@@ -43,7 +43,7 @@ components:
      - **Management IP**
      - **VLAN/IP Address(es)**
      - **Credentials**
-   * - Linux Jumphost - ubuntu
+   * - Linux Jumphost
      - 10.1.1.20
      - **Internal:** 10.1.10.20
 
