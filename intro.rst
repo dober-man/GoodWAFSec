@@ -12,3 +12,5 @@ Good WAF Security - Getting started with ASM!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 https://support.f5.com/csp/article/K07359270#Link26
+
+In this session we will cover ASM.
