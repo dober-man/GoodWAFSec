@@ -8,7 +8,6 @@ Welcome to F5's Agility Labs, 2018 edition!  In this session we will continue th
 
 
 Good WAF Security - Getting started with ASM!
-Blah
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
