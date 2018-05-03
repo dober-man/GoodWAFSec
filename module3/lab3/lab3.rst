@@ -10,5 +10,5 @@ Task 2 - Response Pages
 Task 3 - Event logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 4 - Event Correlation
+Task 4 - HTTP capture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
