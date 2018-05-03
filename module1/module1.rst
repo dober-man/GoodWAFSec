@@ -1,8 +1,18 @@
-Module 1: Positive Security
+Module 1: Base Policy Creation
 ===================================================
-Expected time to complete: **1 hours**
+Estimated time for complemtion: **30 minutes.**
 
-This first module covers the following topics:
+This labs in this module will demonstrate how to configure geolocation and
+IP Intelligence (IPI)
+
+   how to create and build a security policy using
+automatic policy building.
+
+Objectives
+==========
+* Create a security policy using automatic policy building.
+* Enable application security logging profile.
+* Validate that both the policy and logging profile are working.
 
 .. toctree::
    :maxdepth: 1
@@ -10,4 +20,3 @@ This first module covers the following topics:
 
    lab*/lab*
    review
-
