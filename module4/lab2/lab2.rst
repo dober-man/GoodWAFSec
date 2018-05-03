@@ -1,10 +1,10 @@
-Lab 4.2: Using Postman to Create Policy
+Exercise 4.2: Using Postman to Create Policy
 ----------------------------------------
 
-Task 1 - Objective
+Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 2 - Create Policy
+Task 1 - Create Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Task 2 - Verify Policy

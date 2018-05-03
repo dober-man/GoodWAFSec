@@ -1,8 +1,14 @@
-Lab 4.1: Welcome to Postman
+Exercise 4.1: Welcome to Postman
 ----------------------------------------
 
-Task 1 - Objective
+Task 1 -Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 2 - Obtain Postman Collection
+Task 1 - Obtain Postman Collection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Task 2 - Setting Environment Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Task 3 - Testing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

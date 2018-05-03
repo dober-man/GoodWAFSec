@@ -1,11 +1,11 @@
-Lab 4.3: Using Postman to Delete Policy
+Exercise 4.3: Using Postman to Delete Policy
 ----------------------------------------
 
-Task 1 - Objective
+Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 2 - Delete Policy
+Task 1 - Delete Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 3 - Verify Policy
+Task 2 - Verify Deletion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
