@@ -1,8 +1,11 @@
-Lab 3.1: Blocking Policy
+Lab 4.2: Using Postman to Create Policy
 ----------------------------------------
 
 Task 1 - Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 2 - Exploring and tuning policy
+Task 2 - Create Policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Task 2 - Verify Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

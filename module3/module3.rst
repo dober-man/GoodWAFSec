@@ -1,6 +1,6 @@
-Module 3: Advanced WAF
+Module 3: Blocking, Tuning and Attacking the Policy
 ===================================================
-Expected time to complete: **1 hours**
+Expected time to complete: **45 minutes**
 
 .. toctree::
    :maxdepth: 1
@@ -8,4 +8,3 @@ Expected time to complete: **1 hours**
 
    lab*/lab*
    review
-
