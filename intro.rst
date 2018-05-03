@@ -1,15 +1,22 @@
-Welcome to Agility Labs |year|!
------------------------------
 
-Introduction
-~~~~~~~~~~~~~
+F5 Agility Labs 2018
+==============================
 
-Welcome to |classbold| F5's Agility Labs, 2018 edition!
-In this session we wil cover everything you need to know from a best-practice ASM deployment.
-All of the ASM labs this year are
+Introduction to ASM141 - Good WAF Security - Getting started with ASM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Good WAF Security - Getting started with ASM!
+Welcome to F5's Agility Labs, 2018 edition! This class will focus on how to approach application security from a best-practice perspective.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This is the 1st class in a four part series based on
 
-https://support.f5.com/csp/article/K07359270#Link26
+`Succeeding with Application Security <https://support.f5.com/csp/article/K07359270>`_
+
+Here is a complete listing of all ASM classes offered at this years Agility.
+
+ASM141 - Good WAF Security - Getting started with ASM
+
+ASM241 - Elevated WAF Security - Elevating ASM Protection
+
+ASM341 - High and Maximum WAF Security - Maximizing ASM Protection
+
+ASM342 - WAF Programmability - Enhancing ASM Security and Manageability
