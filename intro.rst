@@ -2,7 +2,8 @@
 F5 Agility Labs 2018
 ==============================
 
-Introduction to ASM141 - Good WAF Security - Getting started with ASM
+Introduction to ASM141
+Good WAF Security - Getting started with ASM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Welcome to F5's Agility Labs, 2018 edition! This class will focus on how to approach application security from a best-practice perspective.
