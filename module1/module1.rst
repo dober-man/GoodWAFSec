@@ -9,7 +9,6 @@ IP Intelligence (IPI)
 automatic policy building.
 
 Objectives
-==========
 * Create a security policy using automatic policy building.
 * Enable application security logging profile.
 * Validate that both the policy and logging profile are working.
