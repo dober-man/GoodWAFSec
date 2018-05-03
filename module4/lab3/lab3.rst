@@ -1,14 +1,11 @@
-Lab 3.3: Troubleshooting
+Lab 4.3: Using Postman to Delete Policy
 ----------------------------------------
 
 Task 1 - Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 2 - Response Pages
+Task 2 - Delete Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 3 - Event logs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Task 4 - HTTP capture
+Task 3 - Verify Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

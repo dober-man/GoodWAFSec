@@ -1,14 +1,11 @@
-Lab 3.3: Troubleshooting
+Lab 4.2: Using Postman to Create Policy
 ----------------------------------------
 
 Task 1 - Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 2 - Response Pages
+Task 2 - Create Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 3 - Event logs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Task 4 - HTTP capture
+Task 2 - Verify Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

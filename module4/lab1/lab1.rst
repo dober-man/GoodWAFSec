@@ -1,8 +1,8 @@
-Lab 3.1: Blocking Policy
+Lab 4.1: Welcome to Postman
 ----------------------------------------
 
 Task 1 - Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 2 - Exploring and tuning policy
+Task 2 - Obtain Postman Collection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

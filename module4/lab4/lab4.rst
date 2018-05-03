@@ -1,14 +1,11 @@
-Lab 3.3: Troubleshooting
+Lab 4.4: HTTPS iApp with Policy
 ----------------------------------------
 
 Task 1 - Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 2 - Response Pages
+Task 2 - Deploy iApp with Security
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 3 - Event logs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Task 4 - HTTP capture
+Task 3 - Attack Application
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
