@@ -11,7 +11,14 @@ Objective
 
 - Review the auto-detection of the web server capabilities (i.e. Apache, jQuery).
 
-- Estimated time for completion:**30** **minutes**. 
+- Estimated time for completion: **30** **minutes**.
+
+This lab will demonstrate how to create and build a transparent security policy.
+Please ensure that three virtual servers are configured before you begin:
+
+- ``webgoat.f5demo.com_https_vs``
+- ``webgoat.f5demo.com_http_vs``
+- ``ip_rep_target_https_vs``
 
 Create Policy
 -------------
