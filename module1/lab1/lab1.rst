@@ -1,12 +1,12 @@
 Lab 1.1 Base Policy Creation
 ----------------------------
-1.1.1 Objective
-~~~~~~~~~~~~~~~
+Objective
+---------
 
-Create a transparent rapid deployment policy.
-Enable applicaiton security logging profile.
-Validate that both the policy and logging profile are working.
-Review the auto-detection of the web server capabilities (i.e. Apache,jQuery).
+- Create a transparent rapid deployment policy.
+- Enable applicaiton security logging profile.
+- Validate that both the policy and logging profile are working.
+- Review the auto-detection of the web server capabilities (i.e. Apache,jQuery).
 
 1.2 Geolocation and IP Intelligence
 ----------------------------------------
