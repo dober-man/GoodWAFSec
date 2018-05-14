@@ -1,6 +1,16 @@
-Lab 1.1 Geolocation and IP Intelligence
+Lab 1.1 Base Policy Creation
+----------------------------
+1.1.1 Objective
+~~~~~~~~~~~~~~~
+
+Create a transparent rapid deployment policy.
+Enable applicaiton security logging profile.
+Validate that both the policy and logging profile are working.
+Review the auto-detection of the web server capabilities (i.e. Apache,jQuery).
+
+1.2 Geolocation and IP Intelligence
 ----------------------------------------
-1.1.1 Geolocation
+1.2.1 Geolocation
 ~~~~~~~~~~~~~~~~~~
 
 #. Open **Security > Application Security > Geolocation Enforcement**
