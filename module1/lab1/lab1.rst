@@ -15,7 +15,7 @@ Lab 1.1 Geolocation and IP Intelligence
    |image34|
 
 #. Open **Local Traffic > iRules** and open the iRule titled
-   ``hackazon_irule`` and review the code.
+   ``webgoat_irule`` and review the code.
 
    .. code-block:: tcl
       :linenos:
