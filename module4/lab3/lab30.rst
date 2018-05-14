@@ -31,7 +31,7 @@ Follow the below steps in order found in the Postman collection to complete this
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -68,7 +68,7 @@ An HTTP POST to the ``/mgmt/tm/asm/policies`` endpoint with a body containing ba
 
 **Headers**
 
-:: 
+::
 
     Content-Type: application/json
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
@@ -154,7 +154,7 @@ An HTTP POST to the ``/mgmt/tm/asm/policies`` endpoint with a body containing ba
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -194,7 +194,7 @@ An HTTP POST to the ``/mgmt/tm/asm/policies`` endpoint with a body containing ba
 
 **Headers**
 
-:: 
+::
 
     Content-Type: application/json
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
@@ -217,8 +217,8 @@ An HTTP POST to the ``/mgmt/tm/asm/policies`` endpoint with a body containing ba
 
 **Example Response**
 
-.. NOTE:: Take note of the ASM policy hash for the newly created policy.  
-   Copy this value into your Postman's collection environmental variable 
+.. NOTE:: Take note of the ASM policy hash for the newly created policy.
+   Copy this value into your Postman's collection environmental variable
    for {{asm_policy_hash}}
 
 The hash in the example below is ``zD8sehzULw6Ni7GJG2XwJQ``
@@ -273,7 +273,7 @@ The hash in the example below is ``zD8sehzULw6Ni7GJG2XwJQ``
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -332,4 +332,3 @@ The hash in the example below is ``zD8sehzULw6Ni7GJG2XwJQ``
             "link": "https://localhost/mgmt/tm/asm/policies/zD8sehzULw6Ni7GJG2XwJQ/policy-builder-cookie?ver=13.0.0"
         }
     }
-
