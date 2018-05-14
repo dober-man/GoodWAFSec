@@ -26,12 +26,7 @@ Create Policy
    please **disable** the Application Security Policy from the
    ``webgoat.f5demo.com_https_vs`` virtual server!
 
-#. Run the following curl command to verify the site is loading without
-   issue from this headless browser. If the curl command is not
-   successful (you are getting a “request rejected” error page), please
-   let an instructor know.
-
-   ``curl –k https://webgoat.f5demo.com | more``
+#. On the Main tab, click Security > Application Security > Security Policies. The Active Policies screen opens.
 
    |image43|
 
