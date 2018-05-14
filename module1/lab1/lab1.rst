@@ -4,9 +4,42 @@ Objective
 ---------
 
 - Create a transparent rapid deployment policy.
+
 - Enable applicaiton security logging profile.
+
 - Validate that both the policy and logging profile are working.
-- Review the auto-detection of the web server capabilities (i.e. Apache,jQuery).
+
+- Review the auto-detection of the web server capabilities (i.e. Apache, jQuery).
+
+- Estimated time for completion:**30** **minutes**. 
+
+Create Policy
+-------------
+. IMPORTANT:: To clearly demonstrate just the Bot Defense profile,
+   please **disable** the Application Security Policy from the
+   ``webgoat.f5demo.com_https_vs`` virtual server!
+
+#. Run the following curl command to verify the site is loading without
+   issue from this headless browser. If the curl command is not
+   successful (you are getting a “request rejected” error page), please
+   let an instructor know.
+
+   ``curl –k https://webgoat.f5demo.com | more``
+
+   |image43|
+
+#. On the Main tab, click **Security > DoS Protection > DoS Profiles**.
+   The DoS Profiles screen opens.
+
+   |image44|
+
+#. Click on the **Create** button.
+
+#. Name the policy ``webgoat_DoS`` and click **Finished** to
+   complete the creation of this DoS profile.
+
+   |image45|
+
 
 1.2 Geolocation and IP Intelligence
 ----------------------------------------
@@ -45,18 +78,18 @@ Objective
    |image35|
 
 #. Open **Local Traffic > Virtual Servers** and click on
-   ``hackazon.f5demo.com_https_vs``. Go to the **Resources**
+   ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
    horizontal tab and click on **Manage** in the iRules section.
 
    |image36|
 
-#. Select the ``hackazon_irule``, move it to the **Enabled** assignment and
+#. Select the ``webgoat_irule``, move it to the **Enabled** assignment and
    click **Finished**.
 
    |image37|
 
 #. In a **new Firefox Private Browsing window** connect to
-   ``https://hackazon.f5demo.com``. You may need to connect more than
+   ``https://webgoat.f5demo.com``. You may need to connect more than
    once to receive the block page, make a note of the last four digits
    of the Support ID. Why did you receive the block page?
 
@@ -79,7 +112,7 @@ Objective
 
    |image39|
 
-.. IMPORTANT:: Please remove the iRule ``hackazon_irule`` from the
+.. IMPORTANT:: Please remove the iRule ``webgoat_irule`` from the
    Virtual Server before proceeding to the next step. (Virtual Server >
    Resources)
 
@@ -102,7 +135,7 @@ Objective
       has a SNAT pool predefined with 5 known malicious IP addresses.
 
       There is an iRule applied to that VS which then points the traffic to
-      the VS you have been working on ``hackazon.f5demo.com_https_vs`` which has
+      the VS you have been working on ``webgoat.f5demo.com_https_vs`` which has
       your ASM policy applied. This configuration will cause ASM to see the
       inbound traffic as having the malicious sources.
 
