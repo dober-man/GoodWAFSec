@@ -1,8 +1,11 @@
-Lab 3.1: Blocking Policy
+Exercise 3.1: Blocking Policy
 ----------------------------------------
 
-Task 1 - Objective
+Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 2 - Exploring and tuning policy
+Task 1 - Exploring policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Task 2 - Tuning policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

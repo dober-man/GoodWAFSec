@@ -1,11 +1,11 @@
-Lab 4.4: HTTPS iApp with Policy
+Exercise 4.4: HTTPS iApp with Policy
 ----------------------------------------
 
-Task 1 - Objective
+Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 2 - Deploy iApp with Security
+Task 1 - Deploy iApp with Security
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Task 3 - Attack Application
+Task 2 - Attack Application
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

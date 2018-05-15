@@ -1,7 +1,7 @@
-Lab 3.3: Troubleshooting
+Exercise 3.3: Troubleshooting
 ----------------------------------------
 
-Task 1 - Objective
+Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Task 2 - Response Pages
