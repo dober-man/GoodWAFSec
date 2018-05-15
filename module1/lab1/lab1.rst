@@ -26,16 +26,16 @@ Create Policy
    please **disable** the Application Security Policy from the
    ``webgoat.f5demo.com_https_vs`` virtual server!
 
-#. On the Main tab, click Security > Application Security > Security Policies. The Active Policies screen opens.
-
+#. On the Main tab, click **Security > Application Security > Security Policies**. The Active Policies screen opens.
+#. Click on the **Polices List**
    |image43|
 
-#. On the Main tab, click **Security > DoS Protection > DoS Profiles**.
-   The DoS Profiles screen opens.
+#. Click on the **Create New Policy** button. The policy creation wizard opens.
 
    |image44|
 
-#. Click on the **Create** button.
+#. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
+#. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``. 
 
 #. Name the policy ``webgoat_DoS`` and click **Finished** to
    complete the creation of this DoS profile.
