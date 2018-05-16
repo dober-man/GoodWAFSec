@@ -35,12 +35,39 @@ Create Policy
    |image44|
 
 #. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
-#. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``. 
+#. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``.
+#. Verify the **Policy Template** is set to ``Rapid Deployment Policy``.
+#. Assign this policy to the webgoat.f5demo.com_https_vs from the Virtual Server drop down.
+#. Set the Application Language to **UTF-8**.
+#. Go back two settings
+#. Set the **Enforcement Mode** to ``Transparent``.
+#. Accept the remaining default policy settings.
 
-#. Name the policy ``webgoat_DoS`` and click **Finished** to
-   complete the creation of this DoS profile.
+**Your settings should reflect the figure below:**
+|imagexx|
 
-   |image45|
+#. Click **Create Policy** to complete the policy creation process.
+#. After policy creation is complete, the properties will be displayed for review within the Policies List menu.
+#. Click **Apply** while the ``lab1_webgoat_waf`` policy is selected.
+
+Verify WAF Profile is Applied to Virtual Server
+-----------------------------------------------
+#. In the configuration utility navigate to **Local Traffic> Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
+#. Click on **Polices** under the **Security** tab at the top of the ``webgoat.f5demo.com_https_vs`` details menu.
+#. In the **Application Security Policy** drop down menu, ensure **Application Security Policy** is ``Enabled...`` and the **Policy:** drop-down selection shows the ``webgoat.f5demo.com_https_vs`` policy.
+#. Notice Log Profile is set to ``Disabled``.
+
+Create Application Security Logging Profile
+-------------------------------------------
+#. In the configuration utility navigate to **Security > Event Logs > Logging Profiles** then click on the **plus** icon.
+#. Under the **Logging Profile Properties** section enter a **Profile Name** ``waf_allrequests``, select the checkbox for ``Application Security``.
+#. Change the **Configuration** dropdown to ``Advanced`` under the **Application Security** section.
+#. Select the ``Local Storage`` value for the **Storage Destination** configuration option.
+#. Select the ``For all Requests`` value for the **Response Logging** configuration option.
+#. Select the ``All requests`` value for the **Request Type** configuration option.
+#. Click **Finished.**
+|imagexy|
+**Question:** Would logging all requests and responses in a production environment be a best practice?
 
 
 1.2 Geolocation and IP Intelligence
