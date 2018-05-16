@@ -44,7 +44,8 @@ Create Policy
 #. Accept the remaining default policy settings.
 
 **Your settings should reflect the figure below:**
-|imagexx|
+
+  |imagexx|
 
 #. Click **Create Policy** to complete the policy creation process.
 #. After policy creation is complete, the properties will be displayed for review within the Policies List menu.
@@ -66,7 +67,9 @@ Create Application Security Logging Profile
 #. Select the ``For all Requests`` value for the **Response Logging** configuration option.
 #. Select the ``All requests`` value for the **Request Type** configuration option.
 #. Click **Finished.**
-|imagexy|
+
+  |imagexy|
+
 **Question:** Would logging all requests and responses in a production environment be a best practice?
 
 
