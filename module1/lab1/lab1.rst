@@ -1,7 +1,7 @@
 Lab 1.1 Base Policy Creation
-----------------------------
+----------------------------------
 Objective
----------
+~~~~~~~~~
 
 - Create a transparent rapid deployment policy.
 
