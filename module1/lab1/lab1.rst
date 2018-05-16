@@ -20,8 +20,8 @@ Please ensure that three virtual servers are configured before you begin:
 - ``webgoat.f5demo.com_http_vs``
 - ``ip_rep_target_https_vs``
 
-Create Policy
--------------
+1.1.1 Create Policy
+~~~~~~~~~~~~~~~~~~~
 . IMPORTANT:: To clearly demonstrate just the Bot Defense profile,
    please **disable** the Application Security Policy from the
    ``webgoat.f5demo.com_https_vs`` virtual server!
@@ -51,26 +51,46 @@ Create Policy
 #. After policy creation is complete, the properties will be displayed for review within the Policies List menu.
 #. Click **Apply** while the ``lab1_webgoat_waf`` policy is selected.
 
-Verify WAF Profile is Applied to Virtual Server
------------------------------------------------
+1.1.2 Verify WAF Profile is Applied to Virtual Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. In the configuration utility navigate to **Local Traffic> Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
+
 #. Click on **Polices** under the **Security** tab at the top of the ``webgoat.f5demo.com_https_vs`` details menu.
+
 #. In the **Application Security Policy** drop down menu, ensure **Application Security Policy** is ``Enabled...`` and the **Policy:** drop-down selection shows the ``webgoat.f5demo.com_https_vs`` policy.
+
 #. Notice Log Profile is set to ``Disabled``.
 
-Create Application Security Logging Profile
--------------------------------------------
+1.1.3 Create Application Security Logging Profile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. In the configuration utility navigate to **Security > Event Logs > Logging Profiles** then click on the **plus** icon.
+
 #. Under the **Logging Profile Properties** section enter a **Profile Name** ``waf_allrequests``, select the checkbox for ``Application Security``.
+
 #. Change the **Configuration** dropdown to ``Advanced`` under the **Application Security** section.
+
 #. Select the ``Local Storage`` value for the **Storage Destination** configuration option.
+
 #. Select the ``For all Requests`` value for the **Response Logging** configuration option.
+
 #. Select the ``All requests`` value for the **Request Type** configuration option.
+
 #. Click **Finished.**
 
   |imagexy|
 
 **Question:** Would logging all requests and responses in a production environment be a best practice?
+
+1.1.4 Apply WAF Logging Profile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. Under Local Traffic > Virtual Servers, click on hackazon.f5demo.com_https_vs.
+#. Click on Policies under the Security tab at the top of the hackazon.f5demo.com_https_vs details menu.
+#. In the Log Profile drop down menu, select Enabled...
+#. Within the Available logging profiles menu, select asm_allrequests and then click the << arrows to move the logging policy to the Selected profile.
+#. Click on the Update button to apply the policy.
+
+1.1.5 Test WAF Policy
+~~~~~~~~~~~~~~~~~~~~~
 
 
 1.2 Geolocation and IP Intelligence
