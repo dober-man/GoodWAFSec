@@ -35,20 +35,29 @@ Please ensure that three virtual servers are configured before you begin:
    |image44|
 
 #. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
+
 #. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``.
+
 #. Verify the **Policy Template** is set to ``Rapid Deployment Policy``.
+
 #. Assign this policy to the webgoat.f5demo.com_https_vs from the Virtual Server drop down.
+
 #. Set the Application Language to **UTF-8**.
+
 #. Go back two settings
+
 #. Set the **Enforcement Mode** to ``Transparent``.
+
 #. Accept the remaining default policy settings.
 
-**Your settings should reflect the figure below:**
+  **Your settings should reflect the figure below:**
 
   |imagexx|
 
 #. Click **Create Policy** to complete the policy creation process.
+
 #. After policy creation is complete, the properties will be displayed for review within the Policies List menu.
+
 #. Click **Apply** while the ``lab1_webgoat_waf`` policy is selected.
 
 1.1.2 Verify WAF Profile is Applied to Virtual Server
