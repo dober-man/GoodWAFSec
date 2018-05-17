@@ -33,8 +33,7 @@ Windows jump box.
 Prior to beginning the exercises, it is recommended to review the :doc:`/class3/labinfo`.
 
 #. Module 1: Configuring BIG-IP
-#. Module 2: Configuring AFM (Advanced Firewall Module)
-#. Module 3: Configuring ASM (Application Security Module)
+#. Module 2: Configuring ASM (Application Security Module)
 
 **Support**
 
