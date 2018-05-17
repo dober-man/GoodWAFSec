@@ -91,7 +91,37 @@ Please ensure that three virtual servers are configured before you begin:
 
 1.1.5 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
+#. Open Firefox and navigate to ``https://webgoat.f5demo`` You'll find a toolbar shortcust for the webgoat link.
 
+  |imageyy|
+
+#. Interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
+
+#. On the BIG-IP, navigate to **Security > Event Logs > Applications > Requests**.
+
+#. Clear the "Illegal Requests" filter.
+
+  |imageab|
+
+#. Verify that requests are being logged by the WAF. You should be able to see both the raw client and server responses.
+
+  |imagebd|
+
+1.1.5.1 Review Server Technologies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. On the BIG-IP, navigate to **Security > Application Security > Policy Building > Traffic Learning.
+
+#. Observer that the WAF has "Add Policy Server Technology" suggestions.
+
+  |image3x|
+
+#. Select all of the **Add Server Technology** recommendations and click **Accept Suggestions**.
+
+#. Remember to click **Apply Policy** at the top right.
+
+  |image5c|
+
+**Question:** How does accepting Server Technologies affect Signatures?
 
 1.2 Geolocation and IP Intelligence
 ----------------------------------------
