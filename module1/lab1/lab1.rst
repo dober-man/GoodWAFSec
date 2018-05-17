@@ -109,14 +109,11 @@ Please ensure that three virtual servers are configured before you begin:
 
 1.1.5.1 Review Server Technologies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. On the BIG-IP, navigate to **Security > Application Security > Policy Building > Traffic Learning.
-
-#. Observer that the WAF has "Add Policy Server Technology" suggestions.
+#. On the BIG-IP, navigate to **Security > Application Security > Policy Building > Traffic Learning.**
+#. Observe that the WAF has "Add Policy Server Technology" suggestions.
 
   |image3x|
-
 #. Select all of the **Add Server Technology** recommendations and click **Accept Suggestions**.
-
 #. Remember to click **Apply Policy** at the top right.
 
   |image5c|
