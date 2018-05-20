@@ -24,14 +24,14 @@ Create Policy
 
 .. IMPORTANT:: To clearly demonstrate just the Bot Defense profile,
    please **disable** the Application Security Policy from the
-   ``hackazon.f5demo.com_https_vs`` virtual server!
+   ``webgoat.f5demo.com_https_vs`` virtual server!
 
 #. Run the following curl command to verify the site is loading without
    issue from this headless browser. If the curl command is not
    successful (you are getting a “request rejected” error page), please
    let an instructor know.
 
-   ``curl –k https://hackazon.f5demo.com | more``
+   ``curl –k https://webgoat.f5demo.com | more``
 
    |image43|
 
@@ -42,7 +42,7 @@ Create Policy
 
 #. Click on the **Create** button.
 
-#. Name the policy ``hackazon_DoS`` and click **Finished** to
+#. Name the policy ``webgoat_DoS`` and click **Finished** to
    complete the creation of this DoS profile.
 
    |image45|
@@ -50,7 +50,7 @@ Create Policy
 Configure Policy
 ----------------
 
-#. **Click** the newly created ``hackazon_DoS`` profile listed under the
+#. **Click** the newly created ``webgoat_DoS`` profile listed under the
    **Security > Dos Protection > DoS Profiles** list.
 
 #. The profile’s properties menu will be displayed initially. **Click**
@@ -80,19 +80,19 @@ Configure Policy
    **Block Suspicious Browsers** setting is enabled by default.
 
 #. Click the **Update** button to complete the Proactive Bot
-   Defense ``hackazon_DoS`` profile.
+   Defense ``webgoat_DoS`` profile.
 
 Apply Proactive Bot Defense Policy
 ----------------------------------
 
 #. Under **Local Traffic > Virtual Servers**, click
-   on ``hackazon.f5demo.com_https_vs``.
+   on ``webgoat.f5demo.com_https_vs``.
 
 #. Click on **Policies** under the **Security** tab at the top of
-   the ``hackazon.f5demo.com_https_vs`` details menu.
+   the ``webgoat.f5demo.com_https_vs`` details menu.
 
 #. In the **DoS Protection Profile** drop down menu,
-   select ``Enabled...`` and then select the ``hackazon_DoS`` for
+   select ``Enabled...`` and then select the ``webgoat_DoS`` for
    the profile.
 
 #. Click on the **Update** button to apply the policy.
@@ -124,7 +124,7 @@ Apply Bot Defense Logging Profile
 ---------------------------------
 
 #. Under **Local Traffic > Virtual Servers**, click
-   on ``hackazon.f5demo.com_https_vs``.
+   on ``webgoat.f5demo.com_https_vs``.
 
 #. Click on **Policies** under the **Security** tab at the top
 
@@ -151,7 +151,7 @@ Test the Proactive Bot Defense Policy
 
 #. From the command line execute the following command several times:
 
-   ``curl –k https://hackazon.f5demo.com``
+   ``curl –k https://webgoat.f5demo.com``
 
    .. NOTE:: This can take a few minutes and you may get several empty
       responses as shown.
@@ -185,7 +185,7 @@ BOT Signatures
 
    |image55|
 
-#. **Click** on the ``hackazon_DoS`` profile and then the
+#. **Click** on the ``webgoat_DoS`` profile and then the
    **Application Security** tab to configure the policy.
 
    |image56|
@@ -202,7 +202,7 @@ BOT Signatures
 
    |image57|
 
-#. Run cURL again: ``curl –k https://hackazon.f5demo.com``
+#. Run cURL again: ``curl –k https://webgoat.f5demo.com``
 
    **The site should respond normally now every time.**
 
@@ -219,7 +219,7 @@ BOT Signatures
 Selectively Blocking BOT Categories
 -----------------------------------
 
-#. Under your ``hackazon_DoS`` profile in **Application Security >> Bot
+#. Under your ``webgoat_DoS`` profile in **Application Security >> Bot
    Signatures** click on the **Edit** link for the **Bot Signature
    Categories** section.
 
@@ -231,7 +231,7 @@ Selectively Blocking BOT Categories
 
    |image59|
 
-#. Run cURL again: ``curl –k https://hackazon.f5demo.com``
+#. Run cURL again: ``curl –k https://webgoat.f5demo.com``
 
    |image60|
 
@@ -250,7 +250,7 @@ Selectively Blocking BOT Categories
    |image61|
 
 
-#. Run cURL again: ``curl –k https://hackazon.f5demo.com`` and you should
+#. Run cURL again: ``curl –k https://webgoat.f5demo.com`` and you should
    be back in business. By now you should know the expected output.
 
 #. Change HTTP Library to: **Report**
