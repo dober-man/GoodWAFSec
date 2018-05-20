@@ -120,7 +120,8 @@ In the upper left corner change the mode to Attack mode and then execute the att
 
 
 .. |lab-3-2-1| image:: images/image1_3_2.png
-.. |lab-3-2-2| image:: images/image2-3-2.png
+.. |lab-3-2-1| image:: images/image2_3_2.png
+.. |lab-3-2-2| image:: images/image2_3_2.png
 .. |lab-3-2-3| image:: images/image3-3-2.png
 .. |lab-3-2-4| image:: images/image4-3-2.png
 .. |lab-3-2-5| image:: images/image5-3-2.png

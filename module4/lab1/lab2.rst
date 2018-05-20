@@ -1,4 +1,4 @@
-Lab 1.2: API Authentication
+Excercise 4.1: API Authentication
 ===========================
 
 This lab utilizes the Postman Chrome extension to facilitate the sending data to and receiving data from the |icr|.
@@ -37,7 +37,7 @@ Perform the following steps to complete this task:
 
 |lab-2-2|
 
-4. Click the **1. HTTP BASIC Authentication** item. Click the ‘Authorization’ tab and select ‘Basic Auth’ as the Type. Fill in the username and password (admin/admin) and click the ‘Update Request’ button. Notice that the number of Headers in the Headers tab changed from 1 to 2. This is because Postman automatically created the HTTP header and updated your request to include it. Click the ‘Headers’ tab and examine the HTTP header:
+4. Click the **1. HTTP BASIC Authentication** item. Click the ‘Authorization’ tab and select ‘Basic Auth’ as the Type. Fill in the username and password (admin/f5DEMOs4u!) and click the ‘Preview Request’ button. Notice that the number of Headers in the Headers tab changed from 1 to 2. This is because Postman automatically created the HTTP header and updated your request to include it. Click the ‘Headers’ tab and examine the HTTP header:
 
 |lab-2-3|
 

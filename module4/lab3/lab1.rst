@@ -22,62 +22,18 @@ Follow the below steps in order found in the Postman collection to complete this
 
 .. ATTENTION:: Some response content has been removed for brevity.
 
-1. Deprovision AFM module
---------------------------
-
-This request is will serve as an example of how to deprovision a BIG-IP module.
-
-**Request**
-
-:: 
-
-    PATCH https://{{big_ip_a_mgmt}}/mgmt/tm/sys/provision/afm
-
-**Headers**
-
-:: 
-
-    Content-Type: application/json
-    X-F5-Auth-Token: {{big_ip_a_auth_token}}
-
-**Body**
-
-::
-
-    {
-        "level":"none"
-    }
-
-**Example Response**
-
-.. code-block:: rest
-    :emphasize-lines: 9
-
-    {
-        "kind": "tm:sys:provision:provisionstate",
-        "name": "afm",
-        "fullPath": "afm",
-        "generation": 10714,
-        "selfLink": "https://localhost/mgmt/tm/sys/provision/afm?ver=13.0.0",
-        "cpuRatio": 0,
-        "diskRatio": 0,
-        "level": "none",
-        "memoryRatio": 0
-    }
-
-
-2. Retrieve all module provision states
+1. Retrieve all module provision states
 ----------------------------------------
 
 **Request**
 
-:: 
+::
 
     GET https://{{big_ip_a_mgmt}}/mgmt/tm/sys/provision
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -122,13 +78,13 @@ This request is will serve as an example of how to deprovision a BIG-IP module.
 
 **Request**
 
-:: 
+::
 
     GET https://{{big_ip_a_mgmt}}/mgmt/tm/sys/provision/{{module}}
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -154,17 +110,22 @@ This request is will serve as an example of how to deprovision a BIG-IP module.
 4. Provision ASM module
 ------------------------
 
+.. WARNING::
+
+   In our live Agility lab presentation this module has already been provisioned.  You can skip this step.
+
+
 The **asm** module is provisioned using an HTTP PATCH with a body containing a provisioning level to the REST endpoint for ``mgmt/tm/sys/provision/{{module}}``.
 
 **Request**
 
-:: 
+::
 
     PATCH https://{{big_ip_a_mgmt}}/mgmt/tm/sys/provision/{{module}}
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
