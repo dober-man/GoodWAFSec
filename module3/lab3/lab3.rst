@@ -94,6 +94,3 @@ Observe the detected attack, the expected parameter, and what the applied blocki
 .. |lab-3-3-9| image:: images/image9-3-3.png
 .. |lab-3-3-10| image:: images/image10-3-3.png
 .. |lab-3-3-11| image:: images/image11-3-3.png
-.. |zap_proxy| image:: images/zap_proxy.png
-.. |lab-3-3-12| image:: images/image12-3-3.png
-.. |lab-3-3-13| image:: images/image13-3-3.png
