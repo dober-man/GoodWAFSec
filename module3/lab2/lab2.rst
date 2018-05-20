@@ -97,7 +97,7 @@ Task 1 - Exploring an attack
 
 |lab-3-2-11|
 
-Task 3 - Using ZAP Proxy
+Task 2 - Using ZAP Proxy
 -----------------------
 
 1.  Open ZAP Proxy by locating the icon on the top bar |zap_proxy|
@@ -116,7 +116,6 @@ In the upper left corner change the mode to Attack mode and then execute the att
 4.  Return to the BIG IP and examine the Event Logs.  You will need to stop the auto refresh by clicking on the countdown
 
 |lab-3-2-13|
-
 
 
 
