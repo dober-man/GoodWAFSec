@@ -22,7 +22,7 @@ Follow the below steps in order found in the Postman collection to complete this
 
 .. ATTENTION:: Some response content has been removed for brevity.
 
-1. Retrieve all module provision states
+1. Within the F5SecDevOps Postman collection expand **Lab 3.0 - Provision ASM** and select **2: Retrieve all module provision states **
 ----------------------------------------
 
 **Request**
@@ -39,7 +39,7 @@ Follow the below steps in order found in the Postman collection to complete this
 
 **Example Response**
 
-.. NOTE:: The **asm** module is currently provisioned for **none** while the **ltm** module is provisioned for **nominal**.
+.. NOTE:: The **asm** module is currently provisioned for **nominal** as well as the **ltm** module.
 
 .. code-block:: rest
     :emphasize-lines: 13, 24
@@ -56,7 +56,7 @@ Follow the below steps in order found in the Postman collection to complete this
                 "selfLink": "https://localhost/mgmt/tm/sys/provision/asm?ver=13.0.0",
                 "cpuRatio": 0,
                 "diskRatio": 0,
-                "level": "none",
+                "level": "nominal",
                 "memoryRatio": 0
             },
             {
@@ -90,7 +90,7 @@ Follow the below steps in order found in the Postman collection to complete this
 
 **Example Response**
 
-.. NOTE:: The **asm** module is currently not provisioned.
+.. NOTE:: The **asm** module is currently provisioned.
 
 .. code-block:: rest
     :emphasize-lines: 9
@@ -103,7 +103,7 @@ Follow the below steps in order found in the Postman collection to complete this
         "selfLink": "https://localhost/mgmt/tm/sys/provision/asm?ver=13.0.0",
         "cpuRatio": 0,
         "diskRatio": 0,
-        "level": "none",
+        "level": "nominal",
         "memoryRatio": 0
     }
 
@@ -112,7 +112,7 @@ Follow the below steps in order found in the Postman collection to complete this
 
 .. WARNING::
 
-   In our live Agility lab presentation this module has already been provisioned.  You can skip this step.
+   In our live Agility lab presentation this module has already been provisioned.  You can skip this step but note that you can provision modules from the REST API.
 
 
 The **asm** module is provisioned using an HTTP PATCH with a body containing a provisioning level to the REST endpoint for ``mgmt/tm/sys/provision/{{module}}``.

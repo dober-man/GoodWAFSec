@@ -20,7 +20,7 @@ Follow the below steps in order found in the Postman collection to complete this
 
 .. ATTENTION:: Some response content has been removed for brevity.
 
-1.0. Retrieve ASM resources
+1. Within the F5SecDevOps Postman collection expand **Lab 3.1 - Interact with ASM** and select **1.0: Retrieve ASM resources **
 ----------------------------
 
 **Request**
@@ -31,7 +31,7 @@ Follow the below steps in order found in the Postman collection to complete this
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -67,7 +67,7 @@ Follow the below steps in order found in the Postman collection to complete this
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -118,13 +118,13 @@ A test policy named ``test_asm_policy`` has already been created on the BIG-IP f
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
 **Example Response**
 
-.. NOTE:: Copy the ASM policy hash as it appears in the ``"link": "https://localhost/mgmt/tm/asm/policies/W-w3q351kYbr1A9OEaUOag/plain-text-profiles?ver=13.0.0",`` line of the response and populate the **{{asm_policy_hash}}** Postman environment variable.
+.. NOTE:: Copy the ASM policy hash as it appears in the ``"link": "https://localhost/mgmt/tm/asm/policies/f-Lv75XpEok1Ka1yUfPLgQ/plain-text-profiles?ver=13.0.0",`` line of the response and populate the **{{asm_policy_hash}}** Postman environment variable.
 
 ::
 
@@ -135,11 +135,11 @@ A test policy named ``test_asm_policy`` has already been created on the BIG-IP f
         "items": [
             {
             "plainTextProfileReference": {
-                "link": "https://localhost/mgmt/tm/asm/policies/W-w3q351kYbr1A9OEaUOag/plain-text-profiles?ver=13.0.0",
+                "link": "https://localhost/mgmt/tm/asm/policies/f-Lv75XpEok1Ka1yUfPLgQ/plain-text-profiles?ver=13.0.0",
                 "isSubCollection": true
             },
             "dataGuardReference": {
-                "link": "https://localhost/mgmt/tm/asm/policies/W-w3q351kYbr1A9OEaUOag/data-guard?ver=13.0.0"
+                "link": "https://localhost/mgmt/tm/asm/policies/f-Lv75XpEok1Ka1yUfPLgQ/data-guard?ver=13.0.0"
             }
         ]
     }
@@ -155,7 +155,7 @@ A test policy named ``test_asm_policy`` has already been created on the BIG-IP f
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -190,7 +190,7 @@ A test policy named ``test_asm_policy`` has already been created on the BIG-IP f
 3. Search for ASM policy
 --------------------------
 
-An HTTP GET to the ``/mgmt/tm/asm/policies`` endpoint with a parameter of ``filter=name eq test``, allows ASM policies to be searched by name.
+An HTTP GET to the ``/mgmt/tm/asm/policies`` endpoint with a parameter of ``filter=name eq block``, allows ASM policies to be searched by name.
 
 **Request**
 
@@ -200,7 +200,7 @@ An HTTP GET to the ``/mgmt/tm/asm/policies`` endpoint with a parameter of ``filt
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -208,29 +208,28 @@ An HTTP GET to the ``/mgmt/tm/asm/policies`` endpoint with a parameter of ``filt
 
 ::
 
-    {
-        "plainTextProfileReference": {
-            "link": "https://localhost/mgmt/tm/asm/policies/W-w3q351kYbr1A9OEaUOag/plain-text-profiles?ver=13.0.0",
-            "isSubCollection": true
-        },
-        "dataGuardReference": {
-            "link": "https://localhost/mgmt/tm/asm/policies/W-w3q351kYbr1A9OEaUOag/data-guard?ver=13.0.0"
-        },
-        "createdDatetime": "2017-06-02T04:37:22Z",
-        "cookieSettingsReference": {
-            "link": "https://localhost/mgmt/tm/asm/policies/W-w3q351kYbr1A9OEaUOag/cookie-settings?ver=13.0.0"
-        },
-        "versionLastChange": " Security Policy /Common/test_asm_policy [add]: Type was set to Security.\nEncoding Selected was set to false.\nApplication Language was set to utf-8.\nCase Sensitivity was set to Case Sensitive.\nTemplate was set to POLICY_TEMPLATE_FUNDAMENTAL.\nActive was set to false.\nDifferentiate between HTTP and HTTPS URLs was set to Protocol Specific.\nPolicy Name was set to /Common/test_asm_policy.\nEnforcement Mode was set to Blocking. { audit: policy = /Common/test_asm_policy, username = admin, client IP = 192.168.2.111 }",
-        "name": "test_asm_policy",
-        "caseInsensitive": false,
-        "headerSettingsReference": {
-            "link": "https://localhost/mgmt/tm/asm/policies/W-w3q351kYbr1A9OEaUOag/header-settings?ver=13.0.0"
-        },
-        "versionPolicyName": "/Common/test_asm_policy",
-        "generalReference": {
-            "link": "https://localhost/mgmt/tm/asm/policies/W-w3q351kYbr1A9OEaUOag/general?ver=13.0.0"
-        }
-    }
+  {
+      "kind": "tm:asm:policies:policycollectionstate",
+      "selfLink": "https://localhost/mgmt/tm/asm/policies?filter=name%20eq%20block&ver=13.1.0",
+      "totalItems": 1,
+      "items": [
+          {
+              "plainTextProfileReference": {
+                  "link": "https://localhost/mgmt/tm/asm/policies/f-Lv75XpEok1Ka1yUfPLgQ/plain-text-profiles?ver=13.1.0",
+                  "isSubCollection": true
+              },
+              "dataGuardReference": {
+                  "link": "https://localhost/mgmt/tm/asm/policies/f-Lv75XpEok1Ka1yUfPLgQ/data-guard?ver=13.1.0"
+                  "isSubCollection": true
+              },
+              "versionPolicyName": "/Common/Blocking_Policy",
+              "generalReference": {
+                  "link": "https://localhost/mgmt/tm/asm/policies/f-Lv75XpEok1Ka1yUfPLgQ/general?ver=13.1.0"
+              },
+              "policyBuilderCentralConfigurationReference": {
+                  "link": "https://localhost/mgmt/tm/asm/policies/f-Lv75XpEok1Ka1yUfPLgQ/policy-builder-central-configuration?ver=13.1.0"
+              }
+          }
 
 4.0. List ASM tasks
 --------------------------
@@ -245,105 +244,64 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
 **Example Response**
 
 ::
-
-    {
-        "kind": "tm:asm:tasks",
-        "selfLink": "https://localhost/mgmt/tm/asm/tasks?ver=13.0.0",
-        "items": [
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/export-policy?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/resolve-vulnerabilities?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/check-signatures?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/terminate-vulnerability-assessment?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/apply-server-technologies?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/associate-xml-validation-files-to-xml-profile?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/export-policy-template?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/export-requests?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/initiate-vulnerability-assessment?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/import-policy-template?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/update-signatures?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/import-policy?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/bulk?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/get-vulnerability-assessment-subscriptions?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/apply-policy?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/export-signatures?ver=13.0.0"
-                }
-            },
-            {
-                "reference": {
-                    "link": "https://localhost/mgmt/tm/asm/tasks/import-vulnerabilities?ver=13.0.0"
-                }
-            }
-        ]
-    }
+  {
+      "kind": "tm:asm:tasks",
+      "selfLink": "https://localhost/mgmt/tm/asm/tasks?ver=13.1.0",
+      "items": [
+          {
+              "reference": {
+                  "link": "https://localhost/mgmt/tm/asm/tasks/export-policy?ver=13.1.0"
+              }
+          },
+          {
+              "reference": {
+                  "link": "https://localhost/mgmt/tm/asm/tasks/resolve-vulnerabilities?ver=13.1.0"
+              }
+          },
+          {
+              "reference": {
+                  "link": "https://localhost/mgmt/tm/asm/tasks/check-signatures?ver=13.1.0"
+              }
+          },
+          {
+              "reference": {
+                  "link": "https://localhost/mgmt/tm/asm/tasks/update-signatures?ver=13.1.0"
+              }
+          },
+          {
+              "reference": {
+                  "link": "https://localhost/mgmt/tm/asm/tasks/import-policy?ver=13.1.0"
+              }
+          },
+          {
+              "reference": {
+                  "link": "https://localhost/mgmt/tm/asm/tasks/policy-diff?ver=13.1.0"
+              }
+          },
+          {
+              "reference": {
+                  "link": "https://localhost/mgmt/tm/asm/tasks/import-data-protection?ver=13.1.0"
+              }
+          },
+          {
+              "reference": {
+                  "link": "https://localhost/mgmt/tm/asm/tasks/bulk?ver=13.1.0"
+              }
+          },
+          {
+              "reference": {
+                  "link": "https://localhost/mgmt/tm/asm/tasks/import-vulnerabilities?ver=13.1.0"
+              }
+          }
+      ]
+  }
 
 4.1. List specific ASM task
 ----------------------------
@@ -356,7 +314,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -382,7 +340,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -456,7 +414,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -531,7 +489,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -570,7 +528,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -611,7 +569,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
@@ -756,7 +714,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
 
 **Headers**
 
-:: 
+::
 
     X-F5-Auth-Token: {{big_ip_a_auth_token}}
 
