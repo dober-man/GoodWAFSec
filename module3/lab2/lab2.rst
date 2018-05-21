@@ -119,17 +119,4 @@ In the upper left corner change the mode to Attack mode and then execute the att
 
 
 
-.. |lab-3-2-1| image :: images/image1_3_2.png
-.. |lab-3-3-2| image :: images/image2_3_2.png
-.. |lab-3-3-3| image :: images/image3-3-2.png
-.. |lab-3-3-4| image :: images/image4-3-2.png
-.. |lab-3-3-5| image :: images/image5-3-2.png
-.. |lab-3-3-6| image :: images/image6-3-2.png
-.. |lab-3-3-7| image :: images/image7-3-2.png
-.. |lab-3-3-8| image :: images/image8-3-2.png
-.. |lab-3-3-9| image :: images/image9-3-2.png
-.. |lab-3-3-10| image :: images/image10-3-2.png
-.. |lab-3-3-11| image :: images/image11-3-2.png
-.. |zap_proxy| image :: images/zap_proxy.png
-.. |lab-3-3-12| image :: images/image12-3-2.png
-.. |lab-3-3-13| image :: images/image13-3-2.png
+.. |zap_proxy| image:: images/zap_proxy.png
