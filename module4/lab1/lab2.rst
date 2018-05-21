@@ -1,4 +1,4 @@
-Lab 1.2: API Authentication
+Excercise 4.1: API Authentication
 ===========================
 
 This lab utilizes the Postman Chrome extension to facilitate the sending data to and receiving data from the |icr|.
@@ -37,7 +37,7 @@ Perform the following steps to complete this task:
 
 |lab-2-2|
 
-4. Click the **1. HTTP BASIC Authentication** item. Click the ‘Authorization’ tab and select ‘Basic Auth’ as the Type. Fill in the username and password (admin/admin) and click the ‘Update Request’ button. Notice that the number of Headers in the Headers tab changed from 1 to 2. This is because Postman automatically created the HTTP header and updated your request to include it. Click the ‘Headers’ tab and examine the HTTP header:
+4. Click the **1. HTTP BASIC Authentication** item. Click the ‘Authorization’ tab and select ‘Basic Auth’ as the Type. Fill in the username and password (admin/f5DEMOs4u!) and click the ‘Preview Request’ button. Notice that the number of Headers in the Headers tab changed from 1 to 2. This is because Postman automatically created the HTTP header and updated your request to include it. Click the ‘Headers’ tab and examine the HTTP header:
 
 |lab-2-3|
 
@@ -58,7 +58,7 @@ Perform the following steps to complete this task:
 1. Click the **2: Get Authentication Token** item in the **Lab 1.2 - API Authentication** Postman Collection
 2. Notice that we send a POST request to the ‘/mgmt/shared/authn/login’ endpoint. Note that BASIC authentication is NOT required for this step. The token is provided based on the credentials located within the JSON payload.
 3. Click the ‘Body’ tab and examine the JSON that we will send to BIG-IP to provide credentials and the authentication provider:
-4. Modify the JSON body and add the required credentials (admin/admin). Then click the ‘Send’ button.
+4. Modify the JSON body and add the required credentials (admin/f5DEMOs4u!). Then click the ‘Send’ button.
 5. Examine the response status code. If authentication succeeded and a token was generated, the response will have a 200 OK status code. If the status code is 401 then check your credentials.  View the response body to see the token that was provided:
 
 Successful:
