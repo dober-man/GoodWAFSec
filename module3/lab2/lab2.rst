@@ -15,19 +15,19 @@ Task 1 - Exploring an attack
 
 2.  Click on the asm_vs
 
-|lab-3-2-1|
+.. image:: images/image1_3_2.png
 
 3.  Click on Security and Policies from the top menu
 
-|lab-3-2-2|
+.. image:: images/image2_3_2.png
 
 4.  Make sure to set Application Security Policy to Disabled and that a logging profile has been set
 
-|lab-3-2-3|
+.. image:: images/image3_3_2.png
 
 5.  Within Chrome click on the three dots in the upper right and choose New Incognito window
 
-|lab-3-2-4|
+.. image:: images/image4_3_2.png
 
 6.  Click on the Login Page bookmark to get to the WebGoat application
 
@@ -48,17 +48,17 @@ Task 1 - Exploring an attack
 
     %' or 1='1
 
-|lab-3-2-5|
+.. image:: images/image5_3_2.png
 
 .. NOTE:: You will see that you are able to access the database and gather a wealth of useful information
 
-|lab-3-2-6|
+.. image:: images/image6_3_2.png
 
 11.  Return to the BIG IP and access the Virtual Server asm_vs.  Click on Security/Policies
 
 12.  Within the Application Security Policy section choose Enabled and Blocking_Policy from the drop down menus.  Then click update
 
-|lab-3-2-7|
+.. image:: images/image7_3_2.png
 
 13.  On the left menu of the BIG IP right click on Security and select "Open Link in a new Tab"
 
@@ -75,7 +75,7 @@ Task 1 - Exploring an attack
     %' or 1='1
 
 .. NOTE:: You should see that you are blocked and received a message with a support ID.
-|lab-3-2-8|
+.. image:: images/image8_3_2.png
 
 18.  Use the back button and repeat steps 8-10
 
@@ -85,17 +85,17 @@ Task 1 - Exploring an attack
 
 20.  In the upper right corner change the auto refresh to 10 seconds
 
-|lab-3-2-9|
+.. image:: images/image9_3_2.png
 
 21.  Click on the log entry for /webgoat/login and examine the request.
 
 22.  Change from Basic to All Details and will see more details regarding the request
 
-|lab-3-2-10|
+.. image:: images/image10_3_2.png
 
 23.  Click on Attack signature detected
 
-|lab-3-2-11|
+.. image:: images/image11_3_2.png
 
 Task 2 - Using ZAP Proxy
 -----------------------
@@ -111,11 +111,11 @@ Task 2 - Using ZAP Proxy
 
 In the upper left corner change the mode to Attack mode and then execute the attack
 
-|lab-3-2-12|
+.. image:: images/image12_3_2.png
 
 4.  Return to the BIG IP and examine the Event Logs.  You will need to stop the auto refresh by clicking on the countdown
 
-|lab-3-2-13|
+.. image:: images/image13_3_2.png
 
 
 
