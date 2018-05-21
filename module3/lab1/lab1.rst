@@ -40,11 +40,11 @@ Task 2 - Tuning policy
 
 |lab-3-1-7|  |lab-3-1-8|
 
-.. |lab-3-1-1| image:: images/image1_3_1.png
-.. |lab-3-1-2| image:: images/image2-3-1.png
-.. |lab-3-1-3| image:: images/image3-3-1.png
-.. |lab-3-1-4| image:: images/image4-3-1.png
-.. |lab-3-1-5| image:: images/image5-3-1.png
-.. |lab-3-1-6| image:: images/image6-3-1.png
-.. |lab-3-1-7| image:: images/image7-3-1.png
-.. |lab-3-1-8| image:: images/image8-3-1.png
+.. |lab-3-1-1| image :: images/image1_3_1.png
+.. |lab-3-1-2| image :: images/image2-3-1.png
+.. |lab-3-1-3| image :: images/image3-3-1.png
+.. |lab-3-1-4| image :: images/image4-3-1.png
+.. |lab-3-1-5| image :: images/image5-3-1.png
+.. |lab-3-1-6| image :: images/image6-3-1.png
+.. |lab-3-1-7| image :: images/image7-3-1.png
+.. |lab-3-1-8| image :: images/image8-3-1.png
