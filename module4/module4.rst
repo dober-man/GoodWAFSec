@@ -35,8 +35,8 @@ Prior to beginning the exercises, it is recommended to review the :doc:`/class3/
 Expected time to complete: ****
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
 
-   labinfo
-   module*/module*
+   lab*/lab*
+   review
