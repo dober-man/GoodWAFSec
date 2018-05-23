@@ -11,4 +11,5 @@ Module 1: |icr| Refresher
    :maxdepth: 1
    :glob:
 
-   lab*
+   lab*/lab*
+   review
