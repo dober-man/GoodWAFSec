@@ -43,6 +43,8 @@ You should have received a reponse page that you customized.  Make note of the S
 
 .. NOTE:: Explore the other response pages.  Observe that AJAX reponse pages are disabled by default.
 
+.. BONUS:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
+
 Task 3 - Event logs
 -----------------------
 
@@ -64,7 +66,7 @@ Observe the detected attack, the expected parameter, and what the applied blocki
 
 .. image:: images/image7_3_3.png
 
-4.  Examine the HTTP Header information
+4.  Examine the HTTP Header information.  Do you see your attack within the header?
 
 .. image:: images/image9_3_3.png
 
@@ -72,7 +74,7 @@ Observe the detected attack, the expected parameter, and what the applied blocki
 
 .. image:: images/image10_3_3.png
 
-6.  Clocse this tab and return to the BIG IP Event Logs.  Open the filter again and click on Not Blocked.  Apply Filter
+6.  Close this tab and return to the BIG IP Event Logs.  Open the filter again and click on Not Blocked.  Apply Filter
 
 .. image:: images/image11_3_3.png
 

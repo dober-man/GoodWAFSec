@@ -117,6 +117,6 @@ In the upper left corner change the mode to Attack mode and then execute the att
 
 .. image:: images/image13_3_2.png
 
-
+5.  Take a look at the various attacks conducted by ZAP.  Examine the log entries and what signature prevented the attack from occurring.  You can explore the documentation on the signature as well.
 
 .. |zap_proxy| image:: images/zap_proxy.png

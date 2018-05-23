@@ -1,11 +1,4 @@
-.. |labmodule| replace:: 3
-.. |labnum| replace:: 3
-.. |labdot| replace:: |labmodule|\ .\ |labnum|
-.. |labund| replace:: |labmodule|\ _\ |labnum|
-.. |labname| replace:: Lab\ |labdot|
-.. |labnameund| replace:: Lab\ |labund|
-
-Lab |labmodule|\.\ |labnum|\: HTTPS iApp with Policy
+Excercise 3: HTTPS iApp with Policy
 ===============================================
 
 Overview
