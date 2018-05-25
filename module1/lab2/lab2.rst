@@ -313,4 +313,4 @@ Selectively Blocking BOT Categories
    Please feel free to add widgets and/or explore the ASM interface
    further.
 
-**This concludes this lab guide!**
+**This concludes the BOT Protection section of this lab guide!**
