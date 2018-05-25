@@ -28,17 +28,19 @@ Please ensure that three virtual servers are configured before you begin:
 
 #. On the Main tab, click **Security > Application Security > Security Policies**. The Active Policies screen opens.
 #. Click on the **Polices List**
-   |image43|
+   |image1|
 
 #. Click on the **Create New Policy** button. The policy creation wizard opens.
 
-   |image44|
+   |image2|
 
 #. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
 
 #. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``.
 
-#. Verify the **Policy Template** is set to ``Rapid Deployment Policy``.
+#. Verify the **Policy Template** is set to ``Rapid Deployment Policy``. The BIG-IP will display a dialogue box, selct **OK** to continue.
+
+  |image3|
 
 #. Assign this policy to the webgoat.f5demo.com_https_vs from the Virtual Server drop down.
 
@@ -100,7 +102,7 @@ Please ensure that three virtual servers are configured before you begin:
 
 1.1.5 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
-#. Open Firefox and navigate to ``https://webgoat.f5demo`` You'll find a toolbar shortcust for the webgoat link.
+#. Open Firefox and navigate to ``https://webgoat.f5demo.com`` You'll find a toolbar shortcust for the webgoat link.
   |imageyy|
 
 #. Interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
@@ -245,7 +247,7 @@ Please ensure that three virtual servers are configured before you begin:
       a tool to report IP addresses that have been incorrectly flagged.
 
       Further, you can use Putty on the Win7 box to access the BIG-IP via SSH
-      (bookmarked as F5-WAF) and login with ``root`` / ``401elliottW!`` to run
+      (bookmarked as F5-WAF) and login with ``root`` / ``f5DEMOs4u!`` to run
       the ``iprep_lookup`` command, similar to:
 
       .. code-block:: console
