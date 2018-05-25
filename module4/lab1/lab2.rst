@@ -1,15 +1,15 @@
 Excercise 1.1: API Authentication
-===========================
+----------------------------------------
 
 This lab utilizes the Postman Chrome extension to facilitate the sending data to and receiving data from the |icr|.
 
 REST API Authentication
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 One of the many basic concepts related to interaction with REST API’s is how a particular consumer is authenticated to the system. BIG-IP, BIG-IQ and iWorkflow support two types of authentication: HTTP BASIC and Token based. It’s important to understand both of these authentication mechanisms, as consumers of the API will often make use of both types depending on the use case. This lab will demonstrate how to interact with both types of authentication.
 
 
 Task 1 - Basic Authentication
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. WARNING::
 
@@ -48,7 +48,7 @@ Perform the following steps to complete this task:
 |lab-2-4|
 
 Task 2 - Token Based Authentication
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 One of the disadvantages of BASIC Authentication is that credentials are sent with each and every request. This can result in a much greater attack surface being exposed unnecessarily. As a result Token Based Authentication (TBA) is preferred in many cases. This method only sends the credentials once, on the first request. The system then responds with a unique token for that session and the consumer then uses that token for all subsequent requests. BIG-IP, BIG-IQ and iWorkflow support token-based authentication that drops down to the underlying authentication subsystems available in TMOS. As a result the system can be configured to support external authentication providers (RADIUS, TACACS, AD, etc) and those authentication methods can flow through to the REST API. In this task we will demonstrate TBA using the local authentication database, however, authentication to external providers is fully supported.
 
 .. TIP:: For more information about external authentication providers see the section titled "About external authentication providers with iControl REST" in the iControl REST API User Guide available at https://devcentral.f5.com

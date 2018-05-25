@@ -1,15 +1,15 @@
 Exercise 3.2: Protection from common exploit vectors
-===========================
+----------------------------------------
 
 Overview
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this exercise you will attack the vulnerable application.  Then apply the blocking policy and observe the results.
 
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Task 1 - Exploring an attack
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1.  Go to Local Traffic --> Virtual Servers --> Virtual Server List
 
@@ -98,7 +98,7 @@ Task 1 - Exploring an attack
 .. image:: images/image11_3_2.png
 
 Task 2 - Using ZAP Proxy
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1.  Open ZAP Proxy by locating the icon on the top bar |zap_proxy|
 
