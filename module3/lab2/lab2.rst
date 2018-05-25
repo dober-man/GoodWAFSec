@@ -21,7 +21,7 @@ Task 1 - Exploring an attack
 
 .. image:: images/image2_3_2.png
 
-4.  Make sure to set Application Security Policy to Disabled and that a logging profile has been set
+4.  Make sure to set Application Security Policy to enabled and choose the Blocking_Policy.
 
 .. image:: images/image3_3_2.png
 
@@ -35,7 +35,7 @@ Task 1 - Exploring an attack
 
 ::
 
-    %' or 1='1
+    or 1='1
 
 .. NOTE:: Did you see anything?  Why do you think you were not blocked?
 
@@ -54,9 +54,9 @@ Task 1 - Exploring an attack
 
 .. image:: images/image6_3_2.png
 
-11.  Return to the BIG IP and access the Virtual Server asm_vs.  Click on Security/Policies
+11.  Return to the BIG IP go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
 
-12.  Within the Application Security Policy section choose Enabled and Blocking_Policy from the drop down menus.  Then click update
+12.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure to click Save and Apply Policy
 
 .. image:: images/image7_3_2.png
 
@@ -72,7 +72,7 @@ Task 1 - Exploring an attack
 
 ::
 
-    %' or 1='1
+    or 1='1
 
 .. NOTE:: You should see that you are blocked and received a message with a support ID.
 .. image:: images/image8_3_2.png

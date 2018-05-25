@@ -22,7 +22,20 @@ Task 1 - Exploring policy
 
 .. image:: images/image3_3_1.png
 
+5.  Click on the Change button at the far right to bring up the Select Policy Attack Signature sets and choose to add SQL Injection Signatures then click Change
+
+.. image:: images/image9_3_1.png
+.. image:: images/image10_3_1.png
+
 .. NOTE:: For this lab Signature Staging has been disbaled.  In a production environment you should consider using staging to allow yourself mitigation time before new signatures are implemented.
+
+6.  Ensure that the blocking checkbox has been unchecked for all signatures.  You will click Save and Apply Policy at this point.
+
+.. image:: images/images11_3_1.png
+
+.. NOTE:: You will see an that the policy will apply with errors.  This is because the Policy is set to blocking but we do not have any settings currently in blocking since we unchecked the blocking options.  We will add signatures in to blocking in a later task.
+
+.. image:: images/image12_3_1.png
 
 Task 2 - Tuning policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -33,7 +46,11 @@ Task 2 - Tuning policy
 .. NOTE:: Depending on the setting you choose for Learning Mode you may find additional options
 .. image:: images/image5_3_1.png
 
-2.  Under Policy Building Process you will find there are settings for Loosen Policy and Tighten Policy.  While we will not cover these topics in this lab make note of these settings for future learning opportunities.
+2.  Under Policy Building Process you will find there are settings for Loosen Policy and Tighten Policy.
+
+Loosen Policy would be used when there habe been changes to the application.  Policy Builder will identify legitmate traffic based on repeated behavior from a sufficient number of sources that you set.
+Tighten Policy only applies when you are using automatic learning.  The policy builder will refine the policy until the number of security policy changes has been reached.
+Track Site Changes again only applies to automatic learning.  If enabled this setting allows Policy Builder to discover changes to a web applicaiton.  Policy builder logs the changes and temporarily loosens the policy to make suggestions and adjustments.
 
 .. image:: images/image6_3_1.png
 
