@@ -2,12 +2,12 @@ Exercise 3.3: Troubleshooting
 ----------------------------------------
 
 Objective
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this exercise we will examine the response pages, event logs and briefly look at utilizing HTTP capture tools
 
 Task 2 - Response Pages
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1.  Go to Security --> Application Security --> Policy --> Response pages
 

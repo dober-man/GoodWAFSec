@@ -2,13 +2,14 @@ Exercise 3.1: Blocking Policy
 ----------------------------------------
 
 Objective
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will explore the blocking policy and settings.  The blocking policy used for this lab will focus on negative security using signatures.
 
 Task 1 - Exploring policy
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1.  Within the BIG IP go to Security --> Application Security --> Policy Building --> Learning and Blocking Settings
+
 2.  Click on Blocking Settings...
 
 .. image:: images/image1_3_1.png
@@ -24,7 +25,7 @@ Task 1 - Exploring policy
 .. NOTE:: For this lab Signature Staging has been disbaled.  In a production environment you should consider using staging to allow yourself mitigation time before new signatures are implemented.
 
 Task 2 - Tuning policy
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1.  Under the General Settings you will see various settings for Enforcement, Learning Mode and Learning Speed.  For this lab the policy has been set in to Blocking with Manual Learning and a learning speed of fast.
 
 .. image:: images/image4_3_1.png
