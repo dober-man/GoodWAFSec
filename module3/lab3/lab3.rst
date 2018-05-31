@@ -35,7 +35,7 @@ Task 2 - Response Pages
 
 ::
 
-    %' or 1='1
+    or 1='1
 
 You should have received a reponse page that you customized.  Make note of the Support ID before moving on to the next task.
 
