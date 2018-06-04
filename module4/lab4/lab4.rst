@@ -42,6 +42,8 @@ Task 1 - Deploy iApp with Security
 
 .. image:: images/image8_4_4.png
 
+9.  Go to Security --> Application
+
 9.  Open a new icognito window in Chrome and enter app1.f5demo.com/WebGoat in the address bar.  When you get the SSL warning click Advanced and Proceed
 
 .. image:: images/image9_4_4.png
@@ -50,7 +52,20 @@ Task 1 - Deploy iApp with Security
 
 11.  You can try surfing around the application.  Try an injection attack.
 
-12.  Return to the BIG IP 
+12.  Return to the BIG IP.  Go to Security --> Applicaiton Security --> Policy Building --> Traffic Learning
+
+Do you see learning suggestions?
+
+13.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking Settings
+
+14.  Click the carrot by Attack Signatures then Change at the far right to add more signature.
+
+15.  Choose the High Accurary Signatures and SQL injection
+
+.. image:: images/image11_4_4.png
+
+16.  Click Save and Apply Policy
+
 
 Task 2 - Attack Application
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
