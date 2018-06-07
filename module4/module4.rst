@@ -1,4 +1,4 @@
-Lab 4: Introduction to SecDevOps
+Module 4: Introduction to SecDevOps
 ===================================================
 
 .. _GitHub: https://github.com/f5devcentral/f5-automation-labs
@@ -24,7 +24,7 @@ These exercises will feature the following topics.
 To perform the steps required in the lab, `Postman`_ will be used from the
 Linux jump box.
 
-Prior to beginning the exercises, it is recommended to review the :doc:`/labinfo/labinfo.rst`.
+Prior to beginning the exercises, it is recommended to review the :doc: `/labinfo/labinfo.rst`.
 
 #. Exercise 1: Configuring ASM (Application Security Module)
 
