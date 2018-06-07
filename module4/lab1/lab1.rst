@@ -16,20 +16,21 @@ Task 2 - Postman
 
 We will be using Postman collections to run API calls against our BIG IP.  Postman is an API development tool we use to create and test out API calls.
 
-#.  For this lab you can find the postman collection located here:
+1.  For this lab you can find the postman collection located here:
 
 ::
 
   https://github.com/f5devcentral/f5-automation-labs/tree/develop/postman_collections
 
-#.  To import a Postman collection open the Postman client
+2.  To import a Postman collection open the Postman client
+
 .. image:: /images/postman.png
 
-#.  Click on Import
+3.  Click on Import
 
 .. image:: /images/import.png
 
-#.  Choose Import from Link and enter the URL
+4.  Choose Import from Link and enter the URL
 
 ::
 
@@ -37,12 +38,12 @@ We will be using Postman collections to run API calls against our BIG IP.  Postm
 
 .. image:: /images/import_string.png
 
-#.  You will also need to import the environment file by repeating the above step and in the URL field enter the URL below
+5.  You will also need to import the environment file by repeating the above step and in the URL field enter the URL below
 
 ::
 
   https://raw.githubusercontent.com/f5devcentral/f5-automation-labs/develop/postman_collections/F5_SecDevOps.postman_environment.json
 
-#.  Once complete you will see the SecDevOps Postman collection loaded in the left pane
+6.  Once complete you will see the SecDevOps Postman collection loaded in the left pane
 
 .. image:: /images/secdevops.png
