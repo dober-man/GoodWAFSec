@@ -17,7 +17,7 @@ Follow the below steps in order found in the Postman collection to complete this
 .. ATTENTION:: Some response content has been removed for brevity.
 
 1. Within the F5SecDevOps Postman collection expand **Lab 3.0 - Provision ASM** and select **2: Retrieve all module provision states **
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 **Request**
 
@@ -68,7 +68,6 @@ Follow the below steps in order found in the Postman collection to complete this
     }
 
 3. Retrieve single module provision state
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Request**
 
@@ -102,7 +101,7 @@ Follow the below steps in order found in the Postman collection to complete this
     }
 
 4. Provision ASM module
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 .. WARNING::
 
