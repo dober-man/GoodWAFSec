@@ -1,5 +1,5 @@
 
-Excercise 2: Provisioning ASM
+Excercise 3: Provisioning ASM
 ----------------------------------------
 
 Overview
@@ -15,6 +15,9 @@ Prior to performing the steps below, validate the **{{module}}** Postman environ
 Follow the below steps in order found in the Postman collection to complete this portion of the lab.  The requests and responses have been included below for reference.
 
 .. ATTENTION:: Some response content has been removed for brevity.
+
+Task 1 - Provisioning ASM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Within the F5SecDevOps Postman collection expand **Lab 3.0 - Provision ASM** and select **2: Retrieve all module provision states **
 
