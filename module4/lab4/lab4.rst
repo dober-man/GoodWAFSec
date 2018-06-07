@@ -1,4 +1,4 @@
-Excercise 3: HTTPS iApp with Policy
+Excercise 4.7: HTTPS iApp with Policy
 ----------------------------------------
 
 Overview

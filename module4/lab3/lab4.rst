@@ -1,4 +1,4 @@
-Exercise 2.3 Apply ASM Policy to VS
+Exercise 4.6: Apply ASM Policy to VS
 ----------------------------------------
 
 Overview

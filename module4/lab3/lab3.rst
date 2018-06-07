@@ -1,4 +1,4 @@
-Excercise 2.2: Create ASM Policy
+Excercise 4.5: Create ASM Policy
 ----------------------------------------
 
 Overview

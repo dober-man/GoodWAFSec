@@ -1,4 +1,4 @@
-Excercise 1:  Exploring iControl
+Excercise 4.1:  Exploring iControl
 ----------------------------------------
 
 The iControl REST API available via TMOS can be directly accessed and endpoints explored.
