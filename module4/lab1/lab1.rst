@@ -22,7 +22,8 @@ We will be using Postman collections to run API calls against our BIG IP.  Postm
 
   https://github.com/f5devcentral/f5-automation-labs/tree/develop/postman_collections
 
-#.  To import a Postman collection open the Postman client |postman-icon|
+#.  To import a Postman collection open the Postman client
+.. image:: /images/postman.png
 
 #.  Click on Import
 
@@ -45,6 +46,3 @@ We will be using Postman collections to run API calls against our BIG IP.  Postm
 #.  Once complete you will see the SecDevOps Postman collection loaded in the left pane
 
 .. image:: /images/secdevops.png
-
-
-.. |postman-icon| image:: /images/postman.png
