@@ -14,7 +14,6 @@ Follow the below steps in order found in the Postman collection to complete this
 .. ATTENTION:: Some response content has been removed for brevity.
 
 1. Within the F5SecDevOps Postman collection expand **Lab 3.1 - Interact with ASM** and select **1.0: Retrieve ASM resources **
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Request**
 
@@ -49,8 +48,7 @@ Follow the below steps in order found in the Postman collection to complete this
         ]
     }
 
-1.1. Retrieve ASM server technologies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2. Retrieve ASM server technologies
 
 **Request**
 
@@ -98,8 +96,7 @@ Follow the below steps in order found in the Postman collection to complete this
         ]
     }
 
-2.0. Retrieve ASM policies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3. Retrieve ASM policies
 
 A test policy named ``test_asm_policy`` has already been created on the BIG-IP for demonstration purposes.
 
@@ -137,8 +134,7 @@ A test policy named ``test_asm_policy`` has already been created on the BIG-IP f
         ]
     }
 
-2.1. Retrieve ASM policy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4. Retrieve ASM policy
 
 **Request**
 
@@ -180,8 +176,7 @@ A test policy named ``test_asm_policy`` has already been created on the BIG-IP f
         }
     }
 
-3. Search for ASM policy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5. Search for ASM policy
 
 An HTTP GET to the ``/mgmt/tm/asm/policies`` endpoint with a parameter of ``filter=name eq block``, allows ASM policies to be searched by name.
 
@@ -224,8 +219,7 @@ An HTTP GET to the ``/mgmt/tm/asm/policies`` endpoint with a parameter of ``filt
               }
           }
 
-4.0. List ASM tasks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6. List ASM tasks
 
 An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM related tasks that can be performed via the iControl REST API.
 
@@ -296,8 +290,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
       ]
   }
 
-4.1. List specific ASM task
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7. List specific ASM task
 
 **Request**
 
@@ -322,8 +315,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
         "items": []
     }
 
-5. Retrieve ASM policy templates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+8. Retrieve ASM policy templates
 
 **Request**
 
@@ -396,8 +388,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
         ]
     }
 
-6. Retrieve ASM signature sets
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9. Retrieve ASM signature sets
 
 **Request**
 
@@ -471,8 +462,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
         ]
     }
 
-7. Retrieve ASM signature systems
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10. Retrieve ASM signature systems
 
 **Request**
 
@@ -510,8 +500,8 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
         ]
     }
 
-8. Retrieve ASM attack types
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+11. Retrieve ASM attack types
+
 
 **Request**
 
@@ -551,8 +541,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
         ]
     }
 
-9. Retrieve ASM policy urls
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+12. Retrieve ASM policy urls
 
 **Request**
 
@@ -696,8 +685,7 @@ An HTTP GET to the ``/mgmt/tm/asm/tasks/`` endpoint lists the various ASM relate
         ]
     }
 
-10. Retrieve ASM policy signature sets
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13. Retrieve ASM policy signature sets
 
 **Request**
 

@@ -24,7 +24,7 @@ These exercises will feature the following topics.
 To perform the steps required in the lab, `Postman`_ will be used from the
 Linux jump box.
 
-Prior to beginning the exercises, it is recommended to review the :doc:`/class3/labinfo`.
+Prior to beginning the exercises, it is recommended to review the :doc:`/labinfo/labinfo.rst`.
 
 #. Exercise 1: Configuring ASM (Application Security Module)
 
