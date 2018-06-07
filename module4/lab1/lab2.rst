@@ -1,4 +1,4 @@
-Excercise 1.1: API Authentication
+Excercise 4.2: API Authentication
 ----------------------------------------
 
 This lab utilizes the Postman Chrome extension to facilitate the sending data to and receiving data from the |icr|.
