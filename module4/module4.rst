@@ -29,7 +29,7 @@ Prior to beginning the exercises, it is recommended to review the :doc:`/class3/
 #. Exercise 1: Configuring ASM (Application Security Module)
 
 .. NOTE:: All work for this lab will be performed exclusively from the
-   Windows jumphost.  No software installation or interaction with your
+   linux jumphost.  No software installation or interaction with your
    local system is required.
 
 Expected time to complete: ****
