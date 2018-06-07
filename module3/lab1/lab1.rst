@@ -48,7 +48,7 @@ Task 2 - Tuning policy
 
 2.  Under Policy Building Process you will find there are settings for Loosen Policy and Tighten Policy.
 
-Loosen Policy would be used when there habe been changes to the application.  Policy Builder will identify legitmate traffic based on repeated behavior from a sufficient number of sources that you set.
+Loosen Policy would be used when there have been changes to the application.  Policy Builder will identify legitmate traffic based on repeated behavior from a sufficient number of sources that you set.
 Tighten Policy only applies when you are using automatic learning.  The policy builder will refine the policy until the number of security policy changes has been reached.
 Track Site Changes again only applies to automatic learning.  If enabled this setting allows Policy Builder to discover changes to a web applicaiton.  Policy builder logs the changes and temporarily loosens the policy to make suggestions and adjustments.
 
