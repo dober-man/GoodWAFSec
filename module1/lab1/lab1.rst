@@ -33,7 +33,7 @@ Please ensure that three virtual servers are configured before you begin:
 
 #. Click on the **Create New Policy** button. The policy creation wizard opens.
 
-   |image2|
+.. image:: images/image2.png
 
 #. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
 
