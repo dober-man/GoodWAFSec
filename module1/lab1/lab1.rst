@@ -28,7 +28,7 @@ Please ensure that three virtual servers are configured before you begin:
 
 #. On the Main tab, click **Security > Application Security > Security Policies**. The Active Policies screen opens.
 #. Click on the **Polices List**
-   |image1|
+   .. image:: images image1.PNG
 
 #. Click on the **Create New Policy** button. The policy creation wizard opens.
 
