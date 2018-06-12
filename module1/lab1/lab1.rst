@@ -1,4 +1,4 @@
-Lab 1.1 Base Policy Creation
+Exercise 1.1: Base Policy Creation
 ----------------------------------
 Objective
 ~~~~~~~~~
