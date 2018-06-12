@@ -1,4 +1,4 @@
-Lab 1.3: Protocol Compliance
+Exercise 1.3: Protocol Compliance
 ----------------------------------------
 
 Objective
