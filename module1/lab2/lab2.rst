@@ -1,10 +1,5 @@
-Lab 1.2: BOT Protection
+Exercise 1.3: Proactive Bot Defense
 ----------------------------------------
-
-Task 1 - Explore the API using the TMOS Web Interface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Module 4: Proactive Bot Defense
-===============================
 
 Objective
 ---------
@@ -31,9 +26,9 @@ Create Policy
    successful (you are getting a “request rejected” error page), please
    let an instructor know.
 
-   ``curl –k https://webgoat.f5demo.com | more``
+   ``curl –k https://webgoat.f5demo.com/login | more``
 
-   |image43|
+   .. image:: images/image1_3_1.png
 
 #. On the Main tab, click **Security > DoS Protection > DoS Profiles**.
    The DoS Profiles screen opens.
@@ -118,7 +113,7 @@ Create Bot Defense Logging Profile
    .. NOTE:: You could have also modified the existing ``asm_allrequests``
       logging profile and added DoS logging definitions.
 
-   |image50|
+   .. image:: images/|image50|
 
 Apply Bot Defense Logging Profile
 ---------------------------------
