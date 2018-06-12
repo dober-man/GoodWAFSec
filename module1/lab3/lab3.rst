@@ -2,7 +2,7 @@ Lab 1.3: Protocol Compliance
 ----------------------------------------
 
 Objective
-------------
+~~~~~~~~~
 
 - Attach the security policy to the appropriate virtual server.
 
@@ -11,7 +11,7 @@ Objective
 - Estimated time for completeion **10** **minutes**.
 
 Apply Security Policy
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 .. IMPORTANT:: To clearly demonstrate just the protocol compliance protection,
    please remove the previously created DoS profile and  **enable** the ``lab1_webgoat_waf`` Security Policy on the
@@ -40,4 +40,4 @@ Apply Security Policy
 
 #. Observe the Illegal requests observed by the security policy. What protocol compliance violations were observed by the security policy?
 
-#. 
+#.
