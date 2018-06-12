@@ -2,7 +2,7 @@ Exercise 1.3: Proactive Bot Defense
 ----------------------------------------
 
 Objective
----------
+
 
 -  Create a DoS profile
 
@@ -15,7 +15,7 @@ Objective
 -  Estimated time for completion: **20** **minutes**
 
 Create Policy
--------------
+
 
 .. IMPORTANT:: To clearly demonstrate just the Bot Defense profile,
    please **disable** the Application Security Policy from the
@@ -43,7 +43,7 @@ Create Policy
    |image45|
 
 Configure Policy
-----------------
+
 
 #. **Click** the newly created ``webgoat_DoS`` profile listed under the
    **Security > Dos Protection > DoS Profiles** list.
@@ -78,7 +78,7 @@ Configure Policy
    Defense ``webgoat_DoS`` profile.
 
 Apply Proactive Bot Defense Policy
-----------------------------------
+
 
 #. Under **Local Traffic > Virtual Servers**, click
    on ``webgoat.f5demo.com_https_vs``.
@@ -95,7 +95,7 @@ Apply Proactive Bot Defense Policy
    |image49|
 
 Create Bot Defense Logging Profile
-----------------------------------
+
 
 #. Open a new tab for the Configuration Utility and navigate to:
     **Security > Event Logs > Logging Profiles** then **click
@@ -116,7 +116,7 @@ Create Bot Defense Logging Profile
    .. image:: images/|image50|
 
 Apply Bot Defense Logging Profile
----------------------------------
+
 
 #. Under **Local Traffic > Virtual Servers**, click
    on ``webgoat.f5demo.com_https_vs``.
@@ -142,7 +142,7 @@ Apply Bot Defense Logging Profile
    |image51|
 
 Test the Proactive Bot Defense Policy
--------------------------------------
+
 
 #. From the command line execute the following command several times:
 
@@ -158,7 +158,7 @@ Test the Proactive Bot Defense Policy
    |image52|
 
 Validate that the Proactive Bot Defense Policy is Working
----------------------------------------------------------
+
 
 #. Navigate to **Security > Event Logs > Bot Defense > Requests**.
 
@@ -174,7 +174,7 @@ Validate that the Proactive Bot Defense Policy is Working
 
 
 BOT Signatures
----------------
+
 
 #. Navigate to **Security > DoS Protection > DoS Profiles**
 
@@ -212,7 +212,7 @@ BOT Signatures
    interacting with your site.
 
 Selectively Blocking BOT Categories
------------------------------------
+
 
 #. Under your ``webgoat_DoS`` profile in **Application Security >> Bot
    Signatures** click on the **Edit** link for the **Bot Signature
