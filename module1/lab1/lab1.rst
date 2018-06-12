@@ -126,7 +126,7 @@ Please ensure that three virtual servers are configured before you begin:
 
 **Question:** How does accepting Server Technologies affect Signatures?
 
-1.2 Geolocation and IP Intelligence
+Exercise: 1.2 Geolocation and IP Intelligence
 ----------------------------------------
 1.2.1 Geolocation
 ~~~~~~~~~~~~~~~~~~
