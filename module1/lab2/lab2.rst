@@ -146,7 +146,7 @@ Test the Proactive Bot Defense Policy
 
 #. From the command line execute the following command several times:
 
-   ``curl –k https://webgoat.f5demo.com``
+   ``curl –k https://webgoat.f5demo.com/login``
 
    .. NOTE:: This can take a few minutes and you may get several empty
       responses as shown.
@@ -197,7 +197,7 @@ BOT Signatures
 
    |image57|
 
-#. Run cURL again: ``curl –k https://webgoat.f5demo.com``
+#. Run cURL again: ``curl –k https://webgoat.f5demo.com/login``
 
    **The site should respond normally now every time.**
 

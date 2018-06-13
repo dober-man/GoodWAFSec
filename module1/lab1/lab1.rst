@@ -1,4 +1,4 @@
-Exercise 1.1: Base Policy Creation
+Exercise 1.1: Policy Creation
 ----------------------------------
 Objective
 ~~~~~~~~~
@@ -103,7 +103,7 @@ Please ensure that three virtual servers are configured before you begin:
 
 1.1.5 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
-#. Open Firefox and navigate to ``https://webgoat.f5demo.com`` You'll find a toolbar shortcust for the webgoat link.
+#. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/login`` You'll find a toolbar shortcust for the webgoat link.
   |imageyy|
 
 #. Interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
