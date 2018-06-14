@@ -6,15 +6,19 @@ Task 1 - Exploring iControl
 
 The iControl REST API available via TMOS can be directly accessed and endpoints explored.
 
-#. Open Google Chrome and navigate to the following bookmarks: BIG-IP A GUI and BIG-IP API ToC.  Accept any SSL warnings/errors that appear and ensure that you can access both login prompts.
-#. Click on the **BIG-IP API ToC** bookmark to access the API Table of Contents for BIG-IP A.  The ``/mgmt/toc`` path in the URL is available on all TMOS versions 11.6 or newer.
-#. Authenticate using the default **admin/f5DEMOs4u!** credentials.
-#. After successfully authenticating, you will be presented with a top-level list of REST resources available on the BIG-IP.  At the top of the page is a search box that can be used to search for specific REST resources.
+1. Open Google Chrome and navigate to the following bookmarks: BIG-IP A GUI and BIG-IP API ToC.  Accept any SSL warnings/errors that appear and ensure that you can access both login prompts.
+
+2. Click on the **BIG-IP API ToC** bookmark to access the API Table of Contents for BIG-IP A.  The ``/mgmt/toc`` path in the URL is available on all TMOS versions 11.6 or newer.
+
+3. Authenticate using the default **admin/f5DEMOs4u!** credentials.
+
+4. After successfully authenticating, you will be presented with a top-level list of REST resources available on the BIG-IP.  At the top of the page is a search box that can be used to search for specific REST resources.
+
 
 Task 2 - Postman
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We will be using Postman collections to run API calls against our BIG IP.  Postman is an API development tool we use to create and test out API calls.
+We will be using Postman collections to run API calls against our BIG-IP.  Postman is an API development tool we use to create and test out API calls.
 
 1.  For this lab you can find the postman collection located here:
 

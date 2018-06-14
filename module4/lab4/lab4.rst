@@ -1,10 +1,14 @@
-Excercise 4.7: HTTPS iApp with Policy
+Exercise 4.7: HTTPS iApp with Policy
 ----------------------------------------
 
 Overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F5 offers a number of templated installations for various applications.  For generic web based applications you can find the https iapp template.  As an update to this template we have added security functions such as firewall and web application firewall policies that can be deployed with the application.
+F5 offers a number of templated installations for various applications.  For generic web based applications you can find the https iapp template.  As an update to this template we have added security functions such as firewall and web application firewall policies that can be deployed with the application.  In this lab we will focus on using the basic http iApp template.  If you are interested in integrating similiar templates in to your automation and orchestration strategies please follow this training with the Application Services Lab located here:
+
+::
+
+  http://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/
 
 
 Task 1 - Deploy iApp with Security
@@ -52,7 +56,7 @@ Task 1 - Deploy iApp with Security
 
 11.  You can try surfing around the application.  Try an injection attack.
 
-12.  Return to the BIG IP.  Go to Security --> Applicaiton Security --> Policy Building --> Traffic Learning
+12.  Return to the BIG-IP.  Go to Security --> Applicaiton Security --> Policy Building --> Traffic Learning
 
 Do you see learning suggestions?
 
