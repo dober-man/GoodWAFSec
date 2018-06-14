@@ -26,17 +26,29 @@ Task 1 - Creating Blocking policy
 
 Fill out the following -
   Policy name -  Blocking_Policy
+
   Description - leave blank
+
   Policy type -  Security
+
   Policy Template -  Rapid Deployment Policy
+
   Virtual Server -  webgoat.f5demo.com_https_vs (HTTPS)
+
   Learning Mode -  Manual
+
   Enforcement Mode -  Blocking
+
   Application Language -  Unicode (utf-8)
+
   Server Technologies - (leave blank)
+
   Signature Staging -  Disable  (in a production environment consider leaving this set at 7 days)
+
   Policy is Case Sensitive -  Disabled
+
   Differentiate between HTTP/WS and HTTPS/WSS URLs -  Enabled
+  
   Click Create Policy
 
 5.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
