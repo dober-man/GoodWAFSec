@@ -10,7 +10,7 @@ Task 1 - Creating Blocking policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1.  Login to the BIG-IP device by clicking on the bookmark in Chrome.
 
-.. image:: /images/image13_3_1.png
+.. image:: images/image13_3_1.png
 
 2.  Login to the BIG-IP with the credentials supplied
 
@@ -18,11 +18,11 @@ Task 1 - Creating Blocking policy
 
 3.  Click on Create Policy
 
-.. image:: /images/image14_3_1.png
+.. image:: images/image14_3_1.png
 
 4.  At the far right change the setting to Advanced
 
-.. image:: /images/image15_3_1.png
+.. image:: images/image15_3_1.png
 
 Fill out the following -
   Policy name -  Blocking_Policy
@@ -45,7 +45,7 @@ Fill out the following -
 
 7.  At the far right across from General Settings ensure Advanced is selected
 
-.. image:: /images/image16_3_1.png
+.. image:: images/image16_3_1.png
 
 8.  Click on Blocking Settings
 
