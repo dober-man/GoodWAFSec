@@ -48,7 +48,7 @@ Fill out the following -
   Policy is Case Sensitive -  Disabled
 
   Differentiate between HTTP/WS and HTTPS/WSS URLs -  Enabled
-  
+
   Click Create Policy
 
 5.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
