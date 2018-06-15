@@ -194,11 +194,11 @@ Exercise: 1.2 Geolocation and IP Intelligence
    |image39|
 
 .. IMPORTANT:: Please remove the iRule ``webgoat_irule`` from the
-   Virtual Server before proceeding to the next step. (Virtual Server >
-   Resources)
+   Virtual Server before proceeding to the next step.
+
 
    IP Reputation
-   -------------
+   ~~~~~~~~~~~~~~
 
    #. Navigate to **Security > Application Security > IP Addresses > IP
       Address Intelligence** and click **Enabled**. For all categories
