@@ -19,7 +19,7 @@ Please ensure that two virtual servers are configured before you begin:
 - ``webgoat.f5demo.com_https_vs``
 - ``webgoat.f5demo.com_http_vs``
 
-1.1.1 Create Policy
+Create Policy
 ~~~~~~~~~~~~~~~~~~~
 
 #. On the Main tab, click **Security > Application Security > Security Policies**. The Active Policies screen opens.
@@ -28,11 +28,11 @@ Please ensure that two virtual servers are configured before you begin:
 .. image:: image1.png
 
 
-#. Click on the **Create New Policy** button. The policy creation wizard opens.
+3. Click on the **Create New Policy** button. The policy creation wizard opens.
 
 .. image:: image2.png
 
-#. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
+4. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
 
 #. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``.
 
@@ -60,7 +60,7 @@ Please ensure that two virtual servers are configured before you begin:
 
 #. Click **Apply** while the ``lab1_webgoat_waf`` policy is selected.
 
-1.1.2 Verify WAF Profile is Applied to Virtual Server
+Verify WAF Profile is Applied to Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. In the configuration utility navigate to **Local Traffic> Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
 
@@ -70,7 +70,7 @@ Please ensure that two virtual servers are configured before you begin:
 
 #. Notice Log Profile is set to ``Disabled``.
 
-1.1.3 Create Application Security Logging Profile
+Create Application Security Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. In the configuration utility navigate to **Security > Event Logs > Logging Profiles** then click on the **plus** icon.
 
@@ -90,7 +90,7 @@ Please ensure that two virtual servers are configured before you begin:
 
 **Question:** Would logging all requests and responses in a production environment be a best practice?
 
-1.1.4 Apply WAF Logging Profile
+Apply WAF Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. Under Local Traffic > Virtual Servers, click on hackazon.f5demo.com_https_vs.
 #. Click on Policies under the Security tab at the top of the hackazon.f5demo.com_https_vs details menu.
@@ -98,7 +98,7 @@ Please ensure that two virtual servers are configured before you begin:
 #. Within the Available logging profiles menu, select asm_allrequests and then click the << arrows to move the logging policy to the Selected profile.
 #. Click on the Update button to apply the policy.
 
-1.1.5 Test WAF Policy
+Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
 #. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/login`` You'll find a toolbar shortcust for the webgoat link.
   |image6|
@@ -113,7 +113,7 @@ Please ensure that two virtual servers are configured before you begin:
 #. Verify that requests are being logged by the WAF. You should be able to see both the raw client and server responses.
   |imagebd|
 
-1.1.5.1 Review Server Technologies
+Review Server Technologies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. On the BIG-IP, navigate to **Security > Application Security > Policy Building > Traffic Learning.**
 #. Observe that the WAF has "Add Policy Server Technology" suggestions.
@@ -174,6 +174,7 @@ Exercise: 1.2 Geolocation and IP Intelligence
 #. Open a new **Google Chrome Private Browsing** window and connect to
    ``https://webgoat.f5demo.com/WebGoat/login``. Login and select a few links on the WebGoat page.
 
+
 #. In the BIG-IP Administrative Interface go to **Security > Event Logs
    > Application > Requests** and click on the magnifying glass to
    expand the search filter. Enter the Support ID and click **Apply Filter**.
@@ -198,9 +199,8 @@ Exercise: 1.2 Geolocation and IP Intelligence
 
 IP Reputation
 ~~~~~~~~~~~~~
-1. Navigate to **Security > Application Security > IP Addresses > IP
-      Address Intelligence** and click **Enabled**. For all categories
-      **select Alarm**. Click on **Save** and then on **Apply Policy**.
+#. Navigate to **Security > Application Security > IP Addresses > IP Address Intelligence** and click **Enabled**.
+For all categories **select Alarm**. Click on **Save** and then on **Apply Policy**.
 
       .. NOTE:: On the top right you should see that your IP Intelligence
          database has been updated at some point.
@@ -221,20 +221,19 @@ IP Reputation
 
  #. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
 
- #. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration. Click **Finished**.
+ #. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
+ Click **Finished**.
 
        |image42|
 
- #. Open a new private browsing window in Google Chrome and use the bookmark
-      for **WebGoat** to browse the site. Login and Click on one or two items.
+ #. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
+ Login and Click on one or two items.
 
       |image41|
 
- #. Navigate to **Security > Event Logs > Application > Requests** and
-      review the log entries. Since you configured IP Intelligence
-      violations to alarm you will not need change the filter. Select the
-      most recent entry and examine why the request is illegal. What IP
-      address did the request come from?
+ #. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
+ Since you configured IP Intelligence violations to alarm you will not need change the filter.
+ Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
       |image42|
 
