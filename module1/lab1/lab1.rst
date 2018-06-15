@@ -14,26 +14,22 @@ Objective
 - Estimated time for completion: **30** **minutes**.
 
 This lab will demonstrate how to create and build a transparent security policy.
-Please ensure that three virtual servers are configured before you begin:
+Please ensure that two virtual servers are configured before you begin:
 
 - ``webgoat.f5demo.com_https_vs``
 - ``webgoat.f5demo.com_http_vs``
-- ``ip_rep_target_https_vs``
 
 1.1.1 Create Policy
 ~~~~~~~~~~~~~~~~~~~
-. IMPORTANT:: To clearly demonstrate just the Bot Defense profile,
-   please **disable** the Application Security Policy from the
-   ``webgoat.f5demo.com_https_vs`` virtual server!
 
 #. On the Main tab, click **Security > Application Security > Security Policies**. The Active Policies screen opens.
 #. Click on the **Polices List**
 
-.. image:: images/image1.png
+|image1|
 
 #. Click on the **Create New Policy** button. The policy creation wizard opens.
 
-.. image:: images/image2.png
+|image2|
 
 #. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
 
@@ -41,7 +37,7 @@ Please ensure that three virtual servers are configured before you begin:
 
 #. Verify the **Policy Template** is set to ``Rapid Deployment Policy``. The BIG-IP will display a dialogue box, selct **OK** to continue.
 
-  |image3|
+|image3|
 
 #. Assign this policy to the webgoat.f5demo.com_https_vs from the Virtual Server drop down.
 
@@ -55,7 +51,7 @@ Please ensure that three virtual servers are configured before you begin:
 
   **Your settings should reflect the figure below:**
 
-  |imagexx|
+  |image4|
 
 #. Click **Create Policy** to complete the policy creation process.
 
@@ -89,7 +85,7 @@ Please ensure that three virtual servers are configured before you begin:
 
 #. Click **Finished.**
 
-  |imagexy|
+  |image5|
 
 **Question:** Would logging all requests and responses in a production environment be a best practice?
 
@@ -104,7 +100,7 @@ Please ensure that three virtual servers are configured before you begin:
 1.1.5 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
 #. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/login`` You'll find a toolbar shortcust for the webgoat link.
-  |imageyy|
+  |image6|
 
 #. Interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
@@ -174,10 +170,8 @@ Exercise: 1.2 Geolocation and IP Intelligence
 
    |image37|
 
-#. In a **new Firefox Private Browsing window** connect to
-   ``https://webgoat.f5demo.com``. You may need to connect more than
-   once to receive the block page, make a note of the last four digits
-   of the Support ID. Why did you receive the block page?
+#. Open a new **Google Chrome Private Browsing** window and connect to
+   ``https://webgoat.f5demo.com/WebGoat/login``. Login and select a few links on the WebGoat page.
 
 #. In the BIG-IP Administrative Interface go to **Security > Event Logs
    > Application > Requests** and click on the magnifying glass to
@@ -233,7 +227,7 @@ Exercise: 1.2 Geolocation and IP Intelligence
        |image42|
 
    #. Open a new private browsing window in Google Chrome and use the bookmark
-      for **WebGoat** to browse the site. Login and Click on one or two items. 
+      for **WebGoat** to browse the site. Login and Click on one or two items.
 
       |image41|
 
