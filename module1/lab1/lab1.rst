@@ -217,21 +217,23 @@ Exercise: 1.2 Geolocation and IP Intelligence
       .. NOTE:: In order to create traffic with malicious sources for the purposes of
          this lab we have created added additional configuration items for you.
 
-      There is a Virtual Server (VS) called ``ip_rep_target_https_vs`` which
-      has a SNAT pool predefined with 5 known malicious IP addresses.
+      There is an iRule that you will apply to the ``webgoat.f5demo.com_https_vs`` virtual server.
+      This iRule will insert an X-Forward-For header with value of a malicious source IP address. This configuration
+      will cause ASM to see the inbound traffic as having the malicious sources.
 
-      There is an iRule applied to that VS which then points the traffic to
-      the VS you have been working on ``webgoat.f5demo.com_https_vs`` which has
-      your ASM policy applied. This configuration will cause ASM to see the
-      inbound traffic as having the malicious sources.
+   #. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
+      ``webgoat.f5demo.com_https_vs`` virtual server.
 
-   #. Please review the Virtual Server configuration for
-      ``ip_rep_target_https_vs``. No changes are needed. Also, please
-      review the iRule assigned under the VS Resource tab.
+       |image41|
 
-   #. Open a new private browsing window in Firefox and use the bookmark
-      for **IP Rep Lab** to browse the site. Click on one or two items
-      until you get the block page.
+   #. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
+
+   #. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration. Click **Finished**.
+
+       |image42|
+
+   #. Open a new private browsing window in Google Chrome and use the bookmark
+      for **WebGoat** to browse the site. Login and Click on one or two items. 
 
       |image41|
 
