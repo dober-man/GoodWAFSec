@@ -40,7 +40,7 @@ Create Policy
 
 |image3|
 
-#. Assign this policy to the webgoat.f5demo.com_https_vs from the Virtual Server drop down.
+7. Assign this policy to the webgoat.f5demo.com_https_vs from the Virtual Server drop down.
 
 #. Set the Application Language to **UTF-8**.
 
@@ -54,7 +54,7 @@ Create Policy
 
   |image4|
 
-#. Click **Create Policy** to complete the policy creation process.
+12. Click **Create Policy** to complete the policy creation process.
 
 #. After policy creation is complete, the properties will be displayed for review within the Policies List menu.
 
