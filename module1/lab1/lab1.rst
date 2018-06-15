@@ -196,11 +196,9 @@ Exercise: 1.2 Geolocation and IP Intelligence
 .. IMPORTANT:: Please remove the iRule ``webgoat_irule`` from the
    Virtual Server before proceeding to the next step.
 
-
-   IP Reputation
-   ~~~~~~~~~~~~~~
-
-   #. Navigate to **Security > Application Security > IP Addresses > IP
+IP Reputation
+~~~~~~~~~~~~~
+1. Navigate to **Security > Application Security > IP Addresses > IP
       Address Intelligence** and click **Enabled**. For all categories
       **select Alarm**. Click on **Save** and then on **Apply Policy**.
 
@@ -216,23 +214,23 @@ Exercise: 1.2 Geolocation and IP Intelligence
       This iRule will insert an X-Forward-For header with value of a malicious source IP address. This configuration
       will cause ASM to see the inbound traffic as having the malicious sources.
 
-   #. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
+ #. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
       ``webgoat.f5demo.com_https_vs`` virtual server.
 
        |image41|
 
-   #. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
+ #. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
 
-   #. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration. Click **Finished**.
+ #. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration. Click **Finished**.
 
        |image42|
 
-   #. Open a new private browsing window in Google Chrome and use the bookmark
+ #. Open a new private browsing window in Google Chrome and use the bookmark
       for **WebGoat** to browse the site. Login and Click on one or two items.
 
       |image41|
 
-   #. Navigate to **Security > Event Logs > Application > Requests** and
+ #. Navigate to **Security > Event Logs > Application > Requests** and
       review the log entries. Since you configured IP Intelligence
       violations to alarm you will not need change the filter. Select the
       most recent entry and examine why the request is illegal. What IP
