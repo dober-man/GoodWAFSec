@@ -27,7 +27,6 @@ Create Policy
 
 .. image:: image1.PNG
 
-
 3. Click on the **Create New Policy** button. The policy creation wizard opens.
 
 .. image:: image2.PNG

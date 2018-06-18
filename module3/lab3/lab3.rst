@@ -48,7 +48,7 @@ You should have received a reponse page that you customized.  Make note of the S
 Task 3 - Event logs
 -----------------------
 
-1.  On the BIG IP return to the Security --> Event Log --> Application --> requests
+1.  On the BIG-IP return to the Security --> Event Log --> Application --> requests
 
 2.  Click on the magnifying glass and that will open the log filter.  From here you can enter the Support ID you received from the preceeding task and select Apply Filter.
 
@@ -74,7 +74,7 @@ Observe the detected attack, the expected parameter, and what the applied blocki
 
 .. image:: images/image10_3_3.png
 
-6.  Close this tab and return to the BIG IP Event Logs.  Open the filter again and click on Not Blocked.  Apply Filter
+6.  Close this tab and return to the BIG-IP Event Logs.  Open the filter again and click on Not Blocked.  Apply Filter
 
 .. image:: images/image11_3_3.png
 

@@ -11,27 +11,38 @@ In this exercise you will attack the vulnerable application.  Then apply the blo
 Task 1 - Exploring an attack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Go to Local Traffic --> Virtual Servers --> Virtual Server List
+1.  Go to Security --> Event Logs --> Logging profiles
 
-2.  Click on the asm_vs
+2.  Click Create
+
+  Profile Name: WebGoat
+  Applicattion Security: Enabled
+  Storage Destination:  Local Storage
+  Request Type: All requests
+
+.. NOTE::  Do not use All requests unless for troubleshooting purposes.  Choose Illegal requests, and requests that include staged attack signatures
+
+3.  Go to Local Traffic --> Virtual Servers --> Virtual Server List
+
+4.  Click on the webgoat.f5demo.com_https_vs
 
 .. image:: images/image1_3_2.png
 
-3.  Click on Security and Policies from the top menu
+5.  Click on Security and Policies from the top menu
 
 .. image:: images/image2_3_2.png
 
-4.  Make sure to set Application Security Policy to enabled and choose the Blocking_Policy.
+6.  Make sure to set Application Security Policy to enabled and choose the Blocking_Policy.  Then enabled Log Profile and select the WebGoat profile you created.  Move it to Selected.  Click Update.
 
 .. image:: images/image3_3_2.png
 
-5.  Within Chrome click on the three dots in the upper right and choose New Incognito window
+7.  Within Chrome click on the three dots in the upper right and choose New Incognito window
 
 .. image:: images/image4_3_2.png
 
-6.  Click on the Login Page bookmark to get to the WebGoat application
+8.  Click on the Login Page bookmark to get to the WebGoat application
 
-7.  At the username prompt try entering a sequel query for the username and the letter a for the password
+9.  At the username prompt try entering a sequel query for the username and the letter a for the password
 
 ::
 
@@ -39,36 +50,25 @@ Task 1 - Exploring an attack
 
 .. NOTE:: Did you see anything?  Why do you think you were not blocked?
 
-8.  Login with the credentials webgoat and f5DEMOs4u!
+10.  Return to the BIG-IP Go to Security --> Event Logs --> Application --> requests
 
-9.  Click on Injection Flaws from the left menu and then on SQL Injection
+11.  You will find an entry there for the login page. (We will examine this further later)
 
-10.  Within the Account Name field try the injection attack again
-::
+12.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
 
-    %' or 1='1
-
-.. image:: images/image5_3_2.png
-
-.. NOTE:: You will see that you are able to access the database and gather a wealth of useful information
-
-.. image:: images/image6_3_2.png
-
-11.  Return to the BIG IP go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
-
-12.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure to click Save and Apply Policy
+13.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure to click Save and Apply Policy
 
 .. image:: images/image7_3_2.png
 
-13.  On the left menu of the BIG IP right click on Security and select "Open Link in a new Tab"
+14.  On the left menu of the BIG-IP right click on Security and select "Open Link in a new Tab"
 
-14.  Go to the new tab.  Select Event Logs --> Application --> Requests
+15.  Go to the new tab.  Select Security --> Event Logs --> Application --> Requests
 
-15.  Open a New Incognito Window in Chrome
+16.  Open a New Incognito Window in Chrome
 
-16.  Click the bookmark for Login page
+17.  Click the bookmark for Login page
 
-17.  At the username prompt try entering a sequel query for the username and the letter a for the password
+18.  At the username prompt try entering a sequel query for the username and the letter a for the password
 
 ::
 
@@ -77,11 +77,9 @@ Task 1 - Exploring an attack
 .. NOTE:: You should see that you are blocked and received a message with a support ID.
 .. image:: images/image8_3_2.png
 
-18.  Use the back button and repeat steps 8-10
-
 .. NOTE:: Did the query work?  Why not?
 
-19.  Return to the BIG IP and the Event Logs tab
+19.  Return to the BIG-IP and the Event Logs tab
 
 20.  In the upper right corner change the auto refresh to 10 seconds
 
@@ -113,7 +111,7 @@ In the upper left corner change the mode to Attack mode and then execute the att
 
 .. image:: images/image12_3_2.png
 
-4.  Return to the BIG IP and examine the Event Logs.  You will need to stop the auto refresh by clicking on the countdown
+4.  Return to the BIG-IP and examine the Event Logs.  You will need to stop the auto refresh by clicking on the countdown
 
 .. image:: images/image13_3_2.png
 
