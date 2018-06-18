@@ -30,7 +30,7 @@ Create Policy
 
 3. Click on the **Create New Policy** button. The policy creation wizard opens.
 
-.. image:: image2.png
+.. image:: image2.PNG
 
 4. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
 
