@@ -131,6 +131,8 @@ Geolocation
 
    .. image:: image10.PNG
 
+   .. IMPORTANT:: Remember to click on the **Apply Policy** button committ security policy changes.
+
 #. Open **Local Traffic > iRules** and open the iRule titled
    ``webgoat_irule`` and review the code.
 
@@ -162,16 +164,14 @@ Geolocation
 #. Open a new **Google Chrome Private Browsing** window and connect to
    ``https://webgoat.f5demo.com/WebGoat/login``. Login and select a few links on the WebGoat page.
 
-
 #. In the BIG-IP Administrative Interface go to **Security > Event Logs
-   > Application > Requests** and click on the magnifying glass to
-   expand the search filter. Enter the Support ID and click **Apply Filter**.
+   > Application > Requests**.
 
-   |image38|
+   .. image:: image13.PNG
 
    Notice the geolocation detected and the presence of the X-Forwarded-For
    (XFF) in the Request details. Your actual client IP is still
-   10.128.10.100 however, because we trusted the XFF header and the iRule
+   10.1.10.28 however, because we trusted the XFF header and the iRule
    is randomizing the IP address placed in that header.
 
    ASM believes the request is from an external location to provide a more
