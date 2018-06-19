@@ -101,9 +101,10 @@ Apply WAF Logging Profile
 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
 #. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/WebGoat/login`` You'll find a toolbar shortcust for the webgoat link.
-  |image6|
 
-#. Interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
+.. image:: image7.PNG 
+
+#. Login using your student credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
 #. On the BIG-IP, navigate to **Security > Event Logs > Applications > Requests**.
 
