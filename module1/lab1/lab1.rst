@@ -129,7 +129,7 @@ Geolocation
       at your border router (layer 3), you may decide to geo-enforce at
       ASM (Layer 7) if no private IP’s will be accessing the site.
 
-   |image34|
+   .. image:: image10.PNG
 
 #. Open **Local Traffic > iRules** and open the iRule titled
    ``webgoat_irule`` and review the code.
@@ -149,18 +149,15 @@ Geolocation
       this "trick" to work to demonstrate a global range of source IP
       addresses.
 
-   |image35|
+#. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
+   horizontal tab and click on **Manage** in the **iRules** section.
 
-#. Open **Local Traffic > Virtual Servers** and click on
-   ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
-   horizontal tab and click on **Manage** in the iRules section.
-
-   |image36|
+   .. image:: image11.PNG
 
 #. Select the ``webgoat_irule``, move it to the **Enabled** assignment and
    click **Finished**.
 
-   |image37|
+   .. image:: image12.PNG
 
 #. Open a new **Google Chrome Private Browsing** window and connect to
    ``https://webgoat.f5demo.com/WebGoat/login``. Login and select a few links on the WebGoat page.
