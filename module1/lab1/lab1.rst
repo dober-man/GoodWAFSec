@@ -20,12 +20,13 @@ Please ensure that two virtual servers are configured before you begin:
 - ``webgoat.f5demo.com_http_vs``
 
 Create Policy
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 #. On the Main tab, click **Security > Application Security > Security Policies**. The Active Policies screen opens.
 #. Click on the **Polices List**
 
 .. image:: image1.PNG
+
 
 3. Click on the **Create New Policy** button. The policy creation wizard opens.
 
@@ -35,11 +36,9 @@ Create Policy
 
 #. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``.
 
-#. Verify the **Policy Template** is set to ``Rapid Deployment Policy``. The BIG-IP will display a dialogue box, selct **OK** to continue.
+#. Verify the **Policy Template** is set to ``Rapid Deployment Policy``.
 
-|image3|
-
-7. Assign this policy to the webgoat.f5demo.com_https_vs from the Virtual Server drop down.
+7. Assign this policy to the ``webgoat.f5demo.com_https_vs`` from the Virtual Server drop down.
 
 #. Set the Application Language to **UTF-8**.
 
@@ -49,15 +48,13 @@ Create Policy
 
 #. Accept the remaining default policy settings.
 
-  **Your settings should reflect the figure below:**
-
-  |image4|
-
-12. Click **Create Policy** to complete the policy creation process.
+#. Click **Create Policy** to complete the policy creation process.
 
 #. After policy creation is complete, the properties will be displayed for review within the Policies List menu.
 
-#. Click **Apply** while the ``lab1_webgoat_waf`` policy is selected.
+**Your settings should reflect the figure below:**
+
+.. image:: image3.PNG
 
 Verify WAF Profile is Applied to Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -85,7 +82,7 @@ Create Application Security Logging Profile
 
 #. Click **Finished.**
 
-  |image5|
+  .. image:: image5.PNG
 
 **Question:** Would logging all requests and responses in a production environment be a best practice?
 
@@ -99,7 +96,7 @@ Apply WAF Logging Profile
 
 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
-#. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/login`` You'll find a toolbar shortcust for the webgoat link.
+#. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/WebGoat/login`` You'll find a toolbar shortcust for the webgoat link.
   |image6|
 
 #. Interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
