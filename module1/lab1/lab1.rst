@@ -54,7 +54,7 @@ Create Policy
 
 **Your settings should reflect the figure below:**
 
-.. image:: image3.PNG
+
 
 Enable Server Technology Detection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -63,6 +63,7 @@ Enable Server Technology Detection
 #. Expand the **Server Technology** option and check the **Enable Server Technology Detection** option.
 #. Save changes using the **Save** button.
 #. Apply the changes to the policy using the **Apply Policy** button at the top right of the page.
+
 .. image:: image3a.PNG
 
 Verify WAF Profile is Applied to Virtual Server
