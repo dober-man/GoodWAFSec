@@ -56,6 +56,15 @@ Create Policy
 
 .. image:: image3.PNG
 
+Enable Server Technology Detection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. Select the ``View Learning and Blocking Setting`` link from the **Enforcement Mode** section of the newly created security policy.
+#. Scroll down to the **Server Technology** section of the **Policy Building Settings**.
+#. Expand the **Server Technology** option and check the **Enable Server Technology Detection** option.
+#. Save changes using the **Save** button.
+#. Apply the changes to the policy using the **Apply Policy** button at the top right of the page.
+.. image:: image3a.PNG
+
 Verify WAF Profile is Applied to Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. In the configuration utility navigate to **Local Traffic> Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
