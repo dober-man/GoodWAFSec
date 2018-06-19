@@ -54,21 +54,37 @@ Task 1 - Exploring an attack
 
 11.  You will find an entry there for the login page. (We will examine this further later)
 
-12.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
+12.  Return to the WebGoat application and login with credentials webgoat and f5DEMOs4u!
 
-13.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure to click Save and Apply Policy
+13.  From the left menu go to Injection Flaws --> SQL Injection and select exercise 7
+
+.. image:: images/image5_3_2.png
+
+14.  In the account name field try an injection attack
+
+::
+
+    %' or 1='1
+
+15.  You will be able to see a wealth of information
+
+.. image:: images/image6_3_2.png
+
+16.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
+
+17.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure to click Save and Apply Policy
 
 .. image:: images/image7_3_2.png
 
-14.  On the left menu of the BIG-IP right click on Security and select "Open Link in a new Tab"
+18.  On the left menu of the BIG-IP right click on Security and select "Open Link in a new Tab"
 
-15.  Go to the new tab.  Select Security --> Event Logs --> Application --> Requests
+19.  Go to the new tab.  Select Security --> Event Logs --> Application --> Requests
 
-16.  Open a New Incognito Window in Chrome
+20.  Open a New Incognito Window in Chrome
 
-17.  Click the bookmark for Login page
+21.  Click the bookmark for Login page
 
-18.  At the username prompt try entering a sequel query for the username and the letter a for the password
+22.  At the username prompt try entering a sequel query for the username and the letter a for the password
 
 ::
 
@@ -77,21 +93,23 @@ Task 1 - Exploring an attack
 .. NOTE:: You should see that you are blocked and received a message with a support ID.
 .. image:: images/image8_3_2.png
 
+23.  Repeat steps 12-15
+
 .. NOTE:: Did the query work?  Why not?
 
-19.  Return to the BIG-IP and the Event Logs tab
+24.  Return to the BIG-IP and the Event Logs tab
 
-20.  In the upper right corner change the auto refresh to 10 seconds
+25.  In the upper right corner change the auto refresh to 10 seconds
 
 .. image:: images/image9_3_2.png
 
-21.  Click on the log entry for /webgoat/login and examine the request.
+26.  Click on the log entry for /webgoat/login and examine the request.
 
-22.  Change from Basic to All Details and will see more details regarding the request
+27.  Change from Basic to All Details and will see more details regarding the request
 
 .. image:: images/image10_3_2.png
 
-23.  Click on Attack signature detected
+28.  Click on Attack signature detected
 
 .. image:: images/image11_3_2.png
 
@@ -105,7 +123,7 @@ Task 2 - Using ZAP Proxy
 3.  Enter the following URL in to the URL to Attack field:
 ::
 
-    http://10.1.10.145/WebGoat
+    http://webgoat.f5demo.com/WebGoat
 
 In the upper left corner change the mode to Attack mode and then execute the attack
 
@@ -118,3 +136,23 @@ In the upper left corner change the mode to Attack mode and then execute the att
 5.  Take a look at the various attacks conducted by ZAP.  Examine the log entries and what signature prevented the attack from occurring.  You can explore the documentation on the signature as well.
 
 .. |zap_proxy| image:: images/zap_proxy.png
+
+What additional functions can you turn on to prevent some of the other attacks?  How would you turn these on?
+
+.. Bonus::
+
+Go to Security --> Application Security --> Policy Building --> Traffic learning
+
+Explore the Learning suggestions and Traffic Summary page.
+
+Locate the Enforcement Readiness section.
+
+.. image:: images/image14_3_2.png
+
+Click on the numbers.  This will take you to the learning and blocking settings page.  This shows you the settings that could be turned on to better protect your application.
+
+To the left you will find a number of learning suggestions.  As traffic traverses your application these learning suggestions will eventually reach higher percentages.
+
+Click on a learning suggestion to explore.  You will learn how many events have been triggered and give you the option to accept the suggestion, delete the suggestion or ignore.
+
+.. NOTE:: The higher the percentage on the learning score the higher the chance you should accept this suggestion.
