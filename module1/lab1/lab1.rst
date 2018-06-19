@@ -38,7 +38,7 @@ Create Policy
 
 #. Verify the **Policy Template** is set to ``Rapid Deployment Policy``.
 
-7. Assign this policy to the ``webgoat.f5demo.com_https_vs`` from the Virtual Server drop down.
+#. Assign this policy to the ``webgoat.f5demo.com_https_vs`` from the Virtual Server drop down.
 
 #. Set the Application Language to **UTF-8**.
 
@@ -62,9 +62,11 @@ Verify WAF Profile is Applied to Virtual Server
 
 #. Click on **Polices** under the **Security** tab at the top of the ``webgoat.f5demo.com_https_vs`` details menu.
 
-#. In the **Application Security Policy** drop down menu, ensure **Application Security Policy** is ``Enabled...`` and the **Policy:** drop-down selection shows the ``webgoat.f5demo.com_https_vs`` policy.
+#. In the **Application Security Policy** drop down menu, ensure **Application Security Policy** is ``Enabled...`` and the **Policy:** drop-down selection shows the ``lab1_webgoat_waf`` policy.
 
 #. Notice Log Profile is set to ``Disabled``.
+
+.. image:: image4.PNG
 
 Create Application Security Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -88,11 +90,13 @@ Create Application Security Logging Profile
 
 Apply WAF Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. Under Local Traffic > Virtual Servers, click on hackazon.f5demo.com_https_vs.
-#. Click on Policies under the Security tab at the top of the hackazon.f5demo.com_https_vs details menu.
-#. In the Log Profile drop down menu, select Enabled...
-#. Within the Available logging profiles menu, select asm_allrequests and then click the << arrows to move the logging policy to the Selected profile.
+#. Under **Local Traffic > Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
+#. Click on **Policies** under the **Security** tab at the top of the ``webgoat.f5demo.com_https_vs`` details menu.
+#. In the **Log Profile** drop down menu, select ``Enabled...``
+#. Within the **Available** logging profiles menu, select ``waf_allrequests`` and then click the **<<** arrows to move the logging policy to the **Selected** profile.
 #. Click on the Update button to apply the policy.
+
+.. image:: image6.PNG
 
 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
