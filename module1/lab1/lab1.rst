@@ -57,17 +57,6 @@ Create Policy
 .. image:: imagefix.PNG
 
 
-
-Enable Server Technology Detection
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. Select the ``View Learning and Blocking Setting`` link from the **Enforcement Mode** section of the newly created security policy.
-#. Scroll down to the **Server Technology** section of the **Policy Building Settings**.
-#. Expand the **Server Technology** option and check the **Enable Server Technology Detection** option.
-#. Save changes using the **Save** button.
-#. Apply the changes to the policy using the **Apply Policy** button at the top right of the page.
-
-.. image:: image3a.PNG
-
 Verify WAF Profile is Applied to Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. In the configuration utility navigate to **Local Traffic> Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
@@ -126,21 +115,10 @@ Test WAF Policy
 #. Verify that requests are being logged by the WAF. You should be able to see both the raw client and server responses.
   .. image:: image9.PNG
 
-Review Server Technologies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. On the BIG-IP, navigate to **Security > Application Security > Policy Building > Traffic Learning.**
-#. Observe that the WAF has "Add Policy Server Technology" suggestions.
-  |image3x|
-#. Select all of the **Add Server Technology** recommendations and click **Accept Suggestions**.
-#. Remember to click **Apply Policy** at the top right.
-  |image5c|
-
-**Question:** How does accepting Server Technologies affect Signatures?
-
 Exercise: 1.2 Geolocation and IP Intelligence
 ----------------------------------------
-1.2.1 Geolocation
-~~~~~~~~~~~~~~~~~~
+Geolocation
+~~~~~~~~~~~
 
 #. Open **Security > Application Security > Geolocation Enforcement**
 
