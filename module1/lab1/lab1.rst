@@ -102,17 +102,17 @@ Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
 #. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/WebGoat/login`` You'll find a toolbar shortcust for the webgoat link.
 
-.. image:: image7.PNG 
+.. image:: image7.PNG
 
-#. Login using your student credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
+2. Login using your student credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
 #. On the BIG-IP, navigate to **Security > Event Logs > Applications > Requests**.
 
-#. Clear the "Illegal Requests" filter.
-  |imageab|
+#. Clear the **"Illegal Requests"** filter.
+  .. image:: image8.PNG
 
 #. Verify that requests are being logged by the WAF. You should be able to see both the raw client and server responses.
-  |imagebd|
+  .. image:: image9.PNG
 
 Review Server Technologies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
