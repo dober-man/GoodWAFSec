@@ -180,8 +180,6 @@ Geolocation
    XFF you can work around this and get contextual information about the
    client.
 
-   |image39|
-
 .. IMPORTANT:: Please remove the iRule ``webgoat_irule`` from the
    Virtual Server before proceeding to the next step.
 
@@ -193,7 +191,7 @@ For all categories **select Alarm**. Click on **Save** and then on **Apply Polic
       .. NOTE:: On the top right you should see that your IP Intelligence
          database has been updated at some point.
 
-      |image40|
+.. image:: image14.PNG
 
       .. NOTE:: In order to create traffic with malicious sources for the purposes of
          this lab we have created added additional configuration items for you.
