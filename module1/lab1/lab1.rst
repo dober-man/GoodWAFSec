@@ -54,6 +54,8 @@ Create Policy
 
 **Your settings should reflect the figure below:**
 
+.. image:: image3.PNG
+
 
 
 Enable Server Technology Detection
