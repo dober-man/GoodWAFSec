@@ -54,7 +54,7 @@ Create Policy
 
 **Your settings should reflect the figure below:**
 
-.. image:: image3.PNG
+.. image:: imagefix.PNG
 
 
 
