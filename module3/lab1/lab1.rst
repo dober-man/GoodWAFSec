@@ -25,60 +25,49 @@ Task 1 - Creating Blocking policy
 .. image:: images/image15_3_1.png
 
 Fill out the following -
-  Policy name -  Blocking_Policy
+  - Policy name -  Blocking_Policy
+  - Description - leave blank
+  - Policy type -  Security
+  - Policy Template -  Rapid Deployment Policy
+  - Virtual Server -  webgoat.f5demo.com_https_vs (HTTPS)
+  - Learning Mode -  Manual
+  - Enforcement Mode -  Blocking
+  - Application Language -  Unicode (utf-8)
+  - Server Technologies - (leave blank)
+  - Signature Staging -  Disable  (in a production environment consider leaving this set at 7 days)
+  - Policy is Case Sensitive -  Disabled
+  - Differentiate between HTTP/WS and HTTPS/WSS URLs -  Enabled
 
-  Description - leave blank
+6.  Click Create Policy
 
-  Policy type -  Security
+7.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
 
-  Policy Template -  Rapid Deployment Policy
+8.  Make sure Blocking_Policy is selected in the Current edited security policy.
 
-  Virtual Server -  webgoat.f5demo.com_https_vs (HTTPS)
-
-  Learning Mode -  Manual
-
-  Enforcement Mode -  Blocking
-
-  Application Language -  Unicode (utf-8)
-
-  Server Technologies - (leave blank)
-
-  Signature Staging -  Disable  (in a production environment consider leaving this set at 7 days)
-
-  Policy is Case Sensitive -  Disabled
-
-  Differentiate between HTTP/WS and HTTPS/WSS URLs -  Enabled
-
-  Click Create Policy
-
-5.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
-
-6.  Make sure Blocking_Policy is selected in the Current edited security policy.
-
-7.  At the far right across from General Settings ensure Advanced is selected
+9.  At the far right across from General Settings ensure Advanced is selected
 
 .. image:: images/image16_3_1.png
 
-8.  Click on Blocking Settings
+10.  Click on Blocking Settings
 
 .. image:: images/image1_3_1.png
 
-9.  Click the Block Check box at the top of to select all then click it again to clear Block from all entries.  Then click Change
+11.  Click the Block Check box at the top of to select all then click it again to clear Block from all entries.  Then click Change
 
 .. image:: images/image2_3_1.png
 
-10.  Under Policy Building Settings click on the carrot next to Attack Signatures to expand the Attack Signatures options
+12.  Under Policy Building Settings click on the carrot next to Attack Signatures to expand the Attack Signatures options
 
 .. image:: images/image3_3_1.png
 
-11.  Click on the Change button at the far right to bring up the Select Policy Attack Signature sets and choose to add High Accuracy signature and SQL Injection Signatures then click Change
+13.  Click on the Change button at the far right to bring up the Select Policy Attack Signature sets and choose to add High Accuracy signature and SQL Injection Signatures then click Change
 
 .. image:: images/image9_3_1.png
 .. image:: images/image10_3_1.png
 
 .. NOTE:: For this lab Signature Staging has been disbaled.  In a production environment you should consider using staging to allow yourself mitigation time before new signatures are implemented.
 
-12.  Ensure that the blocking checkbox has been unchecked for all signatures.  You will click Save and Apply Policy at this point.
+14.  Ensure that the blocking checkbox has been unchecked for all signatures.  You will click Save and Apply Policy at this point.
 
 .. image:: images/images11_3_1.png
 
