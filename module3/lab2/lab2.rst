@@ -15,10 +15,10 @@ Task 1 - Exploring an attack
 
 2.  Click Create
 
-  Profile Name: WebGoat
-  Applicattion Security: Enabled
-  Storage Destination:  Local Storage
-  Request Type: All requests
+  - Profile Name: WebGoat
+  - Applicattion Security: Enabled
+  - Storage Destination:  Local Storage
+  - Request Type: All requests
 
 .. NOTE::  Do not use All requests unless for troubleshooting purposes.  Choose Illegal requests, and requests that include staged attack signatures
 
@@ -26,23 +26,37 @@ Task 1 - Exploring an attack
 
 4.  Click on the webgoat.f5demo.com_https_vs
 
+.. image:: images/image15_3_2.png
+
+5.  Click on Resources
+
+.. image:: images/image16_3_2.png
+
+6.  Click on Manage under the iRules section.  Select _sys_https_redirect from the list of available rules and move it to the Enabled column.  Click finished
+
+.. image:: images/image17_3_2.png
+
+.. NOTE:: This step may not be necessary in a production environment.  This iRule redirects all port 80 traffic to the Virtual Server listening on port 443.
+
+7.  Next click on the webgoat.f5demo.com_https_vs
+
 .. image:: images/image1_3_2.png
 
-5.  Click on Security and Policies from the top menu
+8.  Click on Security and Policies from the top menu
 
 .. image:: images/image2_3_2.png
 
-6.  Make sure to set Application Security Policy to enabled and choose the Blocking_Policy.  Then enabled Log Profile and select the WebGoat profile you created.  Move it to Selected.  Click Update.
+9.  Make sure to set Application Security Policy to enabled and choose the Blocking_Policy.  Then enabled Log Profile and select the WebGoat profile you created.  Move it to Selected.  Click Update.
 
 .. image:: images/image3_3_2.png
 
-7.  Within Chrome click on the three dots in the upper right and choose New Incognito window
+10.  Within Chrome click on the three dots in the upper right and choose New Incognito window
 
 .. image:: images/image4_3_2.png
 
-8.  Click on the Login Page bookmark to get to the WebGoat application
+11.  Click on the Login Page bookmark to get to the WebGoat application
 
-9.  At the username prompt try entering a sequel query for the username and the letter a for the password
+12.  At the username prompt try entering a sequel query for the username and the letter a for the password
 
 ::
 
@@ -50,41 +64,41 @@ Task 1 - Exploring an attack
 
 .. NOTE:: Did you see anything?  Why do you think you were not blocked?
 
-10.  Return to the BIG-IP Go to Security --> Event Logs --> Application --> requests
+13.  Return to the BIG-IP Go to Security --> Event Logs --> Application --> requests
 
-11.  You will find an entry there for the login page. (We will examine this further later)
+14.  You will find an entry there for the login page. (We will examine this further later)
 
-12.  Return to the WebGoat application and login with credentials webgoat and f5DEMOs4u!
+15.  Return to the WebGoat application and login with credentials webgoat and f5DEMOs4u!
 
-13.  From the left menu go to Injection Flaws --> SQL Injection and select exercise 7
+16.  From the left menu go to Injection Flaws --> SQL Injection and select exercise 7
 
 .. image:: images/image5_3_2.png
 
-14.  In the account name field try an injection attack
+17.  In the account name field try an injection attack
 
 ::
 
     %' or 1='1
 
-15.  You will be able to see a wealth of information
+18.  You will be able to see a wealth of information
 
 .. image:: images/image6_3_2.png
 
-16.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
+19.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
 
-17.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure to click Save and Apply Policy
+20.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure to click Save and Apply Policy
 
 .. image:: images/image7_3_2.png
 
-18.  On the left menu of the BIG-IP right click on Security and select "Open Link in a new Tab"
+21.  On the left menu of the BIG-IP right click on Security and select "Open Link in a new Tab"
 
-19.  Go to the new tab.  Select Security --> Event Logs --> Application --> Requests
+22.  Go to the new tab.  Select Security --> Event Logs --> Application --> Requests
 
-20.  Open a New Incognito Window in Chrome
+23.  Open a New Incognito Window in Chrome
 
-21.  Click the bookmark for Login page
+24.  Click the bookmark for Login page
 
-22.  At the username prompt try entering a sequel query for the username and the letter a for the password
+25.  At the username prompt try entering a sequel query for the username and the letter a for the password
 
 ::
 
@@ -93,23 +107,23 @@ Task 1 - Exploring an attack
 .. NOTE:: You should see that you are blocked and received a message with a support ID.
 .. image:: images/image8_3_2.png
 
-23.  Repeat steps 12-15
+26.  Repeat steps 16-18
 
 .. NOTE:: Did the query work?  Why not?
 
-24.  Return to the BIG-IP and the Event Logs tab
+27.  Return to the BIG-IP and the Event Logs tab
 
-25.  In the upper right corner change the auto refresh to 10 seconds
+28.  In the upper right corner change the auto refresh to 10 seconds
 
 .. image:: images/image9_3_2.png
 
-26.  Click on the log entry for /webgoat/login and examine the request.
+29.  Click on the log entry for /webgoat/login and examine the request.
 
-27.  Change from Basic to All Details and will see more details regarding the request
+30.  Change from Basic to All Details and will see more details regarding the request
 
 .. image:: images/image10_3_2.png
 
-28.  Click on Attack signature detected
+31.  Click on Attack signature detected
 
 .. image:: images/image11_3_2.png
 
