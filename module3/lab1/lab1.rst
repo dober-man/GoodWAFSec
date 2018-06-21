@@ -77,6 +77,9 @@ Fill out the following -
 
 Task 2 - Tuning policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. ATTENTION::  For this lab we will explore the settings for tuning the policy but will not change the settings.  
+
 1.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking Settings
 
 2.  Under the General Settings you will see various settings for Enforcement, Learning Mode and Learning Speed.  For this lab the policy has been set in to Blocking with Manual Learning and a learning speed of fast.

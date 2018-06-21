@@ -38,7 +38,7 @@ An HTTP PATCH to the ``/mgmt/tm/asm/policies/{{asm_policy_hash}}`` endpoint with
 ::
 
     {
-        "virtualServers":["/Common/hackazon_vs"]
+        "virtualServers":["/Common/automation_vs"]
     }
 
 **Example Response**
