@@ -46,8 +46,6 @@ Task 1 - Deploy iApp with Security
 
 .. image:: images/image8_4_4.png
 
-9.  Go to Security --> Application
-
 9.  Open a new icognito window in Chrome and enter app1.f5demo.com/WebGoat in the address bar.  When you get the SSL warning click Advanced and Proceed
 
 .. image:: images/image9_4_4.png
@@ -74,3 +72,39 @@ Do you see learning suggestions?
 
 Task 2 - Attack Application
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  Within Chrome choose New Incognito window
+
+.. image:: images/image4_3_2.png
+
+2.  Click on the App1 bookmark to get to the WebGoat application
+
+3.  At the username prompt try entering a sequel query for the username and the letter a for the password
+
+::
+
+    or 1='1
+
+.. NOTE:: Did you see anything?  Why do you think you were not blocked?
+
+4.  Return to the BIG-IP Go to Security --> Event Logs --> Application --> requests
+
+5.  You will find an entry there for the login page.
+
+6.  Return to the WebGoat application and login with credentials webgoat and f5DEMOs4u!
+
+7.  From the left menu go to Injection Flaws --> SQL Injection and select exercise 7
+
+.. image:: images/image5_3_2.png
+
+8.  In the account name field try an injection attack
+
+::
+
+    %' or 1='1
+
+.. NOTE::  Were you blocked?  Why or why not?
+
+9.  Return to the BIG-IP Security --> Event Logs --> Application --> requests
+
+10.  You will need to refresh.  Locate the attacks.  Is the policy in transparent or blocking?  How can you change the policy to mitigate against this attack?
