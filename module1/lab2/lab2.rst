@@ -30,19 +30,19 @@ Create Policy
 
    ``curl –k https://webgoat.f5demo.com/WebGoat/login | more``
 
-   .. image:: image1.PNG
+   .. image:: image1_3_1.PNG
 
 #. On the Main tab, click **Security > DoS Protection > DoS Profiles**.
    The DoS Profiles screen opens.
 
-   .. image:: image2.PNG
+   .. image:: image1_3_2.PNG
 
 #. Click on the **Create** button.
 
 #. Name the policy ``webgoat_DoS`` and click **Finished** to
    complete the creation of this DoS profile.
 
-   .. image:: image3.PNG
+   .. image:: image1_3_3.PNG
 
 Configure Policy
 
