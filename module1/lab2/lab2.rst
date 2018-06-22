@@ -28,21 +28,21 @@ Create Policy
    successful (you are getting a “request rejected” error page), please
    let an instructor know.
 
-   ``curl –k https://webgoat.f5demo.com/login | more``
+   ``curl –k https://webgoat.f5demo.com/WebGoat/login | more``
 
    .. image:: image1.PNG
 
 #. On the Main tab, click **Security > DoS Protection > DoS Profiles**.
    The DoS Profiles screen opens.
 
-   |image44|
+   .. image:: image2.PNG
 
 #. Click on the **Create** button.
 
 #. Name the policy ``webgoat_DoS`` and click **Finished** to
    complete the creation of this DoS profile.
 
-   |image45|
+   .. image:: image3.PNG
 
 Configure Policy
 
