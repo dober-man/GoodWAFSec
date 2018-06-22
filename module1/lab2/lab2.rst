@@ -264,19 +264,16 @@ Selectively Blocking BOT Categories
 
 .. image:: image1_3_18.PNG
 
+cURL from Different Geolocations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+  .. NOTE:: We are going to leverage the ``webgoat_irule`` from the earlier lab to get some randomness.
 
-
-   .. NOTE:: We are going to leverage the IPRep virtual server from the earlier lab
-   to get some randomness.
-
-#. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
-      horizontal tab and click on **Manage** in the **iRules** section.
+#. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources** horizontal tab and click on **Manage** in the **iRules** section.
 
   .. image:: image1_3_19.PNG
 
-#. Select the ``webgoat_irule``, move it to the **Enabled** assignment and
-      click **Finished**.
+#. Select the ``webgoat_irule``, move it to the **Enabled** assignment and click **Finished**.
 
 #. Run the cURL command several times: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login``
 
