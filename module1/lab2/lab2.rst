@@ -97,9 +97,10 @@ Apply Proactive Bot Defense Policy
 
 #. Click on the **Update** button to apply the policy.
 
-   |image49|
+   .. image:: image1_3_8.PNG
 
 Create Bot Defense Logging Profile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 #. Open a new tab for the Configuration Utility and navigate to:
@@ -118,9 +119,10 @@ Create Bot Defense Logging Profile
    .. NOTE:: You could have also modified the existing ``asm_allrequests``
       logging profile and added DoS logging definitions.
 
-   .. image:: images/|image50|
+   .. image:: image1_3_9.PNG
 
 Apply Bot Defense Logging Profile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 #. Under **Local Traffic > Virtual Servers**, click
@@ -144,14 +146,15 @@ Apply Bot Defense Logging Profile
       continues to receive the union of DoS, Bot Defense and ASM Security
       Policy events.
 
-   |image51|
+   .. image:: image1_3_10.PNG
 
 Test the Proactive Bot Defense Policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 #. From the command line execute the following command several times:
 
-   ``curl –k https://webgoat.f5demo.com/login``
+   ``curl –k https://webgoat.f5demo.com/WebGoat/login``
 
    .. NOTE:: This can take a few minutes and you may get several empty
       responses as shown.
@@ -163,6 +166,7 @@ Test the Proactive Bot Defense Policy
    |image52|
 
 Validate that the Proactive Bot Defense Policy is Working
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 #. Navigate to **Security > Event Logs > Bot Defense > Requests**.
@@ -179,6 +183,7 @@ Validate that the Proactive Bot Defense Policy is Working
 
 
 BOT Signatures
+~~~~~~~~~~~~~~
 
 
 #. Navigate to **Security > DoS Protection > DoS Profiles**
@@ -217,6 +222,7 @@ BOT Signatures
    interacting with your site.
 
 Selectively Blocking BOT Categories
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 #. Under your ``webgoat_DoS`` profile in **Application Security >> Bot
