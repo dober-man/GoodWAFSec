@@ -54,7 +54,7 @@ Configure Policy
    on the **Application Security** tab at the top of this menu to
    begin configuring the policy.
 
-   |image46|
+   .. image:: image1_3_4.PNG
 
 #. Under the **Application Security** tab >> General Settings
    click the **Edit** link on the right-hand side of General Settings
@@ -62,7 +62,7 @@ Configure Policy
    Security** to enable the DoS profile and allow additional settings
    to be configured.
 
-   |image47|
+   .. image:: image1_3_5.PNG
 
 #. Select **Proactive Bot Defense** under the list of **Application
    Security** options for this DoS profile.
@@ -71,7 +71,7 @@ Configure Policy
    Security >> Proactive Bot Defense** menu and select **Always**
    from the drop-down menu for **Operation Mode**.
 
-   |image48|
+   .. image:: image1_3_6.PNG
 
 #. Notice that for **Block requests from suspicious browsers** the
    **Block Suspicious Browsers** setting is enabled by default.
@@ -79,7 +79,10 @@ Configure Policy
 #. Click the **Update** button to complete the Proactive Bot
    Defense ``webgoat_DoS`` profile.
 
+   .. image:: image1_3_7.PNG
+
 Apply Proactive Bot Defense Policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 #. Under **Local Traffic > Virtual Servers**, click
