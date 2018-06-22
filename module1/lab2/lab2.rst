@@ -15,6 +15,7 @@ Objective
 -  Estimated time for completion: **20** **minutes**
 
 Create Policy
+~~~~~~~~~~~~~
 
 
 .. IMPORTANT:: To clearly demonstrate just the Bot Defense profile,
@@ -45,6 +46,7 @@ Create Policy
    .. image:: image1_3_3.PNG
 
 Configure Policy
+~~~~~~~~~~~~~~~~
 
 
 #. **Click** the newly created ``webgoat_DoS`` profile listed under the
@@ -163,7 +165,6 @@ Test the Proactive Bot Defense Policy
    Proactive BOT Defense is always on, this tool will always be
    blocked.
 
-   |image52|
 
 Validate that the Proactive Bot Defense Policy is Working
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -171,12 +172,11 @@ Validate that the Proactive Bot Defense Policy is Working
 
 #. Navigate to **Security > Event Logs > Bot Defense > Requests**.
 
-   |image53|
 
 #. Notice that the detected bot activity has been logged and is now
    being displayed for review.
 
-   |image54|
+    .. image:: image1_3_11.PNG
 
 #. Note the stated reason for the request being blocked. You may have to
    scroll to the right to see this reason. What was the stated reason?
@@ -188,12 +188,9 @@ BOT Signatures
 
 #. Navigate to **Security > DoS Protection > DoS Profiles**
 
-   |image55|
 
 #. **Click** on the ``webgoat_DoS`` profile and then the
    **Application Security** tab to configure the policy.
-
-   |image56|
 
 #. Select **Proactive Bot Defense** under the list of **Application
    Security** options.
@@ -205,9 +202,9 @@ BOT Signatures
 
    .. NOTE:: Ignore the DNS Resolver warning
 
-   |image57|
+   .. image:: image1_3_12.PNG
 
-#. Run cURL again: ``curl –k https://webgoat.f5demo.com/login``
+#. Run cURL again: ``curl –k https://webgoat.f5demo.com/WebGoat/login``
 
    **The site should respond normally now every time.**
 
@@ -229,17 +226,17 @@ Selectively Blocking BOT Categories
    Signatures** click on the **Edit** link for the **Bot Signature
    Categories** section.
 
-   |image58|
+   .. image:: image1_3_13.PNG
 
 #. Change the HTTP Library action from **None** to **Block** under
    the **Benign Categories** section and click **Update** to apply
    the policy changes.
 
-   |image59|
+   .. image:: image1_3_14.PNG
 
 #. Run cURL again: ``curl –k https://webgoat.f5demo.com``
 
-   |image60|
+   .. image:: image1_3_15.PNG
 
    Whammo!!!... as soon as the BOT is revealed... the connection is dropped.
    The TLS doesn’t get established.
@@ -250,29 +247,38 @@ Selectively Blocking BOT Categories
 
 **To Whitelist cURL:**
 
-#. Go to the **Bot Signatures** list and find **curl**. Move it
+#. Edit the **Bot Signatures** list and find **curl**. Move it
    to disabled signatures and click **Update**.
 
-   |image61|
+   .. image:: image1_3_16.PNG
 
 
-#. Run cURL again: ``curl –k https://webgoat.f5demo.com`` and you should
+#. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login`` and you should
    be back in business. By now you should know the expected output.
 
-#. Change HTTP Library to: **Report**
-   Remove CURL from the whitelist and set http libraries category to
-   just ``report``
+#. Change HTTP Library to: **Report** and remove **CURL** from the whitelist and set http libraries category to ``report``.
 
-   |image62|
+.. image:: image1_3_17.PNG
 
-#. Change Operation Mode to: ``Always``
+#. Modify the ``webgoat_DOS`` Dos Profile operation Operation Mode to: ``Always`` and click **Update**.
 
-   |image63|
+.. image:: image1_3_18.PNG
 
-   We are going to leverage the IPRep virtual server from the earlier lab
+
+
+
+   .. NOTE:: We are going to leverage the IPRep virtual server from the earlier lab
    to get some randomness.
 
-#. Run the cURL command several times: ``curl –k https://10.128.10.210``
+#. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
+      horizontal tab and click on **Manage** in the **iRules** section.
+
+  .. image:: image1_3_19.PNG
+
+#. Select the ``webgoat_irule``, move it to the **Enabled** assignment and
+      click **Finished**.
+
+#. Run the cURL command several times: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login``
 
    |image64|
 
