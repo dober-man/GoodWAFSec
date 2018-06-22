@@ -15,16 +15,16 @@ Task 1 - Exploring an attack
 
 2.  Click Create
 
-  - Profile Name: WebGoat
-  - Applicattion Security: Enabled
-  - Storage Destination:  Local Storage
-  - Request Type: All requests
+  - Profile Name: ``WebGoat``
+  - Applicattion Security: ``Enabled``
+  - Storage Destination:  ``Local Storage``
+  - Request Type: ``All requests``
 
-.. NOTE::  Do not use All requests unless for troubleshooting purposes.  Choose Illegal requests, and requests that include staged attack signatures
+.. WARNING::  Do not use All requests unless for troubleshooting purposes.  Choose Illegal requests, and requests that include staged attack signatures
 
 3.  Go to Local Traffic --> Virtual Servers --> Virtual Server List
 
-4.  Click on the webgoat.f5demo.com_https_vs
+4.  Click on the ``webgoat.f5demo.com_https_vs``
 
 .. image:: images/image15_3_2.png
 
@@ -32,13 +32,13 @@ Task 1 - Exploring an attack
 
 .. image:: images/image16_3_2.png
 
-6.  Click on Manage under the iRules section.  Select _sys_https_redirect from the list of available rules and move it to the Enabled column.  Click finished
+6.  Click on Manage under the iRules section.  Select ``_sys_https_redirect`` from the list of available rules and move it to the Enabled column.  Click finished
 
 .. image:: images/image17_3_2.png
 
 .. NOTE:: This step may not be necessary in a production environment.  This iRule redirects all port 80 traffic to the Virtual Server listening on port 443.
 
-7.  Next click on the webgoat.f5demo.com_https_vs
+7.  Next click on the ``webgoat.f5demo.com_https_vs``
 
 .. image:: images/image1_3_2.png
 
@@ -46,7 +46,7 @@ Task 1 - Exploring an attack
 
 .. image:: images/image2_3_2.png
 
-9.  Make sure to set Application Security Policy to enabled and choose the Blocking_Policy.  Then enabled Log Profile and select the WebGoat profile you created.  Move it to Selected.  Click Update.
+9.  Make sure to set Application Security Policy to enabled and choose the ``Blocking_Policy``.  Then enabled Log Profile and select the WebGoat profile you created.  Move it to Selected.  Click Update.
 
 .. image:: images/image3_3_2.png
 
@@ -117,7 +117,7 @@ Task 1 - Exploring an attack
 
 .. image:: images/image9_3_2.png
 
-29.  Click on the log entry for /webgoat/login and examine the request.
+29.  Click on the log entry for ``/webgoat/login`` and examine the request.
 
 30.  Change from Basic to All Details and will see more details regarding the request
 
