@@ -21,7 +21,7 @@ Create Policy
    please **disable** the Application Security Policy from the
    ``webgoat.f5demo.com_https_vs`` virtual server!
 
-#. Open the **Terminal** application.  
+#. Open the **Terminal** application.
 
 #. Run the following curl command to verify the site is loading without
    issue from this headless browser. If the curl command is not
@@ -30,7 +30,7 @@ Create Policy
 
    ``curl –k https://webgoat.f5demo.com/login | more``
 
-   .. image:: images1.PNG
+   .. image:: image1.PNG
 
 #. On the Main tab, click **Security > DoS Protection > DoS Profiles**.
    The DoS Profiles screen opens.
