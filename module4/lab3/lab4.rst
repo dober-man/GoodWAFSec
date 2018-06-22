@@ -18,7 +18,7 @@ Task 1 - Applying ASM Policy
 
 1. Apply ASM Policy to VS
 
-An HTTP PATCH to the ``/mgmt/tm/asm/policies/{{asm_policy_hash}}`` endpoint with a body containing the name of a virtual server(s), in this case ``"virtualServers":["/Common/hackazon_vs"]``, will apply the ASM policy.
+An HTTP PATCH to the ``/mgmt/tm/asm/policies/{{asm_policy_hash}}`` endpoint with a body containing the name of a virtual server(s), in this case ``"virtualServers":["/Common/automation_vs"]``, will apply the ASM policy.
 
 **Request**
 
