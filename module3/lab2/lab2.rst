@@ -90,6 +90,8 @@ Task 1 - Exploring an attack
 
 .. image:: images/image7_3_2.png
 
+.. NOTE::  Now you have enabled blocking for just the signatures.  Note that all other functions are still in only alarm and learn mode.  What attacks do you think will be blocked at this point?  
+
 21.  On the left menu of the BIG-IP right click on Security and select "Open Link in a new Tab"
 
 22.  Go to the new tab.  Select Security --> Event Logs --> Application --> Requests

@@ -52,11 +52,11 @@ Fill out the following -
 
 .. image:: images/image1_3_1.png
 
-11.  Click the Block Check box at the top of to select all then click it again to clear Block from all entries.  Then click Change
+11.  Click the **Block** Check box at the top of to select all then click it again to clear Block from all entries.  Then click Change
 
 .. image:: images/image2_3_1.png
 
-12.  Under Policy Building Settings click on the carrot next to Attack Signatures to expand the Attack Signatures options
+12.  Under Policy Building Settings  expand the Attack Signatures options
 
 .. image:: images/image3_3_1.png
 
@@ -71,7 +71,7 @@ Fill out the following -
 
 .. image:: images/images11_3_1.png
 
-.. NOTE:: You will see an that the policy will apply with errors.  This is because the Policy is set to blocking but we do not have any settings currently in blocking since we unchecked the blocking options.  We will add signatures in to blocking in a later task.
+.. NOTE:: You will see that the policy will apply with errors.  This is because the Policy is set to blocking but we do not have any settings currently in blocking since we unchecked the blocking options.  At this point you will think this is counter intuitive.  Why would you set a policy in blocking and then not block anything?  This is to illustrate that you can begin building your policy in blocking mode from the start.  The policy will operate as if it were in transparent mode.  When you are ready to begin blocking traffic check the block option for that function(s).  At this point we will test the blocking policy, which is in blocking mode, but no functions are currently in blocking.
 
 .. image:: images/image12_3_1.png
 
