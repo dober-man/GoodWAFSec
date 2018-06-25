@@ -5,9 +5,7 @@ Lab Topology & Tools
    Jumphost. No installation or interaction with your local system is
    required.
 
-All pre-built environments implement the Lab Topology shown below.  Please
-review the topology first, then find the section matching the lab environment
-you are using for connection instructions.
+All pre-built environments implement the Lab Topology shown below.  
 
 .. _lab-topology:
 
