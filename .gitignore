@@ -1,6 +1,6 @@
-.DS_Store#
 *.sublime-*
 pdf/*
 docs/.vscode/settings.json
 python*
 backup/*
+.DS_Store
