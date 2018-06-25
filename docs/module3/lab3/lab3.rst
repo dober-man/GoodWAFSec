@@ -46,7 +46,7 @@ You should have received a reponse page that you customized.  Make note of the S
 .. BONUS:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
 
 Task 3 - Event logs
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1.  On the BIG-IP return to the Security --> Event Log --> Application --> requests
 
