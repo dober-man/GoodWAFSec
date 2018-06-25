@@ -234,7 +234,7 @@ Selectively Blocking BOT Categories
 
    .. image:: image1_3_14.PNG
 
-#. Run cURL again: ``curl –k https://webgoat.f5demo.com``
+#. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login``
 
    .. image:: image1_3_15.PNG
 
@@ -277,28 +277,26 @@ cURL from Different Geolocations
 
 #. Run the cURL command several times: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login``
 
-   |image64|
 
 #. Review the event logs at **Event Logs >> Bot Defense** You will
    now see geo-data for the BOT connection attempts.
 
-   |image65|
+   .. image:: image1_3_20.PNG
 
 #. Navigate to **Security > Overview** and review the default
    report elements.
 
 #. Click **Overview > Application > Traffic**:
 
-   |image66|
+   .. image:: image1_3_21.PNG
 
 #. Take some time reviewing this screen and practice adding a new widget
    to see additional reporting elements:
 
-   |image67|
 
 #. Click the **DoS tab** at the top. The DOS Visibility Screen loads.
 
-   |image68|
+   .. image:: image1_3_22.PNG
 
    .. NOTE:: You may need to change your time in the Windows system tray for
       accurate results.
@@ -309,12 +307,12 @@ cURL from Different Geolocations
 #. Click the **Analysis** tab at the top and review the graphs
    available to you.
 
-   |image69|
+   .. image:: image1_3_23.PNG
 
 #. Click the **URL Latencies** tab at the top and review the graphs
    available to you.
 
-   |image70|
+   .. image:: image1_3_24.PNG
 
 #. Click the **Custom Page** tab at the top and review the graphs
    available to you.
