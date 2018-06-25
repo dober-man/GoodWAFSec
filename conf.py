@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# ASM 341 Docs documentation build configuration file, created by
+# ASM 141 Docs documentation build configuration file, created by
 # sphinx-quickstart on Fri Apr 20 16:29:14 2018.
 #
 # This file is execfile()d with the current directory set to its
@@ -46,9 +46,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'ASM 341 Docs'
-copyright = u'2018, Chad Fazio'
-author = u'Chad Fazio'
+project = u'ASM 141 Docs'
+copyright = u'2018, Brad Scherer'
+author = u'Brad Scherer'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -84,7 +84,7 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 #html_theme = 'alabaster'
-html_theme = "sphinx_rtd_theme"  
+html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -102,7 +102,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ASM341Docsdoc'
+htmlhelp_basename = 'ASM141Docsdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -129,8 +129,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'ASM341Docs.tex', u'ASM 341 Docs Documentation',
-     u'Chad Fazio', 'manual'),
+    (master_doc, 'ASM141Docs.tex', u'ASM 141 Docs Documentation',
+     u'Brad Scherer', 'manual'),
 ]
 
 
@@ -139,7 +139,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'asm341docs', u'ASM 341 Docs Documentation',
+    (master_doc, 'asm141docs', u'ASM 141 Docs Documentation',
      [author], 1)
 ]
 
@@ -150,8 +150,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'ASM341Docs', u'ASM 341 Docs Documentation',
-     author, 'ASM341Docs', 'One line description of project.',
+    (master_doc, 'ASM141Docs', u'ASM 141 Docs Documentation',
+     author, 'ASM141Docs', 'One line description of project.',
      'Miscellaneous'),
 ]
 
@@ -176,5 +176,3 @@ epub_copyright = copyright
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
-
-

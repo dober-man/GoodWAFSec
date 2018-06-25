@@ -1,8 +1,7 @@
-Module 1: Positive Security
+Module 1: Base Policy Creation
 ===================================================
-Expected time to complete: **1 hours**
+Estimated time for completion: **30 minutes.**
 
-This first module covers the following topics:
 
 .. toctree::
    :maxdepth: 1
@@ -10,4 +9,3 @@ This first module covers the following topics:
 
    lab*/lab*
    review
-
