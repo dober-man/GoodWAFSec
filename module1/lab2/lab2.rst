@@ -234,7 +234,7 @@ Selectively Blocking BOT Categories
 
    .. image:: image1_3_14.PNG
 
-#. Run cURL again: ``curl –k https://webgoat.f5demo.com``
+#. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login``
 
    .. image:: image1_3_15.PNG
 
@@ -277,12 +277,11 @@ cURL from Different Geolocations
 
 #. Run the cURL command several times: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login``
 
-   |image64|
 
 #. Review the event logs at **Event Logs >> Bot Defense** You will
    now see geo-data for the BOT connection attempts.
 
-   |image65|
+   .. image:: image1_3_20.PNG
 
 #. Navigate to **Security > Overview** and review the default
    report elements.

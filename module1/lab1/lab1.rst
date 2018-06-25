@@ -203,8 +203,6 @@ For all categories **select Alarm**. Click on **Save** and then on **Apply Polic
  #. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
       ``webgoat.f5demo.com_https_vs`` virtual server.
 
-       |image41|
-
  #. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
 
  #. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
