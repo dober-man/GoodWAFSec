@@ -67,7 +67,11 @@ Fill out the following -
 
 .. NOTE:: For this lab Signature Staging has been disbaled.  In a production environment you should consider using staging to allow yourself mitigation time before new signatures are implemented.
 
-14.  Ensure that the blocking checkbox has been unchecked for all signatures.  You will click Save and Apply Policy at this point.
+14.  Ensure that the blocking checkbox has been unchecked for all signatures.
+
+.. image:: images/image17_3_1.png 
+
+15.  You will click Save and Apply Policy at this point.
 
 .. image:: images/images11_3_1.png
 
