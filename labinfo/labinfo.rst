@@ -37,16 +37,14 @@ Linux server (server01):
 Lab Topology
 ------------
 
-The network topology implemented for this lab is very simple, since the
-focus of the lab is Control Plane programmability rather than Data Plane
-traffic flow we can keep the data plane fairly simple. The following
+The network topology implemented for this lab is very simple. The following
 components have been included in your lab environment:
 
--  1 x Ubuntu Linux 16.04 client - aptly named: client01
--  1 x F5 BIG-IP VE (v13.1.0.5) running ASM and LTM - aptly named: bigip01
--  1 x Ubuntu Linux 16.04 server - aptly named: server01
+-  1 x Ubuntu Linux 16.04 client - friendly name: client01
+-  1 x F5 BIG-IP VE (v13.1.0.5) running ASM and LTM - friendly name: bigip01
+-  1 x Ubuntu Linux 16.04 server - friendly name: server01
 
-.. nwdiag:: labtopology.diag
+.. nwdiag:: images/Agility2018LabDiagram.png
    :width: 800
    :caption: Lab Topology
    :name: lab-topology-diagram

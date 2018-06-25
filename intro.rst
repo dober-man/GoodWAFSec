@@ -12,7 +12,8 @@ This is the 1st class in a four part series based on:
 
 `Succeeding with Application Security <https://support.f5.com/csp/article/K07359270>`_
 
-Here is a complete listing of all ASM classes offered at this years Agility.
+Here is a complete listing of all ASM classes offered at this years Agility. Please visit clouddocs.f5.com to continue your education.
+
 
 ASM141 - Good WAF Security - Getting started with ASM
 
