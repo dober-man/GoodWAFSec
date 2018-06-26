@@ -17,8 +17,12 @@ Apply Security Policy
    please remove the previously created DoS profile and  **enable** the ``lab1_webgoat_waf`` Security Policy on the
    ``webgoat.f5demo.com_https_vs`` virtual server!
 
-#. Open a new private browsing window in Firefox and use the bookmark for **WebSwing** to browse open OWASP ZAP.
-  |image31|
+#. Browse to **Applications > Other > OWASP ZAP** from the Linux OS menu.
+
+#. Upon initialization, OWASP ZAP will ask if you would like to require session persistence. Select the ``No, I do not want to persist this session at this moment in time.`` option the click **Start**.
+
+.. image:: image2_1_1.PNG
+
 
 #. Open a new tab in the Firefox browser and use the bookmark **WebGoat** to browse to the Webgoat application.
 
