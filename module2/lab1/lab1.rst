@@ -45,7 +45,7 @@ Apply Security Policy
 
 #. Observe the server response using the **Response** tab of the **Manual Request Editor**.
 
-#. Browse to Security > Event Logs > Application > Requests on the BIG-IP GUI. Clear the **Illegal Request** option to view all request recieved by the security policy.
+#. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request recieved by the security policy.
 
   |image33|
 
