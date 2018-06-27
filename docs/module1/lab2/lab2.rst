@@ -31,19 +31,19 @@ Create Policy
 
    ``curl –k https://webgoat.f5demo.com/WebGoat/login | more``
 
-   .. image:: image1_3_1.PNG
+   .. image:: /images/image1_3_1.PNG
 
 #. On the Main tab, click **Security > DoS Protection > DoS Profiles**.
    The DoS Profiles screen opens.
 
-   .. image:: image1_3_2.PNG
+   .. image:: /images/image1_3_2.PNG
 
 #. Click on the **Create** button.
 
 #. Name the policy ``webgoat_DoS`` and click **Finished** to
    complete the creation of this DoS profile.
 
-   .. image:: image1_3_3.PNG
+   .. image:: /images/image1_3_3.PNG
 
 Configure Policy
 ~~~~~~~~~~~~~~~~
@@ -56,7 +56,7 @@ Configure Policy
    on the **Application Security** tab at the top of this menu to
    begin configuring the policy.
 
-   .. image:: image1_3_4.PNG
+   .. image:: /images/image1_3_4.PNG
 
 #. Under the **Application Security** tab >> General Settings
    click the **Edit** link on the right-hand side of General Settings
@@ -64,7 +64,7 @@ Configure Policy
    Security** to enable the DoS profile and allow additional settings
    to be configured.
 
-   .. image:: image1_3_5.PNG
+   .. image:: /images/image1_3_5.PNG
 
 #. Select **Proactive Bot Defense** under the list of **Application
    Security** options for this DoS profile.
@@ -73,7 +73,7 @@ Configure Policy
    Security >> Proactive Bot Defense** menu and select **Always**
    from the drop-down menu for **Operation Mode**.
 
-   .. image:: image1_3_6.PNG
+   .. image:: /images/image1_3_6.PNG
 
 #. Notice that for **Block requests from suspicious browsers** the
    **Block Suspicious Browsers** setting is enabled by default.
@@ -81,7 +81,7 @@ Configure Policy
 #. Click the **Update** button to complete the Proactive Bot
    Defense ``webgoat_DoS`` profile.
 
-   .. image:: image1_3_7.PNG
+   .. image:: /images/image1_3_7.PNG
 
 Apply Proactive Bot Defense Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,7 +99,7 @@ Apply Proactive Bot Defense Policy
 
 #. Click on the **Update** button to apply the policy.
 
-   .. image:: image1_3_8.PNG
+   .. image:: /images/image1_3_8.PNG
 
 Create Bot Defense Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -121,7 +121,7 @@ Create Bot Defense Logging Profile
    .. NOTE:: You could have also modified the existing ``asm_allrequests``
       logging profile and added DoS logging definitions.
 
-   .. image:: image1_3_9.PNG
+   .. image:: /images/image1_3_9.PNG
 
 Apply Bot Defense Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -148,7 +148,7 @@ Apply Bot Defense Logging Profile
       continues to receive the union of DoS, Bot Defense and ASM Security
       Policy events.
 
-   .. image:: image1_3_10.PNG
+   .. image:: /images/image1_3_10.PNG
 
 Test the Proactive Bot Defense Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -176,7 +176,7 @@ Validate that the Proactive Bot Defense Policy is Working
 #. Notice that the detected bot activity has been logged and is now
    being displayed for review.
 
-    .. image:: image1_3_11.PNG
+    .. image:: /images/image1_3_11.PNG
 
 #. Note the stated reason for the request being blocked. You may have to
    scroll to the right to see this reason. What was the stated reason?
@@ -202,7 +202,7 @@ BOT Signatures
 
    .. NOTE:: Ignore the DNS Resolver warning
 
-   .. image:: image1_3_12.PNG
+   .. image:: /images/image1_3_12.PNG
 
 #. Run cURL again: ``curl –k https://webgoat.f5demo.com/WebGoat/login``
 
@@ -226,17 +226,17 @@ Selectively Blocking BOT Categories
    Signatures** click on the **Edit** link for the **Bot Signature
    Categories** section.
 
-   .. image:: image1_3_13.PNG
+   .. image:: /images/image1_3_13.PNG
 
 #. Change the HTTP Library action from **None** to **Block** under
    the **Benign Categories** section and click **Update** to apply
    the policy changes.
 
-   .. image:: image1_3_14.PNG
+   .. image:: /images/image1_3_14.PNG
 
 #. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login``
 
-   .. image:: image1_3_15.PNG
+   .. image:: /images/image1_3_15.PNG
 
    Whammo!!!... as soon as the BOT is revealed... the connection is dropped.
    The TLS doesn’t get established.
@@ -250,7 +250,7 @@ Selectively Blocking BOT Categories
 #. Edit the **Bot Signatures** list and find **curl**. Move it
    to disabled signatures and click **Update**.
 
-   .. image:: image1_3_16.PNG
+   .. image:: /images/image1_3_16.PNG
 
 
 #. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login`` and you should
@@ -258,11 +258,11 @@ Selectively Blocking BOT Categories
 
 #. Change HTTP Library to: **Report** and remove **CURL** from the whitelist and set http libraries category to ``report``.
 
-.. image:: image1_3_17.PNG
+.. image:: /images/image1_3_17.PNG
 
 #. Modify the ``webgoat_DOS`` Dos Profile operation Operation Mode to: ``Always`` and click **Update**.
 
-.. image:: image1_3_18.PNG
+.. image:: /images/image1_3_18.PNG
 
 cURL from Different Geolocations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -271,7 +271,7 @@ cURL from Different Geolocations
 
 #. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources** horizontal tab and click on **Manage** in the **iRules** section.
 
-  .. image:: image1_3_19.PNG
+  .. image:: /images/image1_3_19.PNG
 
 #. Select the ``webgoat_irule``, move it to the **Enabled** assignment and click **Finished**.
 
@@ -281,14 +281,14 @@ cURL from Different Geolocations
 #. Review the event logs at **Event Logs >> Bot Defense** You will
    now see geo-data for the BOT connection attempts.
 
-   .. image:: image1_3_20.PNG
+   .. image:: /images/image1_3_20.PNG
 
 #. Navigate to **Security > Overview** and review the default
    report elements.
 
 #. Click **Overview > Application > Traffic**:
 
-   .. image:: image1_3_21.PNG
+   .. image:: /images/image1_3_21.PNG
 
 #. Take some time reviewing this screen and practice adding a new widget
    to see additional reporting elements:
@@ -296,7 +296,7 @@ cURL from Different Geolocations
 
 #. Click the **DoS tab** at the top. The DOS Visibility Screen loads.
 
-   .. image:: image1_3_22.PNG
+   .. image:: /images/image1_3_22.PNG
 
    .. NOTE:: You may need to change your time in the Windows system tray for
       accurate results.
@@ -307,12 +307,12 @@ cURL from Different Geolocations
 #. Click the **Analysis** tab at the top and review the graphs
    available to you.
 
-   .. image:: image1_3_23.PNG
+   .. image:: /images/image1_3_23.PNG
 
 #. Click the **URL Latencies** tab at the top and review the graphs
    available to you.
 
-   .. image:: image1_3_24.PNG
+   .. image:: /images/image1_3_24.PNG
 
 #. Click the **Custom Page** tab at the top and review the graphs
    available to you.
