@@ -47,8 +47,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ASM 141 Docs'
-copyright = u'2018, Brad Scherer'
-author = u'Brad Scherer'
+copyright = u'2018, Brad Scherer, Phil Scott & Shannon Wilson'
+author = u'Brad Scherer, Phil Scott & Shannon Wilson'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -130,7 +130,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'ASM141Docs.tex', u'ASM 141 Docs Documentation',
-     u'Brad Scherer', 'manual'),
+     u'Brad Scherer, Phil Scott & Shannon Wilson', 'manual'),
 ]
 
 
