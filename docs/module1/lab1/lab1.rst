@@ -199,9 +199,9 @@ For all categories **select Alarm**. Click on **Save** and then on **Apply Polic
 
 .. NOTE:: In order to create traffic with malicious sources for the purposes of this lab we have created added additional configuration items for you.
 
-      There is an iRule that you will apply to the ``webgoat.f5demo.com_https_vs`` virtual server.
-      This iRule will insert an X-Forward-For header with value of a malicious source IP address. This configuration
-      will cause ASM to see the inbound traffic as having the malicious sources.
+There is an iRule that you will apply to the ``webgoat.f5demo.com_https_vs`` virtual server.
+This iRule will insert an X-Forward-For header with value of a malicious source IP address.
+This configuration will cause ASM to see the inbound traffic as having the malicious sources.
 
  #. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
       ``webgoat.f5demo.com_https_vs`` virtual server.
