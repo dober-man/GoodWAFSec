@@ -1,7 +1,7 @@
 Lab Environment & Topology
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. WARNING:: All work is done from the Linux client/jumphost (client01), which can be access via RDP (Windows Remote Desktop) or ssh. No installation or interaction with your local system is required.
+.. WARNING:: All work is done from the Linux client/jumphost (client01), which can be accessed via RDP (Windows Remote Desktop) or ssh. No installation or interaction with your local system is required.
 
 Environment
 -----------
@@ -36,9 +36,9 @@ Lab Topology
 The network topology implemented for this lab is very simple. The following
 components have been included in your lab environment:
 
--  1 x Ubuntu Linux 16.04 client - friendly name: client01
--  1 x F5 BIG-IP VE (v13.1.0.5) running ASM and LTM - friendly name: bigip01
--  1 x Ubuntu Linux 16.04 server - friendly name: server01
+-  1 x Ubuntu Linux 16.04 client
+-  1 x F5 BIG-IP VE (v13.1.0.5) running ASM and LTM
+-  1 x Ubuntu Linux 16.04 server
 
 The following table lists VLANS, IP Addresses and Credentials for all
 components:
@@ -71,9 +71,6 @@ components:
      - ssh - ``f5student:f5DEMOs4u!``
 
 A graphical representation of the lab:
-
-
 |labDiagram|
 
 .. |labDiagram| image:: images/Agility2018LabDiagram.png
-Next
