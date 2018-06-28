@@ -3,10 +3,6 @@ Lab Environment & Topology
 
 .. WARNING:: All work is done from the Linux client/jumphost (client01), which can be access via RDP (Windows Remote Desktop) or ssh. No installation or interaction with your local system is required.
 
-All pre-built environments implement the Lab Topology shown below.  Please
-review the topology first, then find the section matching the lab environment
-you are using for connection instructions.
-
 Environment
 -----------
 
@@ -44,12 +40,6 @@ components have been included in your lab environment:
 -  1 x F5 BIG-IP VE (v13.1.0.5) running ASM and LTM - friendly name: bigip01
 -  1 x Ubuntu Linux 16.04 server - friendly name: server01
 
-.. nwdiag:: images/Agility2018LabDiagram.png
-   :width: 800
-   :caption: Lab Topology
-   :name: lab-topology-diagram
-   :scale: 110%
-
 The following table lists VLANS, IP Addresses and Credentials for all
 components:
 
@@ -86,4 +76,4 @@ A graphical representation of the lab:
 |labDiagram|
 
 .. |labDiagram| image:: images/Agility2018LabDiagram.png
-
+Next

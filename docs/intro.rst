@@ -2,7 +2,7 @@
 F5 Agility Labs 2018
 ==============================
 
-ASM141 Good WAF Security - Getting started with ASM
+Good WAF Security - Getting started with ASM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Welcome to F5's Agility Labs, 2018 edition!
