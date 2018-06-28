@@ -90,6 +90,9 @@ Create Application Security Logging Profile
 
 **Question:** Would logging all requests and responses in a production environment be a best practice?
 
+**Answer:** Not typically. This adds 50% or more to the overhead on the log engine and would not typically be used outside of troubleshooting and high security environemnts that are appropriately sized.
+
+
 Apply WAF Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. Under **Local Traffic > Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
