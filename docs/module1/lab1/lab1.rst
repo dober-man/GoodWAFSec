@@ -34,7 +34,7 @@ Create Policy
 
 #. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
 
-#. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``.
+#. Name the security policy ``lab1_webgoat_waf`` and notice that the **Policy Type** is security.
 
 #. Verify the **Policy Template** is set to ``Rapid Deployment Policy``. and notice it is a transparent security policy by default
 
@@ -42,11 +42,9 @@ Create Policy
 
 #. Set the Application Language to **UTF-8**.
 
-#. Accept the remaining default policy settings.
+#. Accept the remaining default policy settings and click **Create Policy** to complete the policy creation process.
 
-#. Click **Create Policy** to complete the policy creation process.
-
-#. After policy creation is complete, the properties will be displayed for review within the Policies List menu.
+.. Note:: After policy creation is complete, the properties will be displayed for review within the Policies List menu.
 
 **Your settings should reflect the figures below:**
 
