@@ -13,8 +13,6 @@ Objective
 
 - Estimated time for completion: **30** **minutes**.
 
-This lab will demonstrate how to create and build a transparent security policy.
-
 #. From the jumpbox, launch Chrome, click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
 
 Please ensure that two virtual servers are configured before you begin:
@@ -33,7 +31,7 @@ Create Policy
 
 #. Click on the **Create New Policy** button. The policy creation wizard opens.
 
-.. image:: /images/image2.PNG
+.. image:: images/image2.PNG
 
 #. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
 
@@ -57,7 +55,7 @@ Create Policy
 
 **Your settings should reflect the figure below:**
 
-.. image:: /images/imagefix.PNG
+.. image:: images/imagefix.PNG
 
 
 Verify WAF Profile is Applied to Virtual Server
@@ -70,7 +68,7 @@ Verify WAF Profile is Applied to Virtual Server
 
 #. Notice Log Profile is set to ``Disabled``.
 
-.. image:: /images/image4.PNG
+.. image:: images/image4.PNG
 
 Create Application Security Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -88,7 +86,7 @@ Create Application Security Logging Profile
 
 #. Click **Finished.**
 
-  .. image:: /images/image5.PNG
+  .. image:: images/image5.PNG
 
 **Question:** Would logging all requests and responses in a production environment be a best practice?
 
@@ -100,23 +98,23 @@ Apply WAF Logging Profile
 #. Within the **Available** logging profiles menu, select ``waf_allrequests`` and then click the **<<** arrows to move the logging policy to the **Selected** profile.
 #. Click on the Update button to apply the policy.
 
-.. image:: /images/image6.PNG
+.. image:: images/image6.PNG
 
 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
 #. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/WebGoat/login`` You'll find a toolbar shortcust for the webgoat link.
 
-.. image:: /images/image7.PNG
+.. image:: images/image7.PNG
 
 2. Login using your student credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
 #. On the BIG-IP, navigate to **Security > Event Logs > Applications > Requests**.
 
 #. Clear the **"Illegal Requests"** filter.
-  .. image:: /images/image8.PNG
+  .. image:: images/image8.PNG
 
 #. Verify that requests are being logged by the WAF. You should be able to see both the raw client and server responses.
-  .. image:: /images/image9.PNG
+  .. image:: images/image9.PNG
 
 Exercise: 1.2 Geolocation and IP Intelligence
 ----------------------------------------
@@ -132,7 +130,7 @@ Geolocation
       at your border router (layer 3), you may decide to geo-enforce at
       ASM (Layer 7) if no private IP’s will be accessing the site.
 
-   .. image:: /images/image10.PNG
+   .. image:: images/image10.PNG
 
    .. IMPORTANT:: Remember to click on the **Apply Policy** button committ security policy changes.
 
@@ -157,12 +155,12 @@ Geolocation
 #. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
    horizontal tab and click on **Manage** in the **iRules** section.
 
-   .. image:: /images/image11.PNG
+   .. image:: images/image11.PNG
 
 #. Select the ``webgoat_irule``, move it to the **Enabled** assignment and
    click **Finished**.
 
-   .. image:: /images/image12.PNG
+   .. image:: images/image12.PNG
 
 #. Open a new **Google Chrome Private Browsing** window and connect to
    ``https://webgoat.f5demo.com/WebGoat/login``. Login and select a few links on the WebGoat page.
@@ -170,7 +168,7 @@ Geolocation
 #. In the BIG-IP Administrative Interface go to **Security > Event Logs
    > Application > Requests**.
 
-   .. image:: /images/image13.PNG
+   .. image:: images/image13.PNG
 
    Notice the geolocation detected and the presence of the X-Forwarded-For
    (XFF) in the Request details. Your actual client IP is still
@@ -194,7 +192,7 @@ For all categories **select Alarm**. Click on **Save** and then on **Apply Polic
       .. NOTE:: On the top right you should see that your IP Intelligence
          database has been updated at some point.
 
-.. image:: /images/image14.PNG
+.. image:: images/image14.PNG
 
       .. NOTE:: In order to create traffic with malicious sources for the purposes of
          this lab we have created added additional configuration items for you.
