@@ -15,10 +15,11 @@ Objective
 
 #. From the jumpbox, launch Chrome, click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
 
-Please ensure that two virtual servers are configured before you begin:
+Please ensure that three virtual servers are configured before you begin:
 
 - ``webgoat.f5demo.com_https_vs``
 - ``webgoat.f5demo.com_http_vs``
+- ``automation_vs``
 
 Create Policy
 ~~~~~~~~~~~~~
@@ -37,15 +38,11 @@ Create Policy
 
 #. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``.
 
-#. Verify the **Policy Template** is set to ``Rapid Deployment Policy``.
+#. Verify the **Policy Template** is set to ``Rapid Deployment Policy``. and notice it is a transparent security policy by default
 
 #. Assign this policy to the ``webgoat.f5demo.com_https_vs`` from the Virtual Server drop down.
 
 #. Set the Application Language to **UTF-8**.
-
-#. Go back two settings
-
-#. Set the **Enforcement Mode** to ``Transparent``.
 
 #. Accept the remaining default policy settings.
 
