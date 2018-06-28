@@ -73,5 +73,6 @@ components:
      - ssh - ``f5student:f5DEMOs4u!``
 
 A graphical representation of the lab:
+
 |labDiagram|
 .. |labDiagram| image:: images/Agility2018LabDiagram.png
