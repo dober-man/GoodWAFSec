@@ -211,18 +211,18 @@ This configuration will cause ASM to see the inbound traffic as having the malic
  #. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
  Click **Finished**.
 
-       |image42|
+ .. image:: images/image15.PNG
 
  #. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
  Login and Click on one or two items.
 
-      |image41|
+ .. image:: images/image16.PNG
 
  #. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
  Since you configured IP Intelligence violations to alarm you will not need change the filter.
  Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
-      |image42|
+ .. image:: images/image17.PNG
 
       **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
       and look up the IP address in question for further information. There is also
