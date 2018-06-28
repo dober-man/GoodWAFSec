@@ -32,8 +32,6 @@ Create Policy
 
 #. Click on the **Create New Policy** button. The policy creation wizard opens.
 
-.. image:: images/image2.PNG
-
 #. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
 
 #. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``.
@@ -50,7 +48,9 @@ Create Policy
 
 #. After policy creation is complete, the properties will be displayed for review within the Policies List menu.
 
-**Your settings should reflect the figure below:**
+**Your settings should reflect the figures below:**
+
+.. image:: images/image2.PNG
 
 .. image:: images/imagefix.PNG
 
