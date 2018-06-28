@@ -189,6 +189,7 @@ Geolocation
 
 IP Reputation
 ~~~~~~~~~~~~~
+
 #. Navigate to **Security > Application Security > IP Addresses > IP Address Intelligence** and click **Enabled**.
 For all categories **select Alarm**. Click on **Save** and then on **Apply Policy**.
 
