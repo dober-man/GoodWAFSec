@@ -119,7 +119,7 @@ Test WAF Policy
 #. Verify that requests are being logged by the WAF. You should be able to see both the raw client and server responses.
   .. image:: images/image9.PNG
 
-Exercise: 1.2 Geolocation and IP Intelligence
+Exercise 1.2: Geolocation and IP Intelligence
 ----------------------------------------
 Geolocation
 ~~~~~~~~~~~
