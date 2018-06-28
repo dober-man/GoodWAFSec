@@ -50,5 +50,3 @@ Apply Security Policy
   |image33|
 
 #. Observe the Illegal requests observed by the security policy. What protocol compliance violations were observed by the security policy?
-
-#.
