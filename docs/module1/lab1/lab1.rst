@@ -5,15 +5,18 @@ Objective
 
 - Create a transparent rapid deployment policy.
 
-- Enable applicaiton security logging profile.
+- Enable application security logging profile.
 
 - Validate that both the policy and logging profile are working.
 
-- Review the auto-detection of the web server capabilities (i.e. Apache, jQuery).
+- Review the auto-detection of the web server capabilities (i.e. Apache, IIS, MySQL etc).
 
 - Estimated time for completion: **30** **minutes**.
 
 This lab will demonstrate how to create and build a transparent security policy.
+
+#. From the jumpbox, launch Chrome, click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
+
 Please ensure that two virtual servers are configured before you begin:
 
 - ``webgoat.f5demo.com_https_vs``
@@ -28,11 +31,11 @@ Create Policy
 .. image:: images/image1.PNG
 
 
-3. Click on the **Create New Policy** button. The policy creation wizard opens.
+#. Click on the **Create New Policy** button. The policy creation wizard opens.
 
 .. image:: /images/image2.PNG
 
-4. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
+#. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
 
 #. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``.
 
