@@ -193,8 +193,7 @@ IP Reputation
 #. Navigate to **Security > Application Security > IP Addresses > IP Address Intelligence** and click **Enabled**.
 For all categories **select Alarm**. Click on **Save** and then on **Apply Policy**.
 
-      .. NOTE:: On the top right you should see that your IP Intelligence
-         database has been updated at some point.
+.. NOTE:: On the top right you should see that your IP Intelligence database has been updated at some point.
 
 .. image:: images/image14.PNG
 
