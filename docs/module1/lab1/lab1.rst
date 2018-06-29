@@ -234,9 +234,10 @@ Further, you can use Putty on the Win7 box to access the BIG-IP via SSH
 the ``iprep_lookup`` command, similar to:
 
 .. code-block::
-.[root@bigip1:Active:Standalone] config #iprep_lookup 77.222.40.121
+@a.[root@bigip1:Active:Standalone] config #iprep_lookup 77.222.40.121
 opening database in /var/IpRep/F5IpRep.dat
 size of IP reputation database = 39492859
 iprep threats list for ip = 77.222.40.121 is:
 bit 7 - Phishing
 bit 8 - Proxy'
+@a
