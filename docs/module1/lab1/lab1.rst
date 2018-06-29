@@ -223,7 +223,7 @@ This configuration will cause ASM to see the inbound traffic as having the malic
  Since you configured IP Intelligence violations to alarm you will not need change the filter.
  Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
- .. image:: images/image17.PNG
+ .. image:: images/image18.PNG
 
 **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
 and look up the IP address in question for further information. There is also
@@ -232,8 +232,6 @@ a tool to report IP addresses that have been incorrectly flagged.
 Further, you can use Putty on the Win7 box to access the BIG-IP via SSH
 (bookmarked as F5-WAF) and login with ``root`` / ``f5DEMOs4u!`` to run
 the ``iprep_lookup`` command, similar to:
-
-.. code-block:: console
 
 [root@bigip1:Active:Standalone] config # iprep_lookup 77.222.40.121
 opening database in /var/IpRep/F5IpRep.dat
