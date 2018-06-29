@@ -160,7 +160,7 @@ Geolocation
 
    .. image:: images/image12.PNG
 
-#. We now need to turn on the **Trust XFF Header** feature in the policy.
+6. We now need to turn on the **Trust XFF Header** feature in the policy.
 Navigate to **Application Security > Policy > Policy Properties** and hit the dropdown for **Advanced View**.
 You can now check the box to **Trust XFF Header** and click **Save** then **Apply Policy**
 
@@ -212,12 +212,12 @@ This configuration will cause ASM to see the inbound traffic as having the malic
  #. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
  Click **Finished**.
 
- .. image:: images/image15.PNG
+ .. image:: images/image16.PNG
 
  #. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
  Login and Click on one or two items.
 
- .. image:: images/image16.PNG
+ .. image:: images/image17.PNG
 
  #. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
  Since you configured IP Intelligence violations to alarm you will not need change the filter.
@@ -225,19 +225,19 @@ This configuration will cause ASM to see the inbound traffic as having the malic
 
  .. image:: images/image17.PNG
 
-      **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
-      and look up the IP address in question for further information. There is also
-      a tool to report IP addresses that have been incorrectly flagged.
+**Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
+and look up the IP address in question for further information. There is also
+a tool to report IP addresses that have been incorrectly flagged.
 
-      Further, you can use Putty on the Win7 box to access the BIG-IP via SSH
-      (bookmarked as F5-WAF) and login with ``root`` / ``f5DEMOs4u!`` to run
-      the ``iprep_lookup`` command, similar to:
+Further, you can use Putty on the Win7 box to access the BIG-IP via SSH
+(bookmarked as F5-WAF) and login with ``root`` / ``f5DEMOs4u!`` to run
+the ``iprep_lookup`` command, similar to:
 
-      .. code-block:: console
+.. code-block:: console
 
-         [root@bigip1:Active:Standalone] config # iprep_lookup 77.222.40.121
-         opening database in /var/IpRep/F5IpRep.dat
-         size of IP reputation database = 39492859
-         iprep threats list for ip = 77.222.40.121 is:
-         bit 7 - Phishing
-         bit 8 - Proxy
+[root@bigip1:Active:Standalone] config # iprep_lookup 77.222.40.121
+opening database in /var/IpRep/F5IpRep.dat
+size of IP reputation database = 39492859
+iprep threats list for ip = 77.222.40.121 is:
+bit 7 - Phishing
+bit 8 - Proxy
