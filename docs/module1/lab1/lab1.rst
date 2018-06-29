@@ -100,11 +100,11 @@ Apply WAF Logging Profile
 
 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
-#. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/WebGoat/login`` You'll find a toolbar shortcust for the webgoat link.
+#. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/WebGoat/login`` You'll find a toolbar shortcut for the webgoat link.
 
 .. image:: images/image7.PNG
 
-2. Login using your student credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
+2. Login using **webgoat/F5DEMOs4u!** credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
 #. On the BIG-IP, navigate to **Security > Event Logs > Applications > Requests**.
 
@@ -160,10 +160,18 @@ Geolocation
 
    .. image:: images/image12.PNG
 
+#. We now need to turn on the **Trust XFF Header** feature in the policy.
+
+#. Navigate to **Application Security > Policy > Policy Properties** and hit the dropdown for **Advanced View**.
+You can now check the box to **Trust XFF Header** and click **Save** then **Apply Policy**
+
+   .. image:: images/image15.PNG
+
+
 #. Open a new **Google Chrome Private Browsing** window and connect to
    ``https://webgoat.f5demo.com/WebGoat/login``. Login and select a few links on the WebGoat page.
 
-#. In the BIG-IP Administrative Interface go to **Security > Event Logs
+#. Navigate to **Security > Event Logs
    > Application > Requests**.
 
    .. image:: images/image13.PNG
@@ -185,7 +193,7 @@ Geolocation
 IP Reputation
 ~~~~~~~~~~~~~
 
-#. Navigate to **Security > Application Security > IP Addresses > IP Address Intelligence** and click **Enabled**.
+Navigate to **Security > Application Security > IP Addresses > IP Address Intelligence** and click **Enabled**.
 For all categories **select Alarm**. Click on **Save** and then on **Apply Policy**.
 
 .. NOTE:: On the top right you should see that your IP Intelligence database has been updated at some point.
