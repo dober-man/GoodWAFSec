@@ -161,20 +161,18 @@ Geolocation
    .. image:: images/image12.PNG
 
 #. We now need to turn on the **Trust XFF Header** feature in the policy.
-
-#. Navigate to **Application Security > Policy > Policy Properties** and hit the dropdown for **Advanced View**.
+Navigate to **Application Security > Policy > Policy Properties** and hit the dropdown for **Advanced View**.
 You can now check the box to **Trust XFF Header** and click **Save** then **Apply Policy**
 
-   .. image:: images/image15.PNG
+.. image:: images/image15.PNG
 
 
 #. Open a new **Google Chrome Private Browsing** window and connect to
    ``https://webgoat.f5demo.com/WebGoat/login``. Login and select a few links on the WebGoat page.
 
-#. Navigate to **Security > Event Logs
-   > Application > Requests**.
+#. Navigate to **Security > Event Logs > Application > Requests**.
 
-   .. image:: images/image13.PNG
+.. image:: images/image13.PNG
 
    Notice the geolocation detected and the presence of the X-Forwarded-For
    (XFF) in the Request details. Your actual client IP is still
