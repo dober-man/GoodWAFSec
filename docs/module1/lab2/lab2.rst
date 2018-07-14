@@ -279,7 +279,7 @@ cURL from Different Geolocations
 #. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_overlay_vs``.
 Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overlay** is applied. Freel free to check out the code in the iRule. This code and BIG-IP flxibility makes lab testing and simulations a breeze.
 
-  .. image:: images/image1_3_19.PNG
+.. image:: images/image1_3_19.PNG
 
 #. Modify the cURL command to point at the overlay virtual server and run several times: ``curl --insecure https://101.10.146/WebGoat/login``
 
@@ -287,14 +287,14 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 #. Review the event logs at **Event Logs >> Bot Defense** You will
    now see geo-data for the BOT connection attempts.
 
-   .. image:: images/image1_3_20.PNG
+.. image:: images/image1_3_20.PNG
 
 #. Navigate to **Security > Overview > Application > Traffic** and review the default
    report elements. You can change the widget time frames to see more historical data.
 
 #. Click **Overview > Application > Traffic**:
 
-   .. image:: images/image1_3_21.PNG
+.. image:: images/image1_3_21.PNG
 
 #. Take some time reviewing this screen and practice adding a new widget
    to see additional reporting elements:
@@ -302,25 +302,24 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 
 #. Click the **DoS tab** at the top. In some time...The DOS Visibility Screen loads.
 
-   .. image:: images/image1_3_22.PNG
+.. image:: images/image1_3_22.PNG
 
-   .. NOTE:: You may need to change your time in the Windows system tray for
-      accurate results.
+.. NOTE:: You may need to change your time in the Windows system tray for
+          accurate results.
 
-   Although there have not been any L7 DoS attacks some of the widgets
-   along the right contain statistics from the BOT mitigations.
+Although there have not been any L7 DoS attacks some of the widgets along the right contain statistics from the BOT mitigations.
 
-   .. image:: images/image4.PNG
+.. image:: images/image4.PNG
 
 #. Click the **Analysis** tab at the top and review the graphs
    available to you.
 
-   .. image:: images/image1_3_23.PNG
+.. image:: images/image1_3_23.PNG
 
 #. Click the **URL Latencies** tab at the top and review the graphs
    available to you.
 
-   .. image:: images/image1_3_24.PNG
+.. image:: images/image1_3_24.PNG
 
 #. Click the **Custom Page** tab at the top and review the graphs
    available to you.
