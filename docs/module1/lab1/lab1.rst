@@ -204,21 +204,21 @@ There is an iRule that you will apply to the ``webgoat.f5demo.com_https_vs`` vir
 This iRule will insert an X-Forward-For header with value of a malicious source IP address.
 This configuration will cause ASM to see the inbound traffic as having the malicious sources.
 
-#. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
+1. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
       ``webgoat.f5demo.com_https_vs`` virtual server.
 
-#. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
-#. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
+2. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
+3. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
 Click **Finished**.
 
 .. image:: images/image16.PNG
 
-#. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
+4. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
  Login and Click on one or two items.
 
 .. image:: images/image17.PNG
 
-#. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
+5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
  Since you configured IP Intelligence violations to alarm you will not need change the filter.
  Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
