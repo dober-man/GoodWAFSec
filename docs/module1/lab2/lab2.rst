@@ -257,7 +257,7 @@ Selectively Blocking BOT Categories
 #. Edit the **Bot Signatures** list and find **curl**. Move it
    to disabled signatures and click **Update**.
 
-   .. image:: images/image1_3_16.PNG
+.. image:: images/image1_3_16.PNG
 
 
 #. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login`` and you should
@@ -274,7 +274,7 @@ Selectively Blocking BOT Categories
 cURL from Different Geolocations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  .. NOTE:: We are going to leverage an overlay virtual server to randomize source IP addresses similar to the earlier lab concept of randomizing XFF.
+.. NOTE:: We are going to leverage an overlay virtual server to randomize source IP addresses similar to the earlier lab concept of randomizing XFF.
 
 #. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_overlay_vs``.
 Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overlay** is applied. Freel free to check out the code in the iRule. This code and BIG-IP flxibility makes lab testing and simulations a breeze.
