@@ -166,7 +166,7 @@ You can now check the box to **Trust XFF Header** and click **Save** then **Appl
 
 .. image:: images/image15.PNG
 
-.. NOTE:: Reggarding Trust XFF - you would do this if ASM is deployed behind an internal or other trusted proxy. Then, the system uses the IP address that initiated the connection to the proxy instead of the internal proxy’s IP address. This option is useful for logging, web scraping, anomaly detection, and the geolocation feature.
+.. NOTE:: Regarding Trust XFF - you would do this if ASM is deployed behind an internal or other trusted proxy. Then, the system uses the IP address that initiated the connection to the proxy instead of the internal proxy’s IP address. This option is useful for logging, web scraping, anomaly detection, and the geolocation feature.
 You should not configure trusted XFF headers if you think the HTTP header may be spoofed, or crafted, by a malicious client.
 
 
@@ -177,16 +177,11 @@ You should not configure trusted XFF headers if you think the HTTP header may be
 
 .. image:: images/image13.PNG
 
-   Notice the geolocation detected and the presence of the X-Forwarded-For
-   (XFF) in the Request details. Your actual client IP is still
-   10.1.10.28 however, because we trusted the XFF header and the iRule
-   is randomizing the IP address placed in that header.
+Notice the geolocation detected and the presence of the X-Forwarded-For (XFF) in the Request details. Your actual client IP is still 10.1.10.28 however, because we trusted the XFF header and the iRule
+is randomizing the IP address placed in that header.
 
-   ASM believes the request is from an external location to provide a more
-   realistic example. Depending on your network you may be leveraging a
-   technology that creates a source NAT ahead of ASM so by leveraging the
-   XFF you can work around this and get contextual information about the
-   client.
+ASM believes the request is from an external location to provide a more realistic example. Depending on your network you may be leveraging a technology that creates a source NAT ahead of ASM so by leveraging the
+XFF you can work around this and get contextual information about the client.
 
 .. IMPORTANT:: Please remove the iRule ``webgoat_irule`` from the
    Virtual Server before proceeding to the next step.
