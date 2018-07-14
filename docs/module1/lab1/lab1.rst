@@ -150,7 +150,7 @@ Geolocation
       this "trick" to work to demonstrate a global range of source IP
       addresses.
 
-1. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
+#. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
    horizontal tab and click on **Manage** in the **iRules** section.
 
    .. image:: images/image11.PNG
@@ -204,26 +204,25 @@ There is an iRule that you will apply to the ``webgoat.f5demo.com_https_vs`` vir
 This iRule will insert an X-Forward-For header with value of a malicious source IP address.
 This configuration will cause ASM to see the inbound traffic as having the malicious sources.
 
- #. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
+#. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
       ``webgoat.f5demo.com_https_vs`` virtual server.
 
- #. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
+#. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
+#. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
+Click **Finished**.
 
- #. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
- Click **Finished**.
+.. image:: images/image16.PNG
 
- .. image:: images/image16.PNG
-
- #. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
+#. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
  Login and Click on one or two items.
 
- .. image:: images/image17.PNG
+.. image:: images/image17.PNG
 
- #. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
+#. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
  Since you configured IP Intelligence violations to alarm you will not need change the filter.
  Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
- .. image:: images/image18.PNG
+.. image:: images/image18.PNG
 
 **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
 and look up the IP address in question for further information. There is also
