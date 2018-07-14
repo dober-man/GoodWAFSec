@@ -66,7 +66,7 @@ components:
      - 10.1.10.245
      - 10.1.20.245
      - https - ``admin:f5DEMOs4u!`` ssh - ``f5student:f5DEMOs4u!``
-   * - Linux Server (server01)
+   * - Linux Server & WebGOAT app(server01)
      - 10.1.1.252
      - N/A
      - 10.1.20.252
