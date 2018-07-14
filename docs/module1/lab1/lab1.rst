@@ -214,8 +214,6 @@ Click **Finished**.
 4. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
  Login and Click on one or two items.
 
-.. image:: images/image17.PNG
-
 5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
  Since you configured IP Intelligence violations to alarm you will not need change the filter.
  Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
