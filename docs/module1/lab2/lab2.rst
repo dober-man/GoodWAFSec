@@ -279,25 +279,25 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 
 .. image:: images/image1_3_19.PNG
 
-#. Modify the cURL command to point at the overlay virtual server and run several times: ``curl --insecure https://101.10.146/WebGoat/login``
+2. Modify the cURL command to point at the overlay virtual server and run several times: ``curl --insecure https://101.10.146/WebGoat/login``
 
-#. Review the event logs at **Event Logs >> Bot Defense** You will
+3. Review the event logs at **Event Logs >> Bot Defense** You will
    now see geo-data for the BOT connection attempts.
 
 .. image:: images/image1_3_20.PNG
 
-#. Navigate to **Security > Overview > Application > Traffic** and review the default
+4. Navigate to **Security > Overview > Application > Traffic** and review the default
    report elements. You can change the widget time frames to see more historical data.
 
-#. Click **Overview > Application > Traffic**:
+5. Click **Overview > Application > Traffic**:
 
 .. image:: images/image1_3_21.PNG
 
-#. Take some time reviewing this screen and practice adding a new widget
+6. Take some time reviewing this screen and practice adding a new widget
    to see additional reporting elements:
 
 
-#. Click the **DoS tab** at the top. In some time...The DOS Visibility Screen loads.
+7. Click the **DoS tab** at the top. In some time...The DOS Visibility Screen loads.
 
 .. image:: images/image1_3_22.PNG
 
@@ -307,15 +307,15 @@ Although there have not been any L7 DoS attacks some of the widgets along the ri
 
 .. image:: images/image4.PNG
 
-#. Click the **Analysis** tab at the top and review the graphs available to you.
+8. Click the **Analysis** tab at the top and review the graphs available to you.
 
 .. image:: images/image1_3_23.PNG
 
-#. Click the **URL Latencies** tab at the top and review the graphs available to you.
+9. Click the **URL Latencies** tab at the top and review the graphs available to you.
 
 .. image:: images/image1_3_24.PNG
 
-#. Click the **Custom Page** tab at the top and review the graphs available to you.
+10. Click the **Custom Page** tab at the top and review the graphs available to you.
 
 Please feel free to add widgets and/or explore the ASM interface further.
 
