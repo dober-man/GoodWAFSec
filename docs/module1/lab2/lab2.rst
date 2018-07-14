@@ -254,14 +254,12 @@ Selectively Blocking BOT Categories
 
 **To Whitelist cURL:**
 
-#. Edit the **Bot Signatures** list and find **curl**. Move it
-   to disabled signatures and click **Update**.
+#. Edit the **Bot Signatures** list and find **curl**. Move it to disabled signatures and click **Update**.
 
 .. image:: images/image1_3_16.PNG
 
 
-#. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login`` and you should
-   be back in business. By now you should know the expected output.
+#. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login`` and you should be back in business. By now you should know the expected output.
 
 #. Change HTTP Library to: **Report** and remove **CURL** from the whitelist.
 
@@ -276,13 +274,12 @@ cURL from Different Geolocations
 
 .. NOTE:: We are going to leverage an overlay virtual server to randomize source IP addresses similar to the earlier lab concept of randomizing XFF.
 
-#. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_overlay_vs``.
+1. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_overlay_vs``.
 Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overlay** is applied. Freel free to check out the code in the iRule. This code and BIG-IP flxibility makes lab testing and simulations a breeze.
 
 .. image:: images/image1_3_19.PNG
 
 #. Modify the cURL command to point at the overlay virtual server and run several times: ``curl --insecure https://101.10.146/WebGoat/login``
-
 
 #. Review the event logs at **Event Logs >> Bot Defense** You will
    now see geo-data for the BOT connection attempts.
