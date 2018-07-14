@@ -150,7 +150,7 @@ Geolocation
       this "trick" to work to demonstrate a global range of source IP
       addresses.
 
-#. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
+1. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
    horizontal tab and click on **Manage** in the **iRules** section.
 
    .. image:: images/image11.PNG
