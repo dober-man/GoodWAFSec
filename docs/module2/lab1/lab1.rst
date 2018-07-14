@@ -8,16 +8,17 @@ Objective
 
 - Validate that the security policy is working correctly.
 
-- Estimated time for completeion **10** **minutes**.
+- Estimated time for completion **10** **minutes**.
 
 Apply Security Policy
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. IMPORTANT:: To clearly demonstrate just the protocol compliance protection,
-   please remove the previously created DoS profile and  **enable** the ``lab1_webgoat_waf`` Security Policy on the
-   ``webgoat.f5demo.com_https_vs`` virtual server!
+.. IMPORTANT:: To clearly demonstrate just the protocol compliance protection, on the ``webgoat.f5demo.com_https_vs`` virtual server:
+1. **Remove** the previously created DoS profile and bot logging profile.
+2. **Enable** the ``lab1_webgoat_waf`` Security Policy
+Your virtual should look like this:
 
-.. image::images/image2_1_0.PNG
+.. image::images/image1.PNG
 
 #. Browse to **Applications > Other > OWASP ZAP** from the Linux OS desktop tool bar.
 
