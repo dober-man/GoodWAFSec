@@ -62,11 +62,11 @@ Your virtual should look like this
 
 Leaning and Blocking
 ~~~~~~~~~~~~~~~~~~~~~~
-The first place we will take a look for why we are not getting blocked is under learning and blocking setting.
+The first place we will take a look for why we are not getting blocked is under learning and blocking settings.
 
 1. Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings** and look for **HTTP Protocol Compliance failed**
 
-.. image:: images/image4.PNG
+.. image:: images/image6.PNG
 
 2. Notice the violation is set to learn only and is not enabled by default in a policy. That is why the request was not blocked.
 
