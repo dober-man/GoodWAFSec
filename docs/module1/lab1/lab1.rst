@@ -85,7 +85,7 @@ Create Application Security Logging Profile
 
 **Question:** Would logging all requests and responses in a production environment be a best practice?
 
-**Answer:** Not typically. This adds 50% or more to the overhead on the log engine and would not typically be used outside of troubleshooting and high security environemnts that are appropriately sized.
+**Answer:** This adds 50% or more to the overhead on the log engine and would not typically be used outside of troubleshooting or high security environments that are appropriately sized.
 
 
 Apply WAF Logging Profile
@@ -106,12 +106,12 @@ Test WAF Policy
 
 2. Login using **webgoat/F5DEMOs4u!** credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
-#. On the BIG-IP, navigate to **Security > Event Logs > Applications > Requests**.
+#. On the BIG-IP, navigate to **Security > Event Logs > Application > Requests**.
 
-#. Clear the **"Illegal Requests"** filter.
+#. Clear the default **"Illegal Requests"** filter by clicking the x.
   .. image:: images/image8.PNG
 
-#. Verify that requests are being logged by the WAF. You should be able to see both the raw client and server responses.
+#. Verify that requests are being logged by the WAF. You should be able to see both the raw client requests and server responses.
   .. image:: images/image9.PNG
 
 Exercise 1.2: Geolocation and IP Intelligence
@@ -130,7 +130,7 @@ Geolocation
 
    .. image:: images/image10.PNG
 
-   .. IMPORTANT:: Remember to click on the **Apply Policy** button committ security policy changes.
+   .. IMPORTANT:: Remember to click on the **Apply Policy** button to commit security policy changes.
 
 #. Open **Local Traffic > iRules** and open the iRule titled
    ``webgoat_irule`` and review the code.
@@ -165,6 +165,9 @@ Navigate to **Application Security > Policy > Policy Properties** and hit the dr
 You can now check the box to **Trust XFF Header** and click **Save** then **Apply Policy**
 
 .. image:: images/image15.PNG
+
+.. NOTE:: Reggarding Trust XFF - you would do this if ASM is deployed behind an internal or other trusted proxy. Then, the system uses the IP address that initiated the connection to the proxy instead of the internal proxy’s IP address. This option is useful for logging, web scraping, anomaly detection, and the geolocation feature.
+You should not configure trusted XFF headers if you think the HTTP header may be spoofed, or crafted, by a malicious client.
 
 
 #. Open a new **Google Chrome Private Browsing** window and connect to
