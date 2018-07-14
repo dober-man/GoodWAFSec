@@ -304,27 +304,22 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 
 .. image:: images/image1_3_22.PNG
 
-.. NOTE:: You may need to change your time in the Windows system tray for
-          accurate results.
+.. NOTE:: You may need to change your time in the Windows system tray for accurate results.
 
 Although there have not been any L7 DoS attacks some of the widgets along the right contain statistics from the BOT mitigations.
 
 .. image:: images/image4.PNG
 
-#. Click the **Analysis** tab at the top and review the graphs
-   available to you.
+#. Click the **Analysis** tab at the top and review the graphs available to you.
 
 .. image:: images/image1_3_23.PNG
 
-#. Click the **URL Latencies** tab at the top and review the graphs
-   available to you.
+#. Click the **URL Latencies** tab at the top and review the graphs available to you.
 
 .. image:: images/image1_3_24.PNG
 
-#. Click the **Custom Page** tab at the top and review the graphs
-   available to you.
+#. Click the **Custom Page** tab at the top and review the graphs available to you.
 
-   Please feel free to add widgets and/or explore the ASM interface
-   further.
+Please feel free to add widgets and/or explore the ASM interface further.
 
 **This concludes the BOT Protection section of this lab guide!**
