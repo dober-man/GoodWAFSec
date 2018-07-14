@@ -15,9 +15,10 @@ Objective
 
 #. From the jumpbox, launch Chrome, click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
 
-Please ensure that three virtual servers are configured before you begin:
+Please ensure that four virtual servers are configured before you begin:
 
 - ``webgoat.f5demo.com_https_vs``
+- ``webgoat.f5demo.com_https_overlay_vs``
 - ``webgoat.f5demo.com_http_vs``
 - ``automation_vs``
 
@@ -228,8 +229,7 @@ Further, you can use Putty on the Win7 box to access the BIG-IP via SSH
 (bookmarked as F5-WAF) and login with ``root`` / ``f5DEMOs4u!`` to run
 the ``iprep_lookup`` command, similar to:
 
-::
-{[root@bigip1:Active:Standalone] config #iprep_lookup 77.222.40.121
+[root@bigip1.Active.Standalone] config #**iprep_lookup 77.222.40.121**
 opening database in /var/IpRep/F5IpRep.dat
 size of IP reputation database = 39492859
 iprep threats list for ip = 77.222.40.121 is:

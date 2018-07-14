@@ -19,13 +19,16 @@ Create Policy
 
 
 .. IMPORTANT:: To clearly demonstrate just the Bot Defense profile,
-   please **disable** the Application Security Policy from the
+   please **disable the Application Security Policy and iRule from the prior lab** from the
    ``webgoat.f5demo.com_https_vs`` virtual server!
+
+.. image:: images/image1.PNG
+.. image:: images/image2.PNG
 
 #. Open the **Terminal** application.
 
 #. Run the following curl command to verify the site is loading without
-   issue from this headless browser. If the curl command is not
+   issue from this command line http utility. If the curl command is not
    successful (you are getting a “request rejected” error page), please
    let an instructor know.
 
@@ -78,6 +81,8 @@ Configure Policy
 #. Notice that for **Block requests from suspicious browsers** the
    **Block Suspicious Browsers** setting is enabled by default.
 
+#. At this point, you may want to take a moment and explore the other defaults that were turned on such as TPS based detection and BOT Signatures. Please don't modify the defaults.
+
 #. Click the **Update** button to complete the Proactive Bot
    Defense ``webgoat_DoS`` profile.
 
@@ -119,7 +124,7 @@ Create Bot Defense Logging Profile
 #. Click **Finished**.
 
    .. NOTE:: You could have also modified the existing ``asm_allrequests``
-      logging profile and added DoS logging definitions.
+      logging profile and added BOT logging definitions.
 
    .. image:: images/image1_3_9.PNG
 
@@ -160,6 +165,8 @@ Test the Proactive Bot Defense Policy
 
    .. NOTE:: This can take a few minutes and you may get several empty
       responses as shown.
+
+.. image:: images/image3.PNG
 
    After a few moments the PBD will initialize and you will Because
    Proactive BOT Defense is always on, this tool will always be
@@ -256,7 +263,7 @@ Selectively Blocking BOT Categories
 #. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login`` and you should
    be back in business. By now you should know the expected output.
 
-#. Change HTTP Library to: **Report** and remove **CURL** from the whitelist and set http libraries category to ``report``.
+#. Change HTTP Library to: **Report** and remove **CURL** from the whitelist.
 
 .. image:: images/image1_3_17.PNG
 
@@ -267,15 +274,14 @@ Selectively Blocking BOT Categories
 cURL from Different Geolocations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  .. NOTE:: We are going to leverage the ``webgoat_irule`` from the earlier lab to get some randomness.
+  .. NOTE:: We are going to leverage an overlay virtual server to randomize source IP addresses similar to the earlier lab concept of randomizing XFF.
 
-#. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources** horizontal tab and click on **Manage** in the **iRules** section.
+#. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_overlay_vs``.
+Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overlay** is applied. Freel free to check out the code in the iRule. This code and BIG-IP flxibility makes lab testing and simulations a breeze.
 
   .. image:: images/image1_3_19.PNG
 
-#. Select the ``webgoat_irule``, move it to the **Enabled** assignment and click **Finished**.
-
-#. Run the cURL command several times: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login``
+#. Modify the cURL command to point at the overlay virtual server and run several times: ``curl --insecure https://101.10.146/WebGoat/login``
 
 
 #. Review the event logs at **Event Logs >> Bot Defense** You will
@@ -283,8 +289,8 @@ cURL from Different Geolocations
 
    .. image:: images/image1_3_20.PNG
 
-#. Navigate to **Security > Overview** and review the default
-   report elements.
+#. Navigate to **Security > Overview > Application > Traffic** and review the default
+   report elements. You can change the widget time frames to see more historical data.
 
 #. Click **Overview > Application > Traffic**:
 
@@ -294,7 +300,7 @@ cURL from Different Geolocations
    to see additional reporting elements:
 
 
-#. Click the **DoS tab** at the top. The DOS Visibility Screen loads.
+#. Click the **DoS tab** at the top. In some time...The DOS Visibility Screen loads.
 
    .. image:: images/image1_3_22.PNG
 
@@ -303,6 +309,8 @@ cURL from Different Geolocations
 
    Although there have not been any L7 DoS attacks some of the widgets
    along the right contain statistics from the BOT mitigations.
+
+   .. image:: images/image4.PNG
 
 #. Click the **Analysis** tab at the top and review the graphs
    available to you.
