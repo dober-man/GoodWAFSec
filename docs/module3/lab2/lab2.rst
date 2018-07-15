@@ -108,9 +108,7 @@ Enter the following URL in to the URL to Attack field and click **Attack**:
 
     https://webgoat.f5demo.com/WebGoat/login
 
-
-
-.. image:: images/image12_3_2.png
+.. image:: images/image7.PNG
 
 4.  Return to the BIG-IP and examine the Event Logs.
 
