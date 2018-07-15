@@ -85,17 +85,13 @@ Your policy should now look like this.
 
 .. image:: images/image4.PNG
 
-19.  In the upper right corner change the auto refresh to 10 seconds
+19.  Click on the log entry for ``/webgoat/login`` and examine the request.
 
-.. image:: images/image9_3_2.png
-
-20.  Click on the log entry for ``/webgoat/login`` and examine the request.
-
-21.  Change from Basic to All Details and will see more details regarding the request
+20.  Change from Basic to All Details and will see more details regarding the request
 
 .. image:: images/image10_3_2.png
 
-22.  Click on Attack signature detected
+21.  Click on Attack signature detected
 
 .. image:: images/image11_3_2.png
 
@@ -106,22 +102,21 @@ Task 2 - Using ZAP Proxy
 
 2.  Select No, I do not want to persist this session at this moment in time
 
-3.  Enter the following URL in to the URL to Attack field:
+3.  In the upper right corner of ZAP, change the mode to ATTACK and accept the popup.
+Enter the following URL in to the URL to Attack field and click **Attack**:
 ::
 
-    http://webgoat.f5demo.com/WebGoat
+    https://webgoat.f5demo.com/WebGoat/login
 
-In the upper left corner change the mode to Attack mode and then execute the attack
+
 
 .. image:: images/image12_3_2.png
 
-4.  Return to the BIG-IP and examine the Event Logs.  You will need to stop the auto refresh by clicking on the countdown
+4.  Return to the BIG-IP and examine the Event Logs.
 
-.. image:: images/image13_3_2.png
+5.  Take a look at the various attacks conducted by ZAP and blocked by ASM.  Examine the log entries and what signature prevented the attack from occurring.  You can explore the documentation on the signature as well.
 
-5.  Take a look at the various attacks conducted by ZAP.  Examine the log entries and what signature prevented the attack from occurring.  You can explore the documentation on the signature as well.
-
-.. |zap_proxy| image:: images/zap_proxy.png
+.. image:: images/zap_proxy.png
 
 What additional functions can you turn on to prevent some of the other attacks?  How would you turn these on?
 
