@@ -22,43 +22,9 @@ Your virtual should look like this
 
 .. image:: images/image1.PNG
 
-#. Browse to **Applications > Other > OWASP ZAP** from the Linux OS desktop tool bar or click the springboard icon in the quick launch bar at the top of the screen.
-
-.. NOTE:: This normally takes 30s or more to launch. Do not keep clicking the icon. It's Java....it's slow.
-
-#. Upon initialization, OWASP ZAP will ask if you would like to require session persistence. Select the ``No, I do not want to persist this session at this moment in time.`` option then click **Start**.
-
-.. image:: images/image2_1_1.PNG
-
-3. Launch the **Firefox** browser from within ZAP using the using the **Launch Browser** button while **Firefox** is selected.
-
-.. image:: images/image2_1_2.PNG
-
-4. Browse to and login to the webgoat application. ``https://webgoat.f5demo.com/WebGoat/login`` Click around a little bit.
-
-.. image:: images/image2.PNG
-
-5. Return to the OWASP ZAP tool. Locate the ``https://webgoat.f5demo.com`` entry under **Sites**.
-
-.. image:: images/image2_1_3.PNG
-
-6. Expand the site ``https://webgoat.f5demo.com`` and find the POST action
-
-.. image:: images/image3.PNG
-
-7. Rick click that and select the **Open/Resend with Request Editor** option from the flyout window.
-
-.. image:: images/image2_1_4.PNG
-
-8. Select the **Request** tab in the **Manual Request Editor** window.
-
-9. Modify the **Host** header to have no value by removing the ``webgoat.f5demo.com`` value. Press the **Send** button. Repeat a few times.
-
-.. image:: images/image2_1_5.PNG
-
-10. Observe the server response using the **Response** tab of the **Manual Request Editor**.
-
-.. image:: images/image4.PNG
+BURPing the App
+~~~~~~~~~~~~~~~~
+1.
 
 11. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy to not allow this.
 
