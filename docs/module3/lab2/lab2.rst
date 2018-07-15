@@ -52,17 +52,16 @@ Task 1 - Exploring an attack
 
 .. image:: images/image2.PNG
 
-11.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
+11.  Time to Block! Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
 
-12.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure to click Save and Apply Policy
+12.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures) and uncheck the box for signature staging.  Make sure to click Save and Apply Policy
+Your policy should now look like this.
 
-.. image:: images/image7_3_2.png
+.. image:: images/image3.PNG
 
-.. NOTE::  Now you have enabled blocking for just the signatures.  Note that all other functions are still in only alarm and learn mode.  What attacks do you think will be blocked at this point?  
+.. NOTE::  Now you have enabled blocking for just the signatures.  Note that all other functions are still in only alarm and learn mode.  What attacks do you think will be blocked at this point?
 
-12.  On the left menu of the BIG-IP right click on Security and select "Open Link in a new Tab"
-
-13.  Go to the new tab.  Select Security --> Event Logs --> Application --> Requests
+13.  On the BIG-IP navigate to **Security > Event Logs > Application > Requests
 
 14.  Open a New Incognito Window in Chrome
 
