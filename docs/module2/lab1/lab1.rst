@@ -56,13 +56,17 @@ Your virtual should look like this
 
 .. image:: images/image2_1_5.PNG
 
-10. Observe the server response using the **Response** tab of the **Manual Request Editor**. This request is not getting blocked. Why?
+10. Observe the server response using the **Response** tab of the **Manual Request Editor**.
 
 .. image:: images/image4.PNG
 
+11. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy to not allow this.
+
+.. image:: images/image8.PNG
+
 Leaning and Blocking
 ~~~~~~~~~~~~~~~~~~~~~~
-The first place we will take a look for why we are not getting blocked is under learning and blocking settings.
+The first place we always take a look for why we are not getting an alert is under learning and blocking settings.
 
 1. Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings** and look for **HTTP Protocol Compliance failed**
 
@@ -75,7 +79,7 @@ The first place we will take a look for why we are not getting blocked is under 
 Now navigate to **Security > Application Security > Policy Building > Traffic Learning** and take a minute to absorb what you're looking at.
 These are all the things that ASM has currently learned about your application and are most likely all false positives at this point since this is a controlled environment. Take a look at some of them and look at the suggested actions ASM would like you to implement. If this policy was in automatic mode, when the learning score reaches 100%, the action is automatically taken.
 
-.. IMPORTANT:: Now that you have seen how ASM learns things think about how important it is that ASM get's good clean traffic during policy development and should be part of SDLC of the application.
+.. IMPORTANT:: Now that you have seen how ASM learns things think about how important it is that ASM gets good clean traffic during policy development and should be part of SDLC of the application.
 
 4. You want to specifically find the learning suggestion for **HTTP protocol compliance failed - HTTP Check: No Host header in HTTP/1.1 request**
 
@@ -83,7 +87,12 @@ These are all the things that ASM has currently learned about your application a
 
 5. Note the action ASM is suggesting that you take - **Enable HTTP Check**
 
-6. Click Accept
+6. Click Accept and then browse back to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed**
+Notice that by accepting the learning suggestion ASM has now enabled the protection but it is still in learning mode so unckeck that manually.
+
+.. image:: images/image7.PNG
+
+7. Be sure you have clicked "Save" and Applied the Policy prior to proceeding.
 
 11. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request received by the security policy.
 
