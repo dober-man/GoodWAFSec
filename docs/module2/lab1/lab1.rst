@@ -72,14 +72,14 @@ The first place we always take a look for why we are not getting an alert is und
 
 .. image:: images/image6.PNG
 
-2. Notice the violation is set to learn only and is not enabled by default in a policy. That is why the request was not blocked.
+2. Notice the violation is set to learn only and is not enabled by default in a policy. That is why the request was seen as legal and there was no alert in the event logs.
 
-3. This means that there must be a learning suggestion ready for us. Let's go take a look.
+3. Since learning was on by default there must be a learning suggestion ready for us. Let's go take a look.
 
-Now navigate to **Security > Application Security > Policy Building > Traffic Learning** and take a minute to absorb what you're looking at.
+Navigate to **Security > Application Security > Policy Building > Traffic Learning** and take a minute to absorb what you're looking at.
 These are all the things that ASM has currently learned about your application and are most likely all false positives at this point since this is a controlled environment. Take a look at some of them and look at the suggested actions ASM would like you to implement. If this policy was in automatic mode, when the learning score reaches 100%, the action is automatically taken.
 
-.. IMPORTANT:: Now that you have seen how ASM learns things think about how important it is that ASM gets good clean traffic during policy development and should be part of SDLC of the application.
+.. IMPORTANT:: Now that you have seen how ASM learns things; think about how important it is that ASM gets good clean traffic during policy development and should be part of SDLC of the application.
 
 4. You want to specifically find the learning suggestion for **HTTP protocol compliance failed - HTTP Check: No Host header in HTTP/1.1 request**
 

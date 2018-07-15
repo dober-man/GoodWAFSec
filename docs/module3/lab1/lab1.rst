@@ -6,15 +6,17 @@ Objective
 
 You will explore the blocking policy and settings.  The blocking policy used for this lab will focus on negative security using signatures.
 
+.. IMPORTANT:: Remove the existing transparent policy from your virtual before proceeding. You virtual should look like this
+
+.. image:: images/image1.PNG
+
 Task 1 - Creating Blocking policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1.  Login to the BIG-IP device by clicking on the bookmark in Chrome.
 
 .. image:: images/image13_3_1.png
 
-2.  Login to the BIG-IP with the credentials supplied
-
-3.  Go to Security --> Application Security --> Security Policies --> Policies List
+3.  Go to **Security > Application Security > Security Policies > Policies List**
 
 3.  Click on Create Policy
 
@@ -69,7 +71,7 @@ Fill out the following -
 
 14.  Ensure that the blocking checkbox has been unchecked for all signatures.
 
-.. image:: images/image17_3_1.png 
+.. image:: images/image17_3_1.png
 
 15.  You will click Save and Apply Policy at this point.
 
