@@ -116,13 +116,14 @@ Enter the following URL in to the URL to Attack field and click **Attack**:
 
 5.  Take a look at the various attacks conducted by ZAP and blocked by ASM.  Examine the log entries and what signature prevented the attack from occurring.  You can explore the documentation on the signature as well.
 
-.. image:: images/zap_proxy.png
+.. image:: images/image5.PNG
 
 What additional functions can you turn on to prevent some of the other attacks?  How would you turn these on?
+Would this tool have even worked if Proactive Bot Defense was enabled?
 
 .. Bonus::
 
-Go to Security --> Application Security --> Policy Building --> Traffic learning
+Go to **Security > Application Security > Policy Building > Traffic learning**
 
 Explore the Learning suggestions and Traffic Summary page.
 
