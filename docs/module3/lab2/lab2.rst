@@ -28,8 +28,7 @@ Task 1 - Exploring an attack
 4.  Return to the BIG-IP Go to **Security > Event Logs > Application > Requests** and clear the illegal filter.
 
 
-
-5.  You will find an entry there for the login page.
+5.  You will find an entry there for the login page login attempt.
 
 .. image:: images/image1.PNG
 
@@ -55,7 +54,7 @@ Task 1 - Exploring an attack
 
 11.  Time to Block! Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
 
-12.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures) and uncheck the box for signature staging.  Make sure to click Save and Apply Policy.
+12.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures) and **uncheck the box for signature staging**.  Make sure to click Save and Apply Policy.
 Your policy should now look like this.
 
 .. image:: images/image3.PNG
@@ -75,13 +74,16 @@ Your policy should now look like this.
     or 1='1
 
 .. NOTE:: You should see that you are blocked and received a message with a support ID.
+
 .. image:: images/image8_3_2.png
 
-17.  Repeat steps 16-18
+17.  Repeat steps 7-8
 
 .. NOTE:: Did the query work?  Why not?
 
-18.  Return to the BIG-IP and the Event Logs tab
+18.  Return to the ASM Event Logs and you should see both attacks as shown here
+
+.. image:: images/image4.PNG
 
 19.  In the upper right corner change the auto refresh to 10 seconds
 
