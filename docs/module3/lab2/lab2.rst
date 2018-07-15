@@ -11,52 +11,13 @@ In this exercise you will attack the vulnerable application.  Then apply the blo
 Task 1 - Exploring an attack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Go to Security --> Event Logs --> Logging profiles
-
-2.  Click Create
-
-  - Profile Name: ``WebGoat``
-  - Applicattion Security: ``Enabled``
-  - Storage Destination:  ``Local Storage``
-  - Request Type: ``All requests``
-
-.. WARNING::  Do not use All requests unless for troubleshooting purposes.  Choose Illegal requests, and requests that include staged attack signatures
-
-3.  Go to Local Traffic --> Virtual Servers --> Virtual Server List
-
-4.  Click on the ``webgoat.f5demo.com_https_vs``
-
-.. image:: images/image15_3_2.png
-
-5.  Click on Resources
-
-.. image:: images/image16_3_2.png
-
-6.  Click on Manage under the iRules section.  Select ``_sys_https_redirect`` from the list of available rules and move it to the Enabled column.  Click finished
-
-.. image:: images/image17_3_2.png
-
-.. NOTE:: This step may not be necessary in a production environment.  This iRule redirects all port 80 traffic to the Virtual Server listening on port 443.
-
-7.  Next click on the ``webgoat.f5demo.com_https_vs``
-
-.. image:: images/image1_3_2.png
-
-8.  Click on Security and Policies from the top menu
-
-.. image:: images/image2_3_2.png
-
-9.  Make sure to set Application Security Policy to enabled and choose the ``Blocking_Policy``.  Then enabled Log Profile and select the WebGoat profile you created.  Move it to Selected.  Click Update.
-
-.. image:: images/image3_3_2.png
-
-10.  Within Chrome click on the three dots in the upper right and choose New Incognito window
+1.  Within Chrome click on the three dots in the upper right and choose New Incognito window
 
 .. image:: images/image4_3_2.png
 
-11.  Click on the Login Page bookmark to get to the WebGoat application
+2.  Click on the Login Page bookmark to get to the WebGoat application
 
-12.  At the username prompt try entering a sequel query for the username and the letter a for the password
+3.  At the username prompt try entering a sequel query for the username and the letter a for the password
 
 ::
 
@@ -64,43 +25,50 @@ Task 1 - Exploring an attack
 
 .. NOTE:: Did you see anything?  Why do you think you were not blocked?
 
-13.  Return to the BIG-IP Go to Security --> Event Logs --> Application --> requests
+4.  Return to the BIG-IP Go to **Security > Event Logs > Application > Requests** and clear the illegal filter.
 
-14.  You will find an entry there for the login page. (We will examine this further later)
 
-15.  Return to the WebGoat application and login with credentials webgoat and f5DEMOs4u!
 
-16.  From the left menu go to Injection Flaws --> SQL Injection and select exercise 7
+5.  You will find an entry there for the login page.
+.. image:: images/image1.PNG
+
+6.  Return to the WebGoat application and login with credentials f5student and f5DEMOs4u!
+
+7.  From the left menu go to Injection Flaws --> SQL Injection and select exercise 7
 
 .. image:: images/image5_3_2.png
 
-17.  In the account name field try an injection attack
+8.  In the account name field try an injection attack
 
 ::
 
     %' or 1='1
 
-18.  You will be able to see a wealth of information
+9.  You will be able to see a wealth of information
 
 .. image:: images/image6_3_2.png
 
-19.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
+10. Return to the BIG-IP Go to **Security > Event Logs > Application > Requests**, clear the illegal filter and review the alert.
 
-20.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure to click Save and Apply Policy
+.. image:: images/image2.PNG
+
+11.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking settings
+
+12.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure to click Save and Apply Policy
 
 .. image:: images/image7_3_2.png
 
 .. NOTE::  Now you have enabled blocking for just the signatures.  Note that all other functions are still in only alarm and learn mode.  What attacks do you think will be blocked at this point?  
 
-21.  On the left menu of the BIG-IP right click on Security and select "Open Link in a new Tab"
+12.  On the left menu of the BIG-IP right click on Security and select "Open Link in a new Tab"
 
-22.  Go to the new tab.  Select Security --> Event Logs --> Application --> Requests
+13.  Go to the new tab.  Select Security --> Event Logs --> Application --> Requests
 
-23.  Open a New Incognito Window in Chrome
+14.  Open a New Incognito Window in Chrome
 
-24.  Click the bookmark for Login page
+15.  Click the bookmark for Login page
 
-25.  At the username prompt try entering a sequel query for the username and the letter a for the password
+16.  At the username prompt try entering a sequel query for the username and the letter a for the password
 
 ::
 
@@ -109,23 +77,23 @@ Task 1 - Exploring an attack
 .. NOTE:: You should see that you are blocked and received a message with a support ID.
 .. image:: images/image8_3_2.png
 
-26.  Repeat steps 16-18
+17.  Repeat steps 16-18
 
 .. NOTE:: Did the query work?  Why not?
 
-27.  Return to the BIG-IP and the Event Logs tab
+18.  Return to the BIG-IP and the Event Logs tab
 
-28.  In the upper right corner change the auto refresh to 10 seconds
+19.  In the upper right corner change the auto refresh to 10 seconds
 
 .. image:: images/image9_3_2.png
 
-29.  Click on the log entry for ``/webgoat/login`` and examine the request.
+20.  Click on the log entry for ``/webgoat/login`` and examine the request.
 
-30.  Change from Basic to All Details and will see more details regarding the request
+21.  Change from Basic to All Details and will see more details regarding the request
 
 .. image:: images/image10_3_2.png
 
-31.  Click on Attack signature detected
+22.  Click on Attack signature detected
 
 .. image:: images/image11_3_2.png
 
