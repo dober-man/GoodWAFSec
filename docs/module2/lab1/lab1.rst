@@ -24,7 +24,29 @@ Your virtual should look like this
 
 BURPing the App
 ~~~~~~~~~~~~~~~~
-1.
+1. Attack 1:
+No Host Header
+POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
+User-Agent: R2D2
+Pragma: no-cache
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 38
+
+username=f5student&password=f5DEMOs4u!
+
+2. Attack 2:
+Script in HOST Header
+POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
+User-Agent: R2D2
+Pragma: no-cache
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 38
+Host: <script>alert(document.cookie);</script>
+
+username=f5student&password=f5DEMOs4u!
+
 
 11. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy to not allow this.
 
