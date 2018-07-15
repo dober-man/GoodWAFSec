@@ -30,6 +30,7 @@ Task 1 - Exploring an attack
 
 
 5.  You will find an entry there for the login page.
+
 .. image:: images/image1.PNG
 
 6.  Return to the WebGoat application and login with credentials f5student and f5DEMOs4u!
@@ -54,7 +55,7 @@ Task 1 - Exploring an attack
 
 11.  Time to Block! Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
 
-12.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures) and uncheck the box for signature staging.  Make sure to click Save and Apply Policy
+12.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures) and uncheck the box for signature staging.  Make sure to click Save and Apply Policy.
 Your policy should now look like this.
 
 .. image:: images/image3.PNG
