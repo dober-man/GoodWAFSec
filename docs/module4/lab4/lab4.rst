@@ -54,7 +54,7 @@ Task 1 - Deploy iApp with Security
 
 11.  You can try surfing around the application.  Try an injection attack.
 
-12.  Return to the BIG-IP.  Go to **Security > Applicaiton Security > Policy Building > Traffic Learning**
+12.  Return to the BIG-IP.  Go to **Security > Application Security > Policy Building > Traffic Learning**
 
 Do you see learning suggestions?
 
@@ -105,7 +105,7 @@ Task 2 - Attack Application
 
 .. NOTE::  Were you blocked?  Why or why not?
 
-9.  Return to the BIG-IP Security --> Event Logs --> Application --> requests
+9.  Return to the BIG-IP **Security > Event Logs > Application > requests**
 
 10.  You will need to refresh.  Locate the attacks.  Is the policy in transparent or blocking?  How can you change the policy to mitigate against this attack?
 
