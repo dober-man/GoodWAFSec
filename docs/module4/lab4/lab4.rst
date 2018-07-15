@@ -14,13 +14,13 @@ F5 offers a number of templated installations for various applications.  For gen
 Task 1 - Deploy iApp with Security
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Go to iApps --> Application Services then click on Create
+1.  Go to **iApps > Application Services** then click on Create
 
 .. image:: images/image1_4_4.png
 
 2.  Give the application a name
 
-3.  In the drop down box for template choose f5.htt.v1.3.Orc3
+3.  In the drop down box for template choose f5.http.v1.3.Orc3
 
 .. image:: images/image2_4_4.png
 
@@ -50,15 +50,15 @@ Task 1 - Deploy iApp with Security
 
 .. image:: images/image9_4_4.png
 
-10.  Login with webgoat and f5DEMOs4u!
+10.  Login with f5student and f5DEMOs4u!
 
 11.  You can try surfing around the application.  Try an injection attack.
 
-12.  Return to the BIG-IP.  Go to Security --> Applicaiton Security --> Policy Building --> Traffic Learning
+12.  Return to the BIG-IP.  Go to **Security > Applicaiton Security > Policy Building > Traffic Learning**
 
 Do you see learning suggestions?
 
-13.  Go to Security --> Application Security --> Policy Building --> Learning and Blocking Settings
+13.  Go to **Security > Application Security > Policy Building > Learning and Blocking Settings**
 
 14.  Click the carrot by Attack Signatures then Change at the far right to add more signature.
 
@@ -87,7 +87,7 @@ Task 2 - Attack Application
 
 .. NOTE:: Did you see anything?  Why do you think you were not blocked?
 
-4.  Return to the BIG-IP Go to Security --> Event Logs --> Application --> requests
+4.  Return to the BIG-IP Go to **Security > Event Logs > Application > requests**
 
 5.  You will find an entry there for the login page.
 
@@ -108,3 +108,6 @@ Task 2 - Attack Application
 9.  Return to the BIG-IP Security --> Event Logs --> Application --> requests
 
 10.  You will need to refresh.  Locate the attacks.  Is the policy in transparent or blocking?  How can you change the policy to mitigate against this attack?
+
+We hope you enjoyed this session! Please come again next year!! The End!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

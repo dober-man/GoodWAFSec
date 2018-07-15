@@ -32,7 +32,7 @@ We will be using Postman collections to run API calls against our BIG-IP.  Postm
 
 3.  Click on Import
 
-.. image:: images/import.png
+.. image:: images/Import.png
 
 4.  Choose Import from Link and enter the URL
 
