@@ -37,6 +37,8 @@ We will be manually sending two different attack types to demonstrate the protoc
 HTTP Compliancy Check - Enforce Host Header
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. NOTE:: By way of RFC HTTP/1.1 requires a host header. Many servers will still process the request without one. We want to enforce RFC compliant HTTP.
+
 1. Open Burp by clicking the icon in the system tray at the top of the screen. (If it offers an update, please decline)
 
 .. image:: images/burp.PNG
@@ -47,20 +49,18 @@ HTTP Compliancy Check - Enforce Host Header
 
 4. Under the **Request** tab paste in the following http request.
 
-.. NOTE:: By way of RFC HTTP/1.1 requires a host header. Many servers will still process the request without one. We want to enforce RFC compliant HTTP.
-
 Attack 1: No Host Header - **Run this several times.**
 
 ::
 
-POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
-User-Agent: R2D2
-Pragma: no-cache
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 38
+  POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
+  User-Agent: R2D2
+  Pragma: no-cache
+  Cache-Control: no-cache
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 38
 
-username=f5student&password=f5DEMOs4u!
+  username=f5student&password=f5DEMOs4u!
 
 
 5. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy to not allow this since this is not compliant or bad HTTP/1.1
