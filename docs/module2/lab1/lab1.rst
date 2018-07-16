@@ -28,9 +28,11 @@ BURPing the App
 In this section we are going to use the free version of an excellent DAST tool; BURP.
 We will be manually sending two different attack types to demonstrate the protocol compliance features of ASM.
 
+HTTP Compliancy Check - Enforce Host Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Attack 1: Run this several times.
-No Host Header
+
 POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
 User-Agent: R2D2
 Pragma: no-cache
@@ -58,6 +60,8 @@ The first place we always take a look when we want to implement a new control is
 
 3. Since learning was on by default there must be a learning suggestion ready for us. Let's go take a look.
 
+4. We want to specifically find the learning suggestion for **HTTP protocol compliance failed - HTTP Check: No Host header in HTTP/1.1 request**
+
 Navigate to **Security > Application Security > Policy Building > Traffic Learning** and click on the Magnifying Glass.
 
 .. image:: images/image2.PNG
@@ -66,9 +70,6 @@ Under the Advanced Tab move the slider to the left so you can see alerts with a 
 
 .. image:: images/image3.PNG
 
-4. You want to specifically find the learning suggestion for **HTTP protocol compliance failed - HTTP Check: No Host header in HTTP/1.1 request**
-
-.. image:: images/image5.PNG
 
 5. Note the action ASM is suggesting that you take - **Enable HTTP Check**
 
@@ -79,9 +80,17 @@ Notice that by accepting the learning suggestion ASM has now enabled the protect
 
 7. Be sure you have clicked "Save" and Applied the Policy prior to proceeding.
 
-11. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request received by the security policy.
+Go back to BURP and run the attack again.
 
-11. Observe the Illegal requests observed by the security policy. What protocol compliance violations were observed by the security policy?
+11. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request received by the security policy.
+You should now see the alerts since we have enabled this compliancy check and turned off learning.
+
+.. image:: images/image9.PNG
+
+HTTP Compliancy Check - Bad Host Header Value
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Observe the Illegal requests observed by the security policy. What protocol compliance violations were observed by the security policy?
 
 2. Attack 2:
 Script in HOST Header
