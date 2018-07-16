@@ -37,7 +37,7 @@ We will be manually sending two different attack types to demonstrate the protoc
 HTTP Compliancy Check - Enforce Host Header
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. NOTE:: By way of RFC HTTP/1.1 requires a host header. Many servers will still process the request without one. We want to enforce RFC compliant HTTP.
+.. NOTE:: By way of RFC; HTTP/1.1 requires a host header. Many servers will still process the request without one. We want to enforce RFC compliant HTTP.
 
 1. Open Burp by clicking the icon in the system tray at the top of the screen. (If it offers an update, please decline)
 
@@ -95,7 +95,7 @@ The first place we always take a look when we want to implement a new control is
 
 .. image:: images/image11.PNG
 
-6. Under the Advanced Tab move the slider to the left so you can see alerts with a learning score of less than 5 and click **Apply Filter*
+6. Under the Advanced Tab move the slider to the left so you can see alerts with a learning score of less than 5 and click **Apply Filter**
 
 .. image:: images/image12.PNG
 
@@ -110,9 +110,10 @@ Notice that by accepting the learning suggestion ASM has now enabled the protect
 
 9. **Be sure you have clicked "Save" and Applied the Policy prior to proceeding.**
 
+
 10. Go back to **Burp** and run the attack again one or more times.
 
-11. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request received by the security policy.
+11. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all requests received by the security policy.
 You should now see the alerts since we have enabled this compliancy check and turned off learning.
 
 .. image:: images/image9.PNG
@@ -155,3 +156,27 @@ Attack 2: XSS in HOST Header
 .. image:: images/image16.PNG
 
 5. Click **Export Request** and review the detailed report. Notice the XSS alerts and how they are currently still in staging. We will cover this in the next lab.
+
+HTTP Compliancy Check - Multiple Host Headers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Description - Examines requests to ensure that they contain only a single "Host" header.
+This is an example of an HTTP Request Smuggling Attack
+
+Risk
+An attacker may try to evade security checks by confusing ASM and/or application servers as to which hostname is being accessed.
+
+Examples
+The website may be accessed by non-browser clients attempting to bypass security gateways.
+
+.. NOTE:: There will be little guidance on this section. Use what you have learned above to complete this lab.
+
+Order of operations
+1. Disable learning and Enable the Compliancy Check for **Multiple Host Headers** in learning and blocking settings.
+2. Use BURP to perform the Attack
+3. Review Event Logs to ensure the attack is being mitigated.
+
+.. image:: images/image18.PNG
+
+.. image:: images/image19.PNG
+
+**This concludes module 2**
