@@ -39,7 +39,7 @@ HTTP Compliancy Check - Enforce Host Header
 
 1. Open Burp by clicking the icon in the system tray at the top of the screen. (If it offers an update, please decline)
 
-.. image:: images/Burp.PNG
+.. image:: images/burp.PNG
 
 2. This will be a temporary project so click **next** to proceed and choose "Use Burp Defaults" on the next screen.
 
