@@ -8,14 +8,10 @@ Environment
 
 Linux client (client01):
 
-* Web Attack Tools:
+* Web Attack Tools used in this lab:
 
- * `Goldeneye <https://github.com/jseidl/GoldenEye>`_ - HTTP DOS Tool
- * `Metasploit <https://www.metasploit.com/>`_ - Pen testing framework
- * `nmap/nping <https://nmap.org/>`_ - Network mapper
- * `Slowhttptest <https://github.com/shekyan/slowhttptest>`_ - HTTP DOS Tool
- * `wapiti <http://wapiti.sourceforge.net/>`_ - web application auditor
- * `w3af <http://w3af.org/>`_ - web application auditor
+ * `OWASP ZAP <https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project>`_ - DAST
+ * `BURP Community Edition <https://portswigger.net/burp/>`_ - Packet Crafting
 
 * Api Tools:
 
@@ -39,7 +35,7 @@ The network topology implemented for this lab is very simple. The following
 components have been included in your lab environment:
 
 -  1 x Ubuntu Linux 16.04 client
--  1 x F5 BIG-IP VE (v13.1.0.5) running ASM and LTM
+-  1 x F5 BIG-IP VE (v13.1.0.2) running ASM and LTM
 -  1 x Ubuntu Linux 16.04 server
 
 The following table lists VLANS, IP Addresses and Credentials for all
@@ -66,7 +62,7 @@ components:
      - 10.1.10.245
      - 10.1.20.245
      - https - ``admin:f5DEMOs4u!`` ssh - ``f5student:f5DEMOs4u!``
-   * - Linux Server & WebGOAT app(server01)
+   * - Linux Server & WebGOAT app (server01)
      - 10.1.1.252
      - N/A
      - 10.1.20.252

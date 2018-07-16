@@ -9,8 +9,6 @@ Objective
 
 - Validate that both the policy and logging profile are working.
 
-- Review the auto-detection of the web server capabilities (i.e. Apache, IIS, MySQL etc).
-
 - Estimated time for completion: **30** **minutes**.
 
 #. From the jumpbox, launch Chrome, click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!

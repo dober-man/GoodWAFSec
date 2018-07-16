@@ -8,7 +8,13 @@ Objective
 
 - Validate that the security policy is working correctly.
 
-- Estimated time for completion **10** **minutes**.
+- Implement HTTP Protocol Compliancy checks
+
+- Explore Learning and Blocking
+
+- Get familiar with ASM Event Logs
+
+- Estimated time for completion **45** **minutes**.
 
 Apply Security Policy
 ~~~~~~~~~~~~~~~~~~~~~
@@ -22,16 +28,30 @@ Your virtual should look like this
 
 .. image:: images/image1.PNG
 
-BURPing the App
+Burp'ing the App
 ~~~~~~~~~~~~~~~~
 
-In this section we are going to use the free version of an excellent DAST tool; BURP.
+In this section we are going to use the free/community version of an excellent DAST tool; Burp. Unfortunately the free version does not actually allow DAST but it is still an excellent tool for packet crafting and that's exactly how we are going to use it.
 We will be manually sending two different attack types to demonstrate the protocol compliance features of ASM.
 
 HTTP Compliancy Check - Enforce Host Header
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Attack 1: Run this several times.
+1. Open Burp by clicking the icon in the system tray at the top of the screen. (If it offers an update, please decline)
+
+.. image:: images/Burp.PNG
+
+2. This will be a temporary project so click **next** to proceed and choose "Use Burp Defaults" on the next screen.
+
+3. Click **Start Burp** and navigate to the **Repeater** tab once opened.
+
+4. Under the **Request** tab paste in the following http request.
+
+.. NOTE:: By way of RFC HTTP/1.1 requires a host header. Many servers will still process the request without one. We want to enforce RFC compliant HTTP.
+
+Attack 1: No Host Header - **Run this several times.**
+
+::
 
 POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
 User-Agent: R2D2
@@ -43,8 +63,7 @@ Content-Length: 38
 username=f5student&password=f5DEMOs4u!
 
 
-
-11. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy to not allow this since this is not compliant or bad HTTP/1.1
+5. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy to not allow this since this is not compliant or bad HTTP/1.1
 
 .. image:: images/image8.PNG
 
@@ -80,7 +99,7 @@ Notice that by accepting the learning suggestion ASM has now enabled the protect
 
 7. Be sure you have clicked "Save" and Applied the Policy prior to proceeding.
 
-Go back to BURP and run the attack again.
+Go back to Burp and run the attack again.
 
 11. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request received by the security policy.
 You should now see the alerts since we have enabled this compliancy check and turned off learning.
