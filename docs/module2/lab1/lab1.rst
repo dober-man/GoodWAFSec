@@ -53,7 +53,7 @@ HTTP Compliancy Check - Enforce Host Header
 
 .. image:: images/image10.PNG
 
-.. IMPORTANT:: When you copy and paste there will be whitespace in front of the headers. You will need to remove this manually.
+.. IMPORTANT:: When you copy and paste there will be whitespace in front of the headers. You will need to remove this manually or the request will not be sent.
 
 Attack 1: No Host Header - **Run this several times.**
 
