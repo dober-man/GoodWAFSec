@@ -47,7 +47,13 @@ HTTP Compliancy Check - Enforce Host Header
 
 3. Click **Start Burp** and navigate to the **Repeater** tab once opened.
 
-4. Under the **Request** tab paste in the following http request.
+4. Under the **Request** tab paste in the following http request, remove any whitespace and click **Go**.
+
+5. A popup will appear asking for target details. Fill out the form as shown below.
+
+.. image:: images/image4.PNG
+
+.. IMPORTANT:: When you copy and paste there will be whitespace in front of the headers. You will need to remove this manually.
 
 Attack 1: No Host Header - **Run this several times.**
 
@@ -62,6 +68,9 @@ Attack 1: No Host Header - **Run this several times.**
 
   username=f5student&password=f5DEMOs4u!
 
+Request and Response should look like this
+
+.. image:: images/image5.PNG
 
 5. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy to not allow this since this is not compliant or bad HTTP/1.1
 
