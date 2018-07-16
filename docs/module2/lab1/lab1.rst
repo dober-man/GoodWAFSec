@@ -75,7 +75,7 @@ Request and Response should look like this
 
 .. image:: images/image5.PNG
 
-5. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy to not allow this since this is not compliant or bad HTTP/1.1
+5. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy per the "Good WAF Protection recommendations", to not allow this since it is not RFC compliant HTTP/1.1
 
 .. image:: images/image8.PNG
 
@@ -87,33 +87,34 @@ The first place we always take a look when we want to implement a new control is
 
 .. image:: images/image6.PNG
 
-2. Notice the violation is set to learn only and is not enabled by default in a policy. That is why the request was seen as legal and there was no alert in the event logs.
+2. Notice the violation is set to learn only and is not enabled by default in a Rapid Deployment Policy. That is why the request was seen as legal and there was no alert in the event logs.
 
-3. Since learning was on by default there must be a learning suggestion ready for us. Let's go take a look.
+3. Since learning **was** on by default there must be a learning suggestion ready for us. Let's go take a look.
 
 4. We want to specifically find the learning suggestion for **HTTP protocol compliance failed - HTTP Check: No Host header in HTTP/1.1 request**
 
 Navigate to **Security > Application Security > Policy Building > Traffic Learning** and click on the Magnifying Glass.
 
-.. image:: images/image2.PNG
+.. image:: images/image11.PNG
 
-Under the Advanced Tab move the slider to the left so you can see alerts with a learning score of less than 5.
+Under the Advanced Tab move the slider to the left so you can see alerts with a learning score of less than 5 and click **Apply Filter*
 
-.. image:: images/image3.PNG
-
+.. image:: images/image12.PNG
 
 5. Note the action ASM is suggesting that you take - **Enable HTTP Check**
 
-6. Click Accept and then browse back to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed**
-Notice that by accepting the learning suggestion ASM has now enabled the protection but it is still in learning mode so unckeck that manually.
+.. image:: images/image13.PNG
+
+6. Click **Accept Suggestion** and then browse back to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed**
+Notice that by accepting the learning suggestion ASM has now enabled the protection but it is still in learning mode so **uncheck** that manually.
 
 .. image:: images/image7.PNG
 
-7. Be sure you have clicked "Save" and Applied the Policy prior to proceeding.
+7. **Be sure you have clicked "Save" and Applied the Policy prior to proceeding.**
 
-Go back to Burp and run the attack again.
+8. Go back to Burp and run the attack again.
 
-11. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request received by the security policy.
+9. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request received by the security policy.
 You should now see the alerts since we have enabled this compliancy check and turned off learning.
 
 .. image:: images/image9.PNG
