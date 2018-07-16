@@ -49,11 +49,12 @@ HTTP Compliancy Check - Enforce Host Header
 
 4. Under the **Request** tab paste in the following http request, remove any whitespace and click **Go**.
 
+.. IMPORTANT:: When you copy and paste there will be whitespace in front of the headers. You will need to remove this manually or the request will not be sent.
+
 5. A popup will appear asking for target details. Fill out the form as shown below.
 
 .. image:: images/image10.PNG
 
-.. IMPORTANT:: When you copy and paste there will be whitespace in front of the headers. You will need to remove this manually or the request will not be sent.
 
 Attack 1: No Host Header - **Run this several times.**
 
