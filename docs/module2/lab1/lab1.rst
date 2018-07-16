@@ -24,7 +24,12 @@ Your virtual should look like this
 
 BURPing the App
 ~~~~~~~~~~~~~~~~
-1. Attack 1:
+
+In this section we are going to use the free version of an excellent DAST tool; BURP.
+We will be manually sending two different attack types to demonstrate the protocol compliance features of ASM.
+
+
+1. Attack 1: Run this several times.
 No Host Header
 POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
 User-Agent: R2D2
@@ -35,26 +40,15 @@ Content-Length: 38
 
 username=f5student&password=f5DEMOs4u!
 
-2. Attack 2:
-Script in HOST Header
-POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
-User-Agent: R2D2
-Pragma: no-cache
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 38
-Host: <script>alert(document.cookie);</script>
-
-username=f5student&password=f5DEMOs4u!
 
 
-11. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy to not allow this.
+11. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy to not allow this since this is not compliant or bad HTTP/1.1
 
 .. image:: images/image8.PNG
 
-Leaning and Blocking
+Learning and Blocking
 ~~~~~~~~~~~~~~~~~~~~~~
-The first place we always take a look for why we are not getting an alert is under learning and blocking settings.
+The first place we always take a look when we want to implement a new control is under learning and blocking settings.
 
 1. Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings** and look for **HTTP Protocol Compliance failed**
 
@@ -64,10 +58,13 @@ The first place we always take a look for why we are not getting an alert is und
 
 3. Since learning was on by default there must be a learning suggestion ready for us. Let's go take a look.
 
-Navigate to **Security > Application Security > Policy Building > Traffic Learning** and take a minute to absorb what you're looking at.
-These are all the things that ASM has currently learned about your application and are most likely all false positives at this point since this is a controlled environment. Take a look at some of them and look at the suggested actions ASM would like you to implement. If this policy was in automatic mode, when the learning score reaches 100%, the action is automatically taken.
+Navigate to **Security > Application Security > Policy Building > Traffic Learning** and click on the Magnifying Glass.
 
-.. IMPORTANT:: Now that you have seen how ASM learns things; think about how important it is that ASM gets good clean traffic during policy development and should be part of SDLC of the application.
+.. image:: images/image2.PNG
+
+Under the Advanced Tab move the slider to the left so you can see alerts with a learning score of less than 5.
+
+.. image:: images/image3.PNG
 
 4. You want to specifically find the learning suggestion for **HTTP protocol compliance failed - HTTP Check: No Host header in HTTP/1.1 request**
 
@@ -85,3 +82,15 @@ Notice that by accepting the learning suggestion ASM has now enabled the protect
 11. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request received by the security policy.
 
 11. Observe the Illegal requests observed by the security policy. What protocol compliance violations were observed by the security policy?
+
+2. Attack 2:
+Script in HOST Header
+POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
+User-Agent: R2D2
+Pragma: no-cache
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 38
+Host: <script>alert(document.cookie);</script>
+
+username=f5student&password=f5DEMOs4u!
