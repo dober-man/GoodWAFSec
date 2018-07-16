@@ -69,13 +69,11 @@ Attack 1: No Host Header - **Run this several times.**
 
 .. image:: images/image10.PNG
 
-
-
 Request and Response should look like this
 
 .. image:: images/image5.PNG
 
-5. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy per the "Good WAF Protection recommendations", to not allow this since it is not RFC compliant HTTP/1.1
+6. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy per the "Good WAF Protection recommendations", to not allow this since it is not RFC compliant HTTP/1.1
 
 .. image:: images/image8.PNG
 
@@ -93,28 +91,28 @@ The first place we always take a look when we want to implement a new control is
 
 4. We want to specifically find the learning suggestion for **HTTP protocol compliance failed - HTTP Check: No Host header in HTTP/1.1 request**
 
-Navigate to **Security > Application Security > Policy Building > Traffic Learning** and click on the Magnifying Glass.
+5. Navigate to **Security > Application Security > Policy Building > Traffic Learning** and click on the Magnifying Glass.
 
 .. image:: images/image11.PNG
 
-Under the Advanced Tab move the slider to the left so you can see alerts with a learning score of less than 5 and click **Apply Filter*
+6. Under the Advanced Tab move the slider to the left so you can see alerts with a learning score of less than 5 and click **Apply Filter*
 
 .. image:: images/image12.PNG
 
-5. Note the action ASM is suggesting that you take - **Enable HTTP Check**
+7. Note the action ASM is suggesting that you take - **"Enable HTTP Check"**
 
 .. image:: images/image13.PNG
 
-6. Click **Accept Suggestion** and then browse back to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed**
+8. Click **Accept Suggestion** and then browse back to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed**
 Notice that by accepting the learning suggestion ASM has now enabled the protection but it is still in learning mode so **uncheck** that manually.
 
 .. image:: images/image7.PNG
 
-7. **Be sure you have clicked "Save" and Applied the Policy prior to proceeding.**
+9. **Be sure you have clicked "Save" and Applied the Policy prior to proceeding.**
 
-8. Go back to Burp and run the attack again.
+10. Go back to **Burp** and run the attack again one or more times.
 
-9. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request received by the security policy.
+11. Browse to **Security > Event Logs > Application > Requests** on the BIG-IP GUI. Clear the **Illegal Request** option to view all request received by the security policy.
 You should now see the alerts since we have enabled this compliancy check and turned off learning.
 
 .. image:: images/image9.PNG
@@ -122,16 +120,38 @@ You should now see the alerts since we have enabled this compliancy check and tu
 HTTP Compliancy Check - Bad Host Header Value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Observe the Illegal requests observed by the security policy. What protocol compliance violations were observed by the security policy?
+The **Bad Host Header Value** check is an HTTP Parser Attack and definitely something that should be implemented as part of **Good WAF Security**.
 
-2. Attack 2:
-Script in HOST Header
-POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
-User-Agent: R2D2
-Pragma: no-cache
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 38
-Host: <script>alert(document.cookie);</script>
+**Risk**
+Used to Fuzz web servers and gather system information. Successful exploitation of this attack could allow for the execution of XSS arbitrary code.
 
-username=f5student&password=f5DEMOs4u!
+1. Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed** and find **Bad host header value**
+Notice that by default this is also in learning mode but disabled by default in a Rapid Deployment Policy.
+
+.. image:: images/image14.PNG
+
+2. **Uncheck** the Learn box and **Check** the Enable box. Scroll up, click **Save** and **Apply Policy**.
+
+3. Go back to **Burp** and under the **Request** tab paste in the following http request, remove any whitespace and click **Go**.
+
+Attack 2: XSS in HOST Header
+
+::
+
+  POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
+  User-Agent: BB8
+  Pragma: no-cache
+  Cache-Control: no-cache
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 38
+  Host: <script>alert(document.cookie);</script>
+
+  username=f5student&password=f5DEMOs4u!
+
+.. image:: images/image15.PNG
+
+4. Browse to **Security > Event Logs > Application > Requests** and review the alert for this attempted attack
+
+.. image:: images/image16.PNG
+
+5. Click **Export Request** and review the detailed report. Notice the XSS alerts and how they are currently still in staging. We will cover this in the next lab.
