@@ -47,7 +47,7 @@ HTTP Compliancy Check - Enforce Host Header
 
 3. Click **Start Burp** and navigate to the **Repeater** tab once opened.
 
-4. Under the **Request** tab paste in the following http request, remove any whitespace and click **Go**.
+4. Under the **Request** tab paste in the following http request, remove any whitespace, or use the text version on the desktop, and click **Go**.
 
 Attack 1: No Host Header - **Run this several times.**
 
@@ -63,7 +63,7 @@ Attack 1: No Host Header - **Run this several times.**
   username=f5student&password=f5DEMOs4u!
 
 
-.. IMPORTANT:: When you copy and paste there will be whitespace in front of the headers. You will need to remove this manually or the request will not be sent.
+.. IMPORTANT:: When you copy and paste there will be whitespace in front of the headers. You will need to remove this manually or the request will not be sent. The requests can also be found in txt docs on the client desktop. If you copy and paste from there rather than this site, the whitespace will not be a problem.
 
 5. A popup will appear asking for target details. Fill out the form as shown below.
 
@@ -133,7 +133,7 @@ Notice that by default this is also in learning mode but disabled by default in 
 
 2. **Uncheck** the Learn box and **Check** the Enable box. Scroll up, click **Save** and **Apply Policy**.
 
-3. Go back to **Burp** and under the **Request** tab paste in the following http request, remove any whitespace and click **Go**.
+3. Go back to **Burp** and under the **Request** tab paste in the following http request, remove any whitespace, or use the text version on the desktop, and click **Go**.
 
 Attack 2: XSS in HOST Header
 
@@ -168,7 +168,7 @@ An attacker may try to evade security checks by confusing ASM and/or application
 Examples
 The website may be accessed by non-browser clients attempting to bypass security gateways.
 
-.. NOTE:: There will be little guidance on this section. Use what you have learned above to complete this lab. Please ask an instructor if you need help. 
+.. NOTE:: There will be little guidance on this section. Use what you have learned above to complete this lab. Please ask an instructor if you need help.
 
 Order of operations
 
