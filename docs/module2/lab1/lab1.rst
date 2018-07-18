@@ -170,10 +170,23 @@ The website may be accessed by non-browser clients attempting to bypass security
 
 .. NOTE:: There will be little guidance on this section. Use what you have learned above to complete this lab. Please ask an instructor if you need help.
 
-Order of operations
+**Order of Operations**
 
 1. Disable learning and Enable the Compliancy Check for **Multiple Host Headers** in learning and blocking settings.
-2. Use BURP to perform the Attack
+2. Use **BURP** to perform the Attack
+
+::
+  POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
+  User-Agent: BB8
+  Pragma: no-cache
+  Cache-Control: no-cache
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 38
+  Host: LordVader
+  Host: LukeSkywalker
+
+  username=f5student&password=f5DEMOs4u!
+
 3. Review Event Logs to ensure the attack is being mitigated.
 
 .. image:: images/image18.PNG
