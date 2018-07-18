@@ -168,9 +168,10 @@ An attacker may try to evade security checks by confusing ASM and/or application
 Examples
 The website may be accessed by non-browser clients attempting to bypass security gateways.
 
-.. NOTE:: There will be little guidance on this section. Use what you have learned above to complete this lab.
+.. NOTE:: There will be little guidance on this section. Use what you have learned above to complete this lab. Please ask an instructor if you need help. 
 
 Order of operations
+
 1. Disable learning and Enable the Compliancy Check for **Multiple Host Headers** in learning and blocking settings.
 2. Use BURP to perform the Attack
 3. Review Event Logs to ensure the attack is being mitigated.
