@@ -162,11 +162,9 @@ HTTP Compliancy Check - Multiple Host Headers
 Description - Examines requests to ensure that they contain only a single "Host" header.
 This is an example of an HTTP Request Smuggling Attack
 
-Risk
-An attacker may try to evade security checks by confusing ASM and/or application servers as to which hostname is being accessed.
+Risk - An attacker may try to evade security checks by confusing ASM and/or application servers as to which hostname is being accessed.
 
-Examples
-The website may be accessed by non-browser clients attempting to bypass security gateways.
+Example - The website may be accessed by non-browser clients attempting to bypass security gateways.
 
 .. NOTE:: There will be little guidance on this section. Use what you have learned above to complete this lab. Please ask an instructor if you need help.
 
