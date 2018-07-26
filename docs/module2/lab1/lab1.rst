@@ -19,7 +19,7 @@ Objective
 Apply Security Policy
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. IMPORTANT:: To clearly demonstrate just the protocol compliance protection, on the ``webgoat.f5demo.com_https_vs`` virtual server
+.. IMPORTANT:: To clearly demonstrate just the protocol compliance protection, on the ``webgoat.f5demo.com_https_vs`` virtual server; PLEASE PERFORM THE FOLLOWING TWO STEPS:
 
 1. **Remove** the previously created DoS profile and bot logging profile.
 2. **Enable** the ``lab1_webgoat_waf`` Security Policy
@@ -174,7 +174,7 @@ Example - The website may be accessed by non-browser clients attempting to bypas
 2. Use **BURP** to perform the Attack
 
 ::
-  
+
   POST https://webgoat.f5demo.com/WebGoat/login HTTP/1.1
   User-Agent: BB8
   Pragma: no-cache

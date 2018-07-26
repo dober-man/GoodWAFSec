@@ -276,7 +276,7 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 
 .. image:: images/image1_3_19.PNG
 
-2. Modify the cURL command to point at the overlay virtual server and run several times: ``curl https://101.10.146/WebGoat/login -k``
+2. Modify the cURL command to point at the overlay virtual server and run several times: ``curl https://10.1.10.146/WebGoat/login -k``
 
 3. Review the event logs at **Event Logs >> Bot Defense** You will
    now see geo-data for the BOT connection attempts.
