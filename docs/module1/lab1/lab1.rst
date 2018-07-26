@@ -198,7 +198,7 @@ XFF. You can work around this and get contextual information about the client.
 IP Reputation
 ~~~~~~~~~~~~~
 
-Navigate to **Security > Application Security > IP Addresses > IP Intelligence** and click **Enabled**. 
+Navigate to **Security > Application Security > IP Addresses > IP Intelligence** and click **Enabled**.
 For all categories **select Alarm**. Click on **Save** and then on **Apply Policy**.
 
 .. NOTE:: On the top right you should see that your IP Intelligence database has been updated at some point.
@@ -208,7 +208,7 @@ For all categories **select Alarm**. Click on **Save** and then on **Apply Polic
 .. NOTE:: In order to create traffic with malicious sources for the purposes of this lab we have created another special configuration item for you.
 
 There is an iRule that you will apply to the ``webgoat.f5demo.com_https_vs`` virtual server.
-This iRule will insert an X-Forward-For header with the value of a malicious source IP address.
+This iRule will insert an X-Forward-For header with the value of a malicious United States source IP address.
 This configuration will cause ASM to see the inbound traffic as having the malicious sources.
 
 1. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
@@ -227,7 +227,7 @@ Click **Finished**.
  Since you configured IP Intelligence violations to alarm you will not need to change the filter.
  Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
-.. image:: images/image20.PNG
+.. image:: images/image22.PNG
 
 **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
 and look up the IP address in question for further information. There is also
@@ -236,9 +236,9 @@ a tool to report IP addresses that have been incorrectly flagged.
 Further, you can ssh to the BIG-IP and login with ``root`` / ``f5DEMOs4u!`` to run
 the ``iprep_lookup`` command, similar to:
 
-[root@bigip1.Active.Standalone] config #**iprep_lookup 107.172.51.119**
-iprep_lookup 107.172.51.119
+[root@bigip1.Active.Standalone] config #**iprep_lookup 8.33.184.254**
+iprep_lookup 8.33.184.254
 opening database in /var/IpRep/F5IpRep.dat
 size of IP reputation database = 37026703
-iprep threats list for ip = 107.172.51.119 is:
-bit 0 - Spam Sources
+iprep threats list for ip = 8.33.184.254 is:
+bit 7 - Phishing
