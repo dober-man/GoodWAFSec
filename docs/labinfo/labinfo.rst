@@ -56,7 +56,7 @@ components:
      - 10.1.1.51
      - 10.1.10.51
      - N/A
-     - https-``ubuntu:f5DEMOs4u!``
+     - https-``ubuntu:ubuntu``
    * - Bigip (bigip01)
      - 10.1.1.245
      - 10.1.10.245
