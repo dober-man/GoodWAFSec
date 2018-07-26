@@ -140,7 +140,7 @@ Apply Bot Defense Logging Profile
 #. Click on **Policies** under the **Security** tab at the top
 
 #. Within the Available logging profiles menu,
-   select ``bot-defense_allrequests`` and then click
+   select ``bot-defense`` and then click
    the ``<<`` arrows to move the logging policy to
    the ``Selected`` profile.
 
@@ -155,7 +155,7 @@ Apply Bot Defense Logging Profile
       continues to receive the union of DoS, Bot Defense and ASM Security
       Policy events.
 
-   .. image:: images/image1_3_10.PNG
+   .. image:: images/image34.PNG
 
 Test the Proactive Bot Defense Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -163,15 +163,10 @@ Test the Proactive Bot Defense Policy
 
 #. From the command line execute the following command several times:
 
-   ``curl –k https://webgoat.f5demo.com/WebGoat/login``
+   ``curl https://webgoat.f5demo.com/WebGoat/login -k``
 
-   .. NOTE:: This can take a few minutes and you may get several empty
-      responses as shown.
-
-.. image:: images/image3.PNG
-
-   After a few moments the PBD will initialize and you will Because
-   Proactive BOT Defense is always on, this tool will always be
+   .. NOTE:: This can take a few seconds to kick in and you will start getting empty responses.
+   Since Proactive BOT Defense is in "always on" mode, this tool will always be
    blocked.
 
 
@@ -213,7 +208,7 @@ BOT Signatures
 
    .. image:: images/image1_3_12.PNG
 
-#. Run cURL again: ``curl –k https://webgoat.f5demo.com/WebGoat/login``
+#. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k``
 
    **The site should respond normally now every time.**
 
@@ -243,9 +238,9 @@ Selectively Blocking BOT Categories
 
    .. image:: images/image1_3_14.PNG
 
-#. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login``
+#. Run cURL again: ``curl  https://webgoat.f5demo.com/WebGoat/login -k``
 
-   .. image:: images/image1_3_15.PNG
+   .. image:: images/image35.PNG
 
    Whammo!!!... as soon as the BOT is revealed... the connection is dropped.
    The TLS doesn’t get established.
@@ -261,7 +256,7 @@ Selectively Blocking BOT Categories
 .. image:: images/image1_3_16.PNG
 
 
-#. Run cURL again: ``curl --insecure https://webgoat.f5demo.com/WebGoat/login`` and you should be back in business. By now you should know the expected output.
+#. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k`` and you should be back in business. By now you should know the expected output.
 
 #. Change HTTP Library to: **Report** and remove **CURL** from the whitelist.
 
@@ -277,11 +272,11 @@ cURL from Different Geolocations
 .. NOTE:: We are going to leverage an overlay virtual server to randomize source IP addresses similar to the earlier lab concept of randomizing XFF.
 
 1. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_overlay_vs``.
-Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overlay** is applied. Freel free to check out the code in the iRule. This code and BIG-IP flxibility makes lab testing and simulations a breeze.
+Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overlay** is applied. Freel free to check out the code in the iRule. This code and BIG-IP flexibility makes lab testing and simulations a breeze.
 
 .. image:: images/image1_3_19.PNG
 
-2. Modify the cURL command to point at the overlay virtual server and run several times: ``curl --insecure https://101.10.146/WebGoat/login``
+2. Modify the cURL command to point at the overlay virtual server and run several times: ``curl https://101.10.146/WebGoat/login -k``
 
 3. Review the event logs at **Event Logs >> Bot Defense** You will
    now see geo-data for the BOT connection attempts.
