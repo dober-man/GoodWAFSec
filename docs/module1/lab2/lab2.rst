@@ -120,7 +120,7 @@ Create Bot Defense Logging Profile
    checkbox for ``Bot Defense``.
 
 #. Under the **Bot Defense** logging section, select the checkboxes
-   for the following: ``Local Publisher``, ``Log Illegal Requests``, and
+   for the following: ``Local Publisher``, ``Log Illegal Requests``, ``Log Bot Signature Matched Requests`` and
    ``Log Challenged Requests``.
 
 #. Click **Finished**.
@@ -128,7 +128,7 @@ Create Bot Defense Logging Profile
    .. NOTE:: You could have also modified the existing ``asm_allrequests``
       logging profile and added BOT logging definitions.
 
-   .. image:: images/image31.PNG
+   .. image:: images/image33.PNG
 
 Apply Bot Defense Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
