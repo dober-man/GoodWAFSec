@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=ASM141Docs
+set SPHINXPROJ=GoodWAFSecDocs
 
 if "%1" == "" goto help
 
