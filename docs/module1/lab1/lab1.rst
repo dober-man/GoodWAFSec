@@ -24,6 +24,13 @@ Please ensure that four virtual servers are configured before you begin:
 - ``webgoat.f5demo.com_http_vs``
 - ``automation_vs``
 
+Add a DNS Server
+~~~~~~~~~~~~~~~~~~~
+1. Navigate to **System > COnfiguration > Device > DNS**
+2. Add google DNS server. 8.8.8.8
+
+.. image:: images/image21.PNG
+
 Create Policy
 ~~~~~~~~~~~~~
 
@@ -186,9 +193,7 @@ is randomizing the IP address placed in that header so ASM believes the request 
 XFF. You can work around this and get contextual information about the client.
 
 .. IMPORTANT:: Please remove the iRule ``webgoat_irule`` from the
-   Virtual Server and disable Geolocation as show in the below screenshot before proceeding to the next step.
-
-.. image:: images/image19.PNG
+   Virtual Server before proceeding.
 
 IP Reputation
 ~~~~~~~~~~~~~
@@ -228,10 +233,10 @@ Click **Finished**.
 and look up the IP address in question for further information. There is also
 a tool to report IP addresses that have been incorrectly flagged.
 
-Further, you can use ssh to the BIG-IP and login with ``root`` / ``f5DEMOs4u!`` to run
+Further, you can ssh to the BIG-IP and login with ``root`` / ``f5DEMOs4u!`` to run
 the ``iprep_lookup`` command, similar to:
 
-[root@bigip1.Active.Standalone] config #**iprep_lookup 77.222.40.121**
+[root@bigip1.Active.Standalone] config #**iprep_lookup 107.172.51.119**
 opening database in /var/IpRep/F5IpRep.dat
 size of IP reputation database = 39492859
 iprep threats list for ip = 77.222.40.121 is:
