@@ -6,7 +6,7 @@ Lab Environment & Topology
 Environment
 -----------
 
-Linux client (client01):
+**Linux client (client01):**
 
 * Web Attack Tools used in this lab:
 
@@ -20,7 +20,7 @@ Linux client (client01):
  * `Postman <https://www.getpostman.com/>`_ - Graphical based Restful Client, will be used to interact with the iControl Rest API
  * `python <https://www.python.org/>`_ - general programming language used to interact with the iControl Rest API
 
-Linux server (server01):
+**Linux server (server01):**
 
 * `WebGoat 8 <https://github.com/WebGoat/WebGoat/wiki>`_ - WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons. You can install and practice with WebGoat. There are other 'goats' such as WebGoat for .Net. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat applications. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application aims to provide a realistic teaching environment, providing users with hints and code to further explain the lesson.
 

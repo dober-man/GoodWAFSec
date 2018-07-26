@@ -1,4 +1,4 @@
-F5 Agility 2018 Labs - ASM - GoodWAFSec
+F5 Agility 2018 Labs - ASM - Good WAF Security
 ===================================
 
 .. toctree::
