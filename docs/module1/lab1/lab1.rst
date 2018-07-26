@@ -222,7 +222,7 @@ Click **Finished**.
  Since you configured IP Intelligence violations to alarm you will not need to change the filter.
  Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
-.. image:: images/image18.PNG
+.. image:: images/image20.PNG
 
 **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
 and look up the IP address in question for further information. There is also
