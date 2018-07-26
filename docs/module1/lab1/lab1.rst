@@ -9,6 +9,10 @@ Objective
 
 - Validate that both the policy and logging profile are working.
 
+- Configure Geolocation and review logs
+
+- Configure IP Intelligence and review logs
+
 - Estimated time for completion: **30** **minutes**.
 
 #. From the jumpbox, launch Chrome, click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
@@ -39,7 +43,7 @@ Create Policy
 
 #. Assign this policy to the ``webgoat.f5demo.com_https_vs`` from the Virtual Server drop down.
 
-#. Set the Application Language to **UTF-8**.
+#. Confirm that the Application Language is set to **UTF-8**.
 
 #. Accept the remaining default policy settings and click **Create Policy** to complete the policy creation process.
 
@@ -103,7 +107,7 @@ Test WAF Policy
 
 .. image:: images/image7.PNG
 
-2. Login using **webgoat/F5DEMOs4u!** credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
+2. Login using **f5student/F5DEMOs4u!** credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
 #. On the BIG-IP, navigate to **Security > Event Logs > Application > Requests**.
 
@@ -129,7 +133,7 @@ Geolocation
 
    .. image:: images/image10.PNG
 
-   .. IMPORTANT:: Remember to click on the **Apply Policy** button to commit security policy changes.
+   .. IMPORTANT:: Remember to click on the **Apply Policy** button (top right) to commit security policy changes.
 
 #. Open **Local Traffic > iRules** and open the iRule titled
    ``webgoat_irule`` and review the code.
@@ -159,14 +163,15 @@ Geolocation
 
    .. image:: images/image12.PNG
 
-6. We now need to turn on the **Trust XFF Header** feature in the policy.
+6. We now need to tell ASM to trust the XFF header by turning on the **Trust XFF Header** feature in the policy.
 Navigate to **Application Security > Policy > Policy Properties** and hit the dropdown for **Advanced View**.
 You can now check the box to **Trust XFF Header** and click **Save** then **Apply Policy**
 
 .. image:: images/image15.PNG
 
 .. NOTE:: Regarding Trust XFF - you would do this if ASM is deployed behind an internal or other trusted proxy. Then, the system uses the IP address that initiated the connection to the proxy instead of the internal proxy’s IP address. This option is useful for logging, web scraping, anomaly detection, and the geolocation feature.
-You should not configure trusted XFF headers if you think the HTTP header may be spoofed, or crafted, by a malicious client.
+
+**You should not configure trusted XFF headers if you think the HTTP header may be spoofed, or crafted, by a malicious client.**
 
 
 #. Open a new **Google Chrome Private Browsing** window and connect to
@@ -177,10 +182,8 @@ You should not configure trusted XFF headers if you think the HTTP header may be
 .. image:: images/image13.PNG
 
 Notice the geolocation detected and the presence of the X-Forwarded-For (XFF) in the Request details. Your actual client IP is still 10.1.10.28 however, because we trusted the XFF header and the iRule
-is randomizing the IP address placed in that header.
-
-ASM believes the request is from an external location to provide a more realistic example. Depending on your network you may be leveraging a technology that creates a source NAT ahead of ASM so by leveraging the
-XFF you can work around this and get contextual information about the client.
+is randomizing the IP address placed in that header so ASM believes the request is from an external location. Depending on your network you may be leveraging a technology that creates a source NAT ahead of ASM so by leveraging the
+XFF. You can work around this and get contextual information about the client.
 
 .. IMPORTANT:: Please remove the iRule ``webgoat_irule`` from the
    Virtual Server before proceeding to the next step.
