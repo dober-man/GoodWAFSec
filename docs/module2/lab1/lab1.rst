@@ -31,7 +31,7 @@ Your virtual should look like this
 Burp'ing the App
 ~~~~~~~~~~~~~~~~
 
-In this section we are going to use the free/community version of an excellent DAST tool; Burp. Unfortunately the free version does not actually allow DAST but it is still an excellent tool for packet crafting and that's exactly how we are going to use it.
+In this section we are going to use the free/community version of an excellent DAST tool; Burp. Unfortunately, the free version does not actually allow DAST but it is still an excellent tool for packet crafting and that's exactly how we are going to use it.
 We will be manually sending two different attack types to demonstrate the protocol compliance features of ASM.
 
 HTTP Compliancy Check - Enforce Host Header
@@ -49,7 +49,7 @@ HTTP Compliancy Check - Enforce Host Header
 
 4. Under the **Request** tab paste in the following http request, remove any whitespace, or use the text version on the desktop, and click **Go**.
 
-Attack 1: No Host Header - **Run this several times.**
+Attack 1: No Host Header - **Run this at least 10 times.**
 
 ::
 

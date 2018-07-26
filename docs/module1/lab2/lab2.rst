@@ -204,8 +204,6 @@ BOT Signatures
    then change the setting from **Always** to **During Attack** and
    click **Update** to complete the policy change.
 
-   .. NOTE:: Ignore the DNS Resolver warning
-
    .. image:: images/image1_3_12.PNG
 
 #. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k``

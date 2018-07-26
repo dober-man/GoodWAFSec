@@ -24,20 +24,6 @@ Please ensure that four virtual servers are configured before you begin:
 - ``webgoat.f5demo.com_http_vs``
 - ``automation_vs``
 
-Add a DNS Server
-~~~~~~~~~~~~~~~~~~~
-1. Navigate to **System > Configuration > Device > DNS**
-2. Add google DNS server. 8.8.8.8
-
-.. image:: images/image21.PNG
-
-Add a DNS Resolver
-~~~~~~~~~~~~~~~~~~~~
-1. Navigate to **Network > DNS Resolvers > DNS Resolvers List**
-2. Configure a DNS Resolver named **webgoat_resolver**  and click finished
-
-.. image:: images/image21.PNG
-
 Create Your 1st WAF Policy
 ~~~~~~~~~~~~~
 
