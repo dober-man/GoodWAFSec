@@ -107,7 +107,7 @@ Test WAF Policy
 
 .. image:: images/image7.PNG
 
-2. Login using **f5student/F5DEMOs4u!** credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
+2. Login using **f5student/f5DEMOs4u!** credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
 #. On the BIG-IP, navigate to **Security > Event Logs > Application > Requests**.
 
@@ -193,7 +193,7 @@ XFF. You can work around this and get contextual information about the client.
 IP Reputation
 ~~~~~~~~~~~~~
 
-Navigate to **Security > Application Security > IP Addresses > IP Address Intelligence** and click **Enabled**. Ignore the DNS error.
+Navigate to **Security > Application Security > IP Addresses > IP Intelligence** and click **Enabled**. Ignore the DNS error.
 For all categories **select Alarm**. Click on **Save** and then on **Apply Policy**.
 
 .. NOTE:: On the top right you should see that your IP Intelligence database has been updated at some point.
@@ -228,8 +228,7 @@ Click **Finished**.
 and look up the IP address in question for further information. There is also
 a tool to report IP addresses that have been incorrectly flagged.
 
-Further, you can use Putty on the Win7 box to access the BIG-IP via SSH
-(bookmarked as F5-WAF) and login with ``root`` / ``f5DEMOs4u!`` to run
+Further, you can use ssh to the BIG-IP and login with ``root`` / ``f5DEMOs4u!`` to run
 the ``iprep_lookup`` command, similar to:
 
 [root@bigip1.Active.Standalone] config #**iprep_lookup 77.222.40.121**
