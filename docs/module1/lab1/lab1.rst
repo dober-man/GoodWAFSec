@@ -198,7 +198,7 @@ XFF. You can work around this and get contextual information about the client.
 IP Reputation
 ~~~~~~~~~~~~~
 
-Navigate to **Security > Application Security > IP Addresses > IP Intelligence** and click **Enabled**. Ignore the DNS error.
+Navigate to **Security > Application Security > IP Addresses > IP Intelligence** and click **Enabled**. 
 For all categories **select Alarm**. Click on **Save** and then on **Apply Policy**.
 
 .. NOTE:: On the top right you should see that your IP Intelligence database has been updated at some point.
@@ -237,9 +237,8 @@ Further, you can ssh to the BIG-IP and login with ``root`` / ``f5DEMOs4u!`` to r
 the ``iprep_lookup`` command, similar to:
 
 [root@bigip1.Active.Standalone] config #**iprep_lookup 107.172.51.119**
+iprep_lookup 107.172.51.119
 opening database in /var/IpRep/F5IpRep.dat
-size of IP reputation database = 39492859
-iprep threats list for ip = 77.222.40.121 is:
-bit 7 - Phishing
-bit 8 - Proxy'
-}
+size of IP reputation database = 37026703
+iprep threats list for ip = 107.172.51.119 is:
+bit 0 - Spam Sources
