@@ -32,9 +32,11 @@ Create Policy
    successful (you are getting a “request rejected” error page), please
    let an instructor know.
 
-   ``curl –k https://webgoat.f5demo.com/WebGoat/login | more``
-
+   ``curl https://webgoat.f5demo.com/WebGoat/login -k | more``
+Input
    .. image:: images/image1_3_1.PNG
+Output
+  .. image:: images/image30.PNG
 
 #. On the Main tab, click **Security > DoS Protection > DoS Profiles**.
    The DoS Profiles screen opens.
@@ -114,7 +116,7 @@ Create Bot Defense Logging Profile
     **Security > Event Logs > Logging Profiles** then **click
    the plus icon**.
 
-#. Enter a Profile Name ``bot-defense_allrequests``, select the
+#. Enter a Profile Name ``bot-defense``, select the
    checkbox for ``Bot Defense``.
 
 #. Under the **Bot Defense** logging section, select the checkboxes
@@ -126,7 +128,7 @@ Create Bot Defense Logging Profile
    .. NOTE:: You could have also modified the existing ``asm_allrequests``
       logging profile and added BOT logging definitions.
 
-   .. image:: images/image1_3_9.PNG
+   .. image:: images/image31.PNG
 
 Apply Bot Defense Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

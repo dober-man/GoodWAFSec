@@ -26,12 +26,19 @@ Please ensure that four virtual servers are configured before you begin:
 
 Add a DNS Server
 ~~~~~~~~~~~~~~~~~~~
-1. Navigate to **System > COnfiguration > Device > DNS**
+1. Navigate to **System > Configuration > Device > DNS**
 2. Add google DNS server. 8.8.8.8
 
 .. image:: images/image21.PNG
 
-Create Policy
+Add a DNS Resolver
+~~~~~~~~~~~~~~~~~~~~
+1. Navigate to **Network > DNS Resolvers > DNS Resolvers List**
+2. Configure a DNS Resolver named **webgoat_resolver**  and click finished
+
+.. image:: images/image21.PNG
+
+Create Your 1st WAF Policy
 ~~~~~~~~~~~~~
 
 #. On the Main tab, click **Security > Application Security > Security Policies**. The Active Policies screen opens.
