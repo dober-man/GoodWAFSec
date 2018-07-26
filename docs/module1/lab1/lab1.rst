@@ -186,12 +186,14 @@ is randomizing the IP address placed in that header so ASM believes the request 
 XFF. You can work around this and get contextual information about the client.
 
 .. IMPORTANT:: Please remove the iRule ``webgoat_irule`` from the
-   Virtual Server before proceeding to the next step.
+   Virtual Server and disable Geolocation as show in the below screenshot before proceeding to the next step.
+
+.. image:: images/image19.PNG
 
 IP Reputation
 ~~~~~~~~~~~~~
 
-Navigate to **Security > Application Security > IP Addresses > IP Address Intelligence** and click **Enabled**.
+Navigate to **Security > Application Security > IP Addresses > IP Address Intelligence** and click **Enabled**. Ignore the DNS error.
 For all categories **select Alarm**. Click on **Save** and then on **Apply Policy**.
 
 .. NOTE:: On the top right you should see that your IP Intelligence database has been updated at some point.
@@ -217,7 +219,7 @@ Click **Finished**.
  Login and Click on one or two items.
 
 5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
- Since you configured IP Intelligence violations to alarm you will not need change the filter.
+ Since you configured IP Intelligence violations to alarm you will not need to change the filter.
  Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
 .. image:: images/image18.PNG
