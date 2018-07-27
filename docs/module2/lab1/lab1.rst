@@ -63,7 +63,7 @@ Attack 1: No Host Header - **Run this at least 10 times.**
   username=f5student&password=f5DEMOs4u!
 
 
-.. IMPORTANT:: When you copy and paste there will be whitespace in front of the headers. You will need to remove this manually or the request will not be sent. The requests can also be found in txt docs on the client desktop. If you copy and paste from there rather than this site, the whitespace will not be a problem.
+.. IMPORTANT:: When you copy and paste there may be whitespace in front of the headers. You will need to remove this manually or the request will not be sent. The requests can also be found in txt docs on the client desktop. If you copy and paste from there rather than this site, the whitespace will not be a problem.
 
 5. A popup will appear asking for target details. Fill out the form as shown below.
 
