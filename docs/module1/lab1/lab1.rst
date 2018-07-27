@@ -15,7 +15,9 @@ Objective
 
 - Estimated time for completion: **30** **minutes**.
 
-#. From the jumpbox, launch Chrome, click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
+#. RDP to the the jumpbox, launch Chrome, click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
+.. NOTE:: If the Operating system prompts you to update system software, please decline
+
 
 Please ensure that four virtual servers are configured before you begin:
 
