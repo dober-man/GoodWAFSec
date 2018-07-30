@@ -49,7 +49,7 @@ HTTP Compliancy Check - Enforce Host Header
 
 4. Under the **Request** tab paste in the following http request, remove any whitespace, or use the text version on the desktop, and click **Go**.
 
-Attack 1: No Host Header - **Run this at least 10 times.**
+Attack 1: No Host Header - **Run this 10 times.**
 
 ::
 
@@ -123,7 +123,8 @@ HTTP Compliancy Check - Bad Host Header Value
 
 The **Bad Host Header Value** check is an HTTP Parser Attack and definitely something that should be implemented as part of **Good WAF Security**.
 
-**Risk**
+**Risk:**
+
 Used to Fuzz web servers and gather system information. Successful exploitation of this attack could allow for the execution of XSS arbitrary code.
 
 1. Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed** and find **Bad host header value**
