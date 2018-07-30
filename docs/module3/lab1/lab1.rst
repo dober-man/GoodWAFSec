@@ -4,25 +4,22 @@ Exercise 3.1: Blocking Policy
 Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You will explore the blocking policy and settings.  The blocking policy used for this lab will focus on negative security using signatures.
+You will explore the blocking policy and settings.  The blocking policy used for this lab will focus on negative security using attack signatures.
 
-.. IMPORTANT:: Remove the existing transparent policy from your virtual before proceeding. You virtual should look like this
+.. IMPORTANT:: Remove the existing transparent policy from your virtual before proceeding. Your virtual should look like this
 
 .. image:: images/image1.PNG
 
 Task 1 - Creating Blocking policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1.  Login to the BIG-IP device by clicking on the bookmark in Chrome.
 
-.. image:: images/image13_3_1.png
+1.  Go to **Security > Application Security > Security Policies** and click the Plus sign.
 
-3.  Go to **Security > Application Security > Security Policies** and click the Plus sign.
-
-4.  Click on Create Policy
+2.  Click on Create Policy
 
 .. image:: images/image14_3_1.png
 
-5.  At the far right change the setting to Advanced
+3.  At the far right change the setting to Advanced
 
 .. image:: images/image15_3_1.png
 
@@ -40,40 +37,40 @@ Fill out the following -
   - Policy is Case Sensitive -  ``Disabled``
   - Differentiate between HTTP/WS and HTTPS/WSS URLs -  ``Enabled``
 
-6.  Click Create Policy
+4.  Click Create Policy
 
-7.  Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
+5.  Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
 
-8.  Make sure ``Blocking_Policy`` is selected in the Current edited security policy.
+6.  Make sure ``Blocking_Policy`` is selected in the Current edited security policy.
 
-9.  At the far right across from General Settings ensure Advanced is selected
+7.  At the far right across from General Settings ensure Advanced is selected
 
 .. image:: images/image16_3_1.png
 
-10.  Click on **Blocking Settings**
+8.  Click on **Blocking Settings**
 
 .. image:: images/image1_3_1.png
 
-11.  Click the **Block** Check box at the top of to select all then click it again to clear Block from all entries.  Then click Change
+9.  Click the **Block** Check box at the top of to select all then click it again to clear Block from all entries.  Then click Change
 
 .. image:: images/image2_3_1.png
 
-12.  Under Policy Building Settings  expand the Attack Signatures options
+10.  Under Policy Building Settings  expand the Attack Signatures options
 
 .. image:: images/image3_3_1.png
 
-13.  Click on the Change button at the far right to bring up the Select Policy Attack Signature sets and choose to add both High Accuracy signature sets and SQL Injection Signatures then click Change
+11.  Click on the Change button at the far right to bring up the Select Policy Attack Signature sets and choose to add both High Accuracy signature sets and SQL Injection Signatures then click Change
 
 .. image:: images/image9_3_1.png
 .. image:: images/image10_3_1.png
 
 .. NOTE:: For this lab Signature Staging has been disbaled.  In a production environment you should consider using staging to allow yourself mitigation time before new signatures are implemented.
 
-14.  Ensure that the blocking checkbox has been unchecked for all signatures.
+12.  Ensure that the blocking checkbox has been unchecked for all signatures.
 
 .. image:: images/image17_3_1.png
 
-15.  You will click Save and Apply Policy at this point.
+13.  You will click Save and Apply Policy at this point.
 
 .. image:: images/images11_3_1.png
 

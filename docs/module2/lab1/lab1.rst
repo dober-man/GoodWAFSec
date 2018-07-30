@@ -124,8 +124,7 @@ HTTP Compliancy Check - Bad Host Header Value
 The **Bad Host Header Value** check is an HTTP Parser Attack and definitely something that should be implemented as part of **Good WAF Security**.
 
 **Risk:**
-
-Used to Fuzz web servers and gather system information. Successful exploitation of this attack could allow for the execution of XSS arbitrary code.
+If we allow bad host header values they can be used to Fuzz web servers and gather system information. Successful exploitation of this attack could allow for the execution of XSS arbitrary code.
 
 1. Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed** and find **Bad host header value**
 Notice that by default this is also in learning mode but disabled by default in a Rapid Deployment Policy.
@@ -156,7 +155,7 @@ Attack 2: XSS in HOST Header
 
 .. image:: images/image16.PNG
 
-5. Click **Export Request** and review the detailed report. Notice the XSS alerts and how they are currently still in staging. We will cover this in the next lab.
+5. Click **Export Request** and review the detailed report. Notice the XSS alerts and how they are currently still in staging. We will cover this in the next module.
 
 HTTP Compliancy Check - Multiple Host Headers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
