@@ -41,7 +41,7 @@ Create Your 1st WAF Policy
 
 #. Name the security policy ``lab1_webgoat_waf`` and notice that the **Policy Type** is security.
 
-#. Verify the **Policy Template** is set to ``Rapid Deployment Policy``. and notice it is a transparent security policy by default
+#. Verify the **Policy Template** is set to ``Rapid Deployment Policy`` and notice it is a transparent security policy by default
 
 #. Assign this policy to the ``webgoat.f5demo.com_https_vs`` from the Virtual Server drop down.
 
@@ -60,9 +60,9 @@ Create Your 1st WAF Policy
 
 Verify WAF Profile is Applied to Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. In the configuration utility navigate to **Local Traffic> Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
+#. In the configuration utility navigate to **Local Traffic > Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
 
-#. Click on **Polices** under the **Security** tab at the top of the ``webgoat.f5demo.com_https_vs`` details menu.
+#. Click on **Policies** under the **Security** tab at the top of the ``webgoat.f5demo.com_https_vs`` details menu.
 
 #. In the **Application Security Policy** drop down menu, ensure **Application Security Policy** is ``Enabled...`` and the **Policy:** drop-down selection shows the ``lab1_webgoat_waf`` policy.
 
@@ -203,8 +203,7 @@ For all categories **select Alarm**. Click on **Save** and then on **Apply Polic
 .. NOTE:: In order to create traffic with malicious sources for the purposes of this lab we have created another special configuration item for you.
 
 There is an iRule that you will apply to the ``webgoat.f5demo.com_https_vs`` virtual server.
-This iRule will insert an X-Forward-For header with the value of a malicious United States source IP address.
-This configuration will cause ASM to see the inbound traffic as having the malicious sources.
+This iRule will insert an X-Forward-For header with the value of a malicious United States source IP address. (Remember US is an allowed Geolocation)
 
 1. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
       ``webgoat.f5demo.com_https_vs`` virtual server.
@@ -231,7 +230,7 @@ a tool to report IP addresses that have been incorrectly flagged.
 Further, you can ssh to the BIG-IP and login with ``root`` / ``f5DEMOs4u!`` to run
 the ``iprep_lookup`` command, similar to:
 
-[root@bigip1.Active.Standalone] config #**iprep_lookup 8.33.184.254**
+[root@bigip1.Active.Standalone] config # **iprep_lookup 8.33.184.254**
 iprep_lookup 8.33.184.254
 opening database in /var/IpRep/F5IpRep.dat
 size of IP reputation database = 37026703
