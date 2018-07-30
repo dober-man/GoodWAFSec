@@ -17,7 +17,7 @@ Objective
 
 .. NOTE:: If the Operating system prompts you to update system software, please decline
 
-#. RDP to the the jumpbox, launch Chrome, click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
+#. RDP to the the jumpbox, launch Chrome (please be patient and don't click the icon multiple times. Chrome can take a few seconds to launch), click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
 
 Please ensure that four virtual servers are configured before you begin:
 

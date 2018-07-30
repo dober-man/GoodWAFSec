@@ -21,4 +21,4 @@ Here is a complete listing of all ASM classes offered at this years Agility.
 
 * WAF Programmability - Enhancing ASM Security and Manageability
 
-Please visit `clouddocs.f5.com <https://clouddocs.f5.com>`_ to continue your education.
+Following the Agility conference you can visit `clouddocs.f5.com <https://clouddocs.f5.com>`_ to continue your education.
