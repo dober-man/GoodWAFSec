@@ -231,6 +231,7 @@ Further, you can ssh to the BIG-IP and login with ``root`` / ``f5DEMOs4u!`` to r
 the ``iprep_lookup`` command, similar to:
 
 [root@bigip1.Active.Standalone] config # **iprep_lookup 8.33.184.254**
+
 iprep_lookup 8.33.184.254
 opening database in /var/IpRep/F5IpRep.dat
 size of IP reputation database = 37026703
