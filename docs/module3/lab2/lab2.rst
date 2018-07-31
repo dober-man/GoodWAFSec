@@ -1,5 +1,5 @@
 Exercise 3.2: Protection from common exploit vectors
-----------------------------------------
+------------------------------------------------------
 
 Overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -61,7 +61,7 @@ Your policy should now look like this.
 
 .. NOTE::  Now you have enabled blocking for just the signatures.  Note that all other functions are still in only alarm and learn mode.  What attacks do you think will be blocked at this point?
 
-13.  On the BIG-IP navigate to **Security > Event Logs > Application > Requests
+13.  On the BIG-IP navigate to **Security > Event Logs > Application > Requests**
 
 14.  Open a New Incognito Window in Chrome
 
@@ -121,7 +121,8 @@ Enter the following URL in to the URL to Attack field and click **Attack**:
 What additional functions can you turn on to prevent some of the other attacks?  How would you turn these on?
 Would this tool have even worked if Proactive Bot Defense was enabled?
 
-.. Bonus::
+Bonus
+~~~~~~
 
 Go to **Security > Application Security > Policy Building > Traffic learning**
 

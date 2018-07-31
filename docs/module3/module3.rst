@@ -7,4 +7,3 @@ Expected time to complete: **45 minutes**
    :glob:
 
    lab*/lab*
-   review
