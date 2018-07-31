@@ -27,7 +27,7 @@ Please ensure that four virtual servers are configured before you begin:
 - ``automation_vs``
 
 Create Your 1st WAF Policy
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. On the Main tab, click **Security > Application Security > Security Policies**. The Active Policies screen opens.
 #. Click on the **Polices List**
@@ -114,13 +114,15 @@ Test WAF Policy
 #. On the BIG-IP, navigate to **Security > Event Logs > Application > Requests**.
 
 #. Clear the default **"Illegal Requests"** filter by clicking the x.
-  .. image:: images/image8.PNG
+
+.. image:: images/image8.PNG
 
 #. Verify that requests are being logged by the WAF. You should be able to see both the raw client requests and server responses.
-  .. image:: images/image9.PNG
+
+.. image:: images/image9.PNG
 
 Exercise 1.2: Geolocation and IP Intelligence
-----------------------------------------
+-------------------------------------------------
 Geolocation
 ~~~~~~~~~~~
 
