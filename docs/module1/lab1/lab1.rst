@@ -211,17 +211,14 @@ This iRule will insert an X-Forward-For header with the value of a malicious Uni
       ``webgoat.f5demo.com_https_vs`` virtual server.
 
 2. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
-3. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
-Click **Finished**.
+
+3. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration and Click **Finished**.
 
 .. image:: images/image16.PNG
 
-4. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
- Login and Click on one or two items.
+4. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site. Login and Click on one or two items.
 
-5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
- Since you configured IP Intelligence violations to alarm you will not need to change the filter.
- Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
+5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries. Since you configured IP Intelligence violations to alarm you will not need to change the filter. Select the most recent entry and examine why the request is illegal. What IP address did the request come? from?
 
 .. image:: images/image22.PNG
 
