@@ -9,7 +9,7 @@ In this exercise we will examine the response pages, event logs and briefly look
 Task 2 - Response Pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Go to Security --> Application Security --> Policy --> Response pages
+1.  Go to **Security > Application Security > Policy > Response pages**
 
 .. image:: images/image1_3_3.png
 
@@ -29,9 +29,9 @@ Task 2 - Response Pages
 
 5.  Click Save and Apply Policy.  And click OK.
 
-6.  Open a New Incognito Window in Chrome
+6.  Open a New Incognito Window in Chrome and navigate to the Webgoat login page
 
-7.  Try entering a sql injection at the login prompt
+7.  Try entering a sql injection.
 
 ::
 

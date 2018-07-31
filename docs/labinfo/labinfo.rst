@@ -1,25 +1,17 @@
 Lab Environment & Topology
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. WARNING:: All work is done from the Linux client/jumphost (client01), which can be access via RDP (Windows Remote Desktop) or ssh. No installation or interaction with your local system is required.
-
-All pre-built environments implement the Lab Topology shown below.  Please
-review the topology first, then find the section matching the lab environment
-you are using for connection instructions.
+.. NOTE:: All work is done from the Linux client/jumphost (client01), which can be accessed via RDP (Windows Remote Desktop) or ssh. No installation or interaction with your local system is required.
 
 Environment
 -----------
 
-Linux client (client01):
+**Linux client (client01):**
 
-* Web Attack Tools:
+* Web Attack Tools used in this lab:
 
- * `Goldeneye <https://github.com/jseidl/GoldenEye>`_ - HTTP DOS Tool
- * `Metasploit <https://www.metasploit.com/>`_ - Pen testing framework
- * `nmap/nping <https://nmap.org/>`_ - Network mapper
- * `Slowhttptest <https://github.com/shekyan/slowhttptest>`_ - HTTP DOS Tool
- * `wapiti <http://wapiti.sourceforge.net/>`_ - web application auditor
- * `w3af <http://w3af.org/>`_ - web application auditor
+ * `OWASP ZAP <https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project>`_ - DAST
+ * `BURP Community Edition <https://portswigger.net/burp/>`_ - Packet Crafting
 
 * Api Tools:
 
@@ -28,9 +20,11 @@ Linux client (client01):
  * `Postman <https://www.getpostman.com/>`_ - Graphical based Restful Client, will be used to interact with the iControl Rest API
  * `python <https://www.python.org/>`_ - general programming language used to interact with the iControl Rest API
 
-Linux server (server01):
+**Linux server (server01):**
 
-* `WebGoat 8 <https://github.com/WebGoat/WebGoat/wiki>`_ - deliberately insecure application
+* `WebGoat 8 <https://github.com/WebGoat/WebGoat/wiki>`_ - WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons. You can install and practice with WebGoat. There are other 'goats' such as WebGoat for .Net. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat applications. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application aims to provide a realistic teaching environment, providing users with hints and code to further explain the lesson.
+
+Why the name "WebGoat"? Developers should not feel bad about not knowing security. Even the best programmers make security errors. What they need is a scapegoat, right? Just blame it on the **Goat!**
 
 .. _lab-topology:
 
@@ -40,15 +34,9 @@ Lab Topology
 The network topology implemented for this lab is very simple. The following
 components have been included in your lab environment:
 
--  1 x Ubuntu Linux 16.04 client - friendly name: client01
--  1 x F5 BIG-IP VE (v13.1.0.5) running ASM and LTM - friendly name: bigip01
--  1 x Ubuntu Linux 16.04 server - friendly name: server01
-
-.. nwdiag:: images/Agility2018LabDiagram.png
-   :width: 800
-   :caption: Lab Topology
-   :name: lab-topology-diagram
-   :scale: 110%
+-  1 x Ubuntu Linux 16.04 client
+-  1 x F5 BIG-IP VE (v13.1.0.2) running ASM and LTM
+-  1 x Ubuntu Linux 16.04 server
 
 The following table lists VLANS, IP Addresses and Credentials for all
 components:
@@ -68,13 +56,13 @@ components:
      - 10.1.1.51
      - 10.1.10.51
      - N/A
-     - https-``f5student:f5DEMOs4u!``
+     - https-``ubuntu:ubuntu``
    * - Bigip (bigip01)
      - 10.1.1.245
      - 10.1.10.245
      - 10.1.20.245
      - https - ``admin:f5DEMOs4u!`` ssh - ``f5student:f5DEMOs4u!``
-   * - Linux Server (server01)
+   * - Linux Server & WebGOAT app (server01)
      - 10.1.1.252
      - N/A
      - 10.1.20.252
@@ -82,8 +70,6 @@ components:
 
 A graphical representation of the lab:
 
-
 |labDiagram|
 
 .. |labDiagram| image:: images/Agility2018LabDiagram.png
-

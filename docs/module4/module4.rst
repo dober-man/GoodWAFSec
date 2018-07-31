@@ -19,8 +19,6 @@ These exercises will feature the following topics.
 
 * Create, modify and assign an ASM policy
 
-**Lab Guide**
-
 To perform the steps required in the lab, `Postman`_ will be used from the
 Linux jump box.
 

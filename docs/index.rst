@@ -1,4 +1,4 @@
-F5 Agility 2018 Labs - ASM 141
+F5 Agility 2018 Labs - ASM - Good WAF Security
 ===================================
 
 .. toctree::
@@ -9,6 +9,3 @@ F5 Agility 2018 Labs - ASM 141
    intro*
    labinfo/lab*
    module*/module*
-
-.... image::<path>
-   

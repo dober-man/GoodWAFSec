@@ -28,11 +28,11 @@ We will be using Postman collections to run API calls against our BIG-IP.  Postm
 
 2.  To import a Postman collection open the Postman client
 
-.. image:: /images/postman.png
+.. image:: images/postman.png
 
 3.  Click on Import
 
-.. image:: /images/import.png
+.. image:: images/Import.png
 
 4.  Choose Import from Link and enter the URL
 
@@ -40,7 +40,7 @@ We will be using Postman collections to run API calls against our BIG-IP.  Postm
 
   https://raw.githubusercontent.com/f5devcentral/f5-automation-labs/develop/postman_collections/F5_SecDevOps.postman_environment.json
 
-.. image:: /images/import_string.png
+.. image:: images/import_string.png
 
 5.  You will also need to import the environment file by repeating the above step and in the URL field enter the URL below
 
@@ -50,4 +50,4 @@ We will be using Postman collections to run API calls against our BIG-IP.  Postm
 
 6.  Once complete you will see the SecDevOps Postman collection loaded in the left pane
 
-.. image:: /images/secdevops.png
+.. image:: images/secdevops.png

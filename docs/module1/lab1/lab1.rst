@@ -5,69 +5,70 @@ Objective
 
 - Create a transparent rapid deployment policy.
 
-- Enable applicaiton security logging profile.
+- Enable application security logging profile.
 
 - Validate that both the policy and logging profile are working.
 
-- Review the auto-detection of the web server capabilities (i.e. Apache, jQuery).
+- Configure Geolocation and review logs
+
+- Configure IP Intelligence and review logs
 
 - Estimated time for completion: **30** **minutes**.
 
-This lab will demonstrate how to create and build a transparent security policy.
-Please ensure that two virtual servers are configured before you begin:
+.. NOTE:: If the Operating system prompts you to update system software, please decline
+
+#. RDP to the the jumpbox, launch Chrome (please be patient and don't click the icon multiple times. Chrome can take a few seconds to launch), click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
+
+Please ensure that four virtual servers are configured before you begin:
 
 - ``webgoat.f5demo.com_https_vs``
+- ``webgoat.f5demo.com_https_overlay_vs``
 - ``webgoat.f5demo.com_http_vs``
+- ``automation_vs``
 
-Create Policy
+Create Your 1st WAF Policy
 ~~~~~~~~~~~~~
 
 #. On the Main tab, click **Security > Application Security > Security Policies**. The Active Policies screen opens.
 #. Click on the **Polices List**
 
-.. image:: image1.PNG
+.. image:: images/image1.PNG
 
 
-3. Click on the **Create New Policy** button. The policy creation wizard opens.
+#. Click on the **Create New Policy** button. The policy creation wizard opens.
 
-.. image:: image2.PNG
+#. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
 
-4. Click on the **Advanced** button (Top-Right) to ensure that all the available policy creation options are displayed.
+#. Name the security policy ``lab1_webgoat_waf`` and notice that the **Policy Type** is security.
 
-#. Name the security policy ``lab1_webgoat_waf`` and ensure that the **Policy Type** is ``security``.
-
-#. Verify the **Policy Template** is set to ``Rapid Deployment Policy``.
+#. Verify the **Policy Template** is set to ``Rapid Deployment Policy`` and notice it is a transparent security policy by default
 
 #. Assign this policy to the ``webgoat.f5demo.com_https_vs`` from the Virtual Server drop down.
 
-#. Set the Application Language to **UTF-8**.
+#. Confirm that the Application Language is set to **UTF-8**.
 
-#. Go back two settings
+#. Accept the remaining default policy settings and click **Create Policy** to complete the policy creation process.
 
-#. Set the **Enforcement Mode** to ``Transparent``.
+.. Note:: After policy creation is complete, the properties will be displayed for review within the Policies List menu.
 
-#. Accept the remaining default policy settings.
+**Your settings should reflect the figures below:**
 
-#. Click **Create Policy** to complete the policy creation process.
+.. image:: images/image2.PNG
 
-#. After policy creation is complete, the properties will be displayed for review within the Policies List menu.
-
-**Your settings should reflect the figure below:**
-
-.. image:: imagefix.PNG
+.. image:: images/imagefix.PNG
 
 
 Verify WAF Profile is Applied to Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. In the configuration utility navigate to **Local Traffic> Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
+#. In the configuration utility navigate to **Local Traffic > Virtual Servers**, click on ``webgoat.f5demo.com_https_vs``.
 
-#. Click on **Polices** under the **Security** tab at the top of the ``webgoat.f5demo.com_https_vs`` details menu.
+#. Click on **Policies** under the **Security** tab at the top of the ``webgoat.f5demo.com_https_vs`` details menu.
 
 #. In the **Application Security Policy** drop down menu, ensure **Application Security Policy** is ``Enabled...`` and the **Policy:** drop-down selection shows the ``lab1_webgoat_waf`` policy.
 
 #. Notice Log Profile is set to ``Disabled``.
 
-.. image:: image4.PNG
+.. image:: images/image4.PNG
 
 Create Application Security Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -85,9 +86,12 @@ Create Application Security Logging Profile
 
 #. Click **Finished.**
 
-  .. image:: image5.PNG
+  .. image:: images/image5.PNG
 
 **Question:** Would logging all requests and responses in a production environment be a best practice?
+
+**Answer:** This adds 50% or more to the overhead on the log engine and would not typically be used outside of troubleshooting or high security environments that are appropriately sized.
+
 
 Apply WAF Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,25 +101,25 @@ Apply WAF Logging Profile
 #. Within the **Available** logging profiles menu, select ``waf_allrequests`` and then click the **<<** arrows to move the logging policy to the **Selected** profile.
 #. Click on the Update button to apply the policy.
 
-.. image:: image6.PNG
+.. image:: images/image6.PNG
 
 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
-#. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/WebGoat/login`` You'll find a toolbar shortcust for the webgoat link.
+#. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/WebGoat/login`` You'll find a toolbar shortcut for the webgoat link.
 
-.. image:: image7.PNG
+.. image:: images/image7.PNG
 
-2. Login using your student credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
+2. Login using **f5student/f5DEMOs4u!** credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
-#. On the BIG-IP, navigate to **Security > Event Logs > Applications > Requests**.
+#. On the BIG-IP, navigate to **Security > Event Logs > Application > Requests**.
 
-#. Clear the **"Illegal Requests"** filter.
-  .. image:: image8.PNG
+#. Clear the default **"Illegal Requests"** filter by clicking the x.
+  .. image:: images/image8.PNG
 
-#. Verify that requests are being logged by the WAF. You should be able to see both the raw client and server responses.
-  .. image:: image9.PNG
+#. Verify that requests are being logged by the WAF. You should be able to see both the raw client requests and server responses.
+  .. image:: images/image9.PNG
 
-Exercise: 1.2 Geolocation and IP Intelligence
+Exercise 1.2: Geolocation and IP Intelligence
 ----------------------------------------
 Geolocation
 ~~~~~~~~~~~
@@ -129,9 +133,9 @@ Geolocation
       at your border router (layer 3), you may decide to geo-enforce at
       ASM (Layer 7) if no private IP’s will be accessing the site.
 
-   .. image:: image10.PNG
+   .. image:: images/image10.PNG
 
-   .. IMPORTANT:: Remember to click on the **Apply Policy** button committ security policy changes.
+   .. IMPORTANT:: Remember to click on the **Apply Policy** button (top right) to commit security policy changes.
 
 #. Open **Local Traffic > iRules** and open the iRule titled
    ``webgoat_irule`` and review the code.
@@ -154,86 +158,82 @@ Geolocation
 #. Open **Local Traffic > Virtual Servers** and click on ``webgoat.f5demo.com_https_vs``. Go to the **Resources**
    horizontal tab and click on **Manage** in the **iRules** section.
 
-   .. image:: image11.PNG
+   .. image:: images/image11.PNG
 
 #. Select the ``webgoat_irule``, move it to the **Enabled** assignment and
    click **Finished**.
 
-   .. image:: image12.PNG
+   .. image:: images/image12.PNG
+
+6. We now need to tell ASM to trust the XFF header by turning on the **Trust XFF Header** feature in the policy.
+Navigate to **Application Security > Policy > Policy Properties** and hit the dropdown for **Advanced View**.
+You can now check the box to **Trust XFF Header** and click **Save** then **Apply Policy**
+
+.. image:: images/image15.PNG
+
+.. NOTE:: Regarding Trust XFF - you would do this if ASM is deployed behind an internal or other trusted proxy. Then, the system uses the IP address that initiated the connection to the proxy instead of the internal proxy’s IP address. This option is useful for logging, web scraping, anomaly detection, and the geolocation feature.
+
+**You should not configure trusted XFF headers if you think the HTTP header may be spoofed, or crafted, by a malicious client.**
+
 
 #. Open a new **Google Chrome Private Browsing** window and connect to
    ``https://webgoat.f5demo.com/WebGoat/login``. Login and select a few links on the WebGoat page.
 
-#. In the BIG-IP Administrative Interface go to **Security > Event Logs
-   > Application > Requests**.
+#. Navigate to **Security > Event Logs > Application > Requests**.
 
-   .. image:: image13.PNG
+.. image:: images/image13.PNG
 
-   Notice the geolocation detected and the presence of the X-Forwarded-For
-   (XFF) in the Request details. Your actual client IP is still
-   10.1.10.28 however, because we trusted the XFF header and the iRule
-   is randomizing the IP address placed in that header.
-
-   ASM believes the request is from an external location to provide a more
-   realistic example. Depending on your network you may be leveraging a
-   technology that creates a source NAT ahead of ASM so by leveraging the
-   XFF you can work around this and get contextual information about the
-   client.
+Notice the geolocation detected and the presence of the X-Forwarded-For (XFF) in the Request details. Your actual client IP is still 10.1.10.28 however, because we trusted the XFF header and the iRule
+is randomizing the IP address placed in that header so ASM believes the request is from an external location. Depending on your network you may be leveraging a technology that creates a source NAT ahead of ASM so by leveraging the
+XFF. You can work around this and get contextual information about the client.
 
 .. IMPORTANT:: Please remove the iRule ``webgoat_irule`` from the
-   Virtual Server before proceeding to the next step.
+   Virtual Server before proceeding.
 
 IP Reputation
 ~~~~~~~~~~~~~
-#. Navigate to **Security > Application Security > IP Addresses > IP Address Intelligence** and click **Enabled**.
+
+Navigate to **Security > Application Security > IP Addresses > IP Intelligence** and click **Enabled**.
 For all categories **select Alarm**. Click on **Save** and then on **Apply Policy**.
 
-      .. NOTE:: On the top right you should see that your IP Intelligence
-         database has been updated at some point.
+.. NOTE:: On the top right you should see that your IP Intelligence database has been updated at some point.
 
-.. image:: image14.PNG
+.. image:: images/image14.PNG
 
-      .. NOTE:: In order to create traffic with malicious sources for the purposes of
-         this lab we have created added additional configuration items for you.
+.. NOTE:: In order to create traffic with malicious sources for the purposes of this lab we have created another special configuration item for you.
 
-      There is an iRule that you will apply to the ``webgoat.f5demo.com_https_vs`` virtual server.
-      This iRule will insert an X-Forward-For header with value of a malicious source IP address. This configuration
-      will cause ASM to see the inbound traffic as having the malicious sources.
+There is an iRule that you will apply to the ``webgoat.f5demo.com_https_vs`` virtual server.
+This iRule will insert an X-Forward-For header with the value of a malicious United States source IP address. (Remember US is an allowed Geolocation)
 
- #. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
+1. Navigate to **Local Traffic > Virtual Server > Virtual Servers List** and select the
       ``webgoat.f5demo.com_https_vs`` virtual server.
 
- #. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
+2. Navigate to the **Resources** tab and click **Manage** for the **iRules** section.
+3. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
+Click **Finished**.
 
- #. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration.
- Click **Finished**.
+.. image:: images/image16.PNG
 
-       |image42|
-
- #. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
+4. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site.
  Login and Click on one or two items.
 
-      |image41|
-
- #. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
- Since you configured IP Intelligence violations to alarm you will not need change the filter.
+5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries.
+ Since you configured IP Intelligence violations to alarm you will not need to change the filter.
  Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
-      |image42|
+.. image:: images/image22.PNG
 
-      **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
-      and look up the IP address in question for further information. There is also
-      a tool to report IP addresses that have been incorrectly flagged.
+**Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
+and look up the IP address in question for further information. There is also
+a tool to report IP addresses that have been incorrectly flagged.
 
-      Further, you can use Putty on the Win7 box to access the BIG-IP via SSH
-      (bookmarked as F5-WAF) and login with ``root`` / ``f5DEMOs4u!`` to run
-      the ``iprep_lookup`` command, similar to:
+Further, you can ssh to the BIG-IP and login with ``root`` / ``f5DEMOs4u!`` to run
+the ``iprep_lookup`` command, similar to:
 
-      .. code-block:: console
+[root@bigip1.Active.Standalone] config # **iprep_lookup 8.33.184.254**
 
-         [root@bigip1:Active:Standalone] config # iprep_lookup 77.222.40.121
-         opening database in /var/IpRep/F5IpRep.dat
-         size of IP reputation database = 39492859
-         iprep threats list for ip = 77.222.40.121 is:
-         bit 7 - Phishing
-         bit 8 - Proxy
+iprep_lookup 8.33.184.254
+opening database in /var/IpRep/F5IpRep.dat
+size of IP reputation database = 37026703
+iprep threats list for ip = 8.33.184.254 is:
+bit 7 - Phishing
