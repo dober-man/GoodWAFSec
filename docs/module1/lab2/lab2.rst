@@ -27,14 +27,13 @@ Create Policy
 
 #. Open the **Terminal** application.
 
-#. Run the following curl command to verify the site is loading without
-   issue from this command line http utility. If the curl command is not
-   successful (you are getting a “request rejected” error page), please
-   let an instructor know.
+#. Run the following curl command to verify the site is loading without issue from this command line http utility. If the curl command is not successful (you are getting a “request rejected” error page), please let an instructor know.
 
    ``curl https://webgoat.f5demo.com/WebGoat/login -k | more``
+
 Input
    .. image:: images/image1_3_1.PNG
+
 Output
   .. image:: images/image30.PNG
 
@@ -165,9 +164,7 @@ Test the Proactive Bot Defense Policy
 
    ``curl https://webgoat.f5demo.com/WebGoat/login -k``
 
-   .. NOTE:: This can take a few seconds to kick in and you will start getting empty responses.
-   Since Proactive BOT Defense is in "always on" mode, this tool will always be
-   blocked.
+.. NOTE:: This can take a few seconds to kick in and you will start getting empty responses. Since Proactive BOT Defense is in "always on" mode, this tool will always be blocked.
 
 
 Validate that the Proactive Bot Defense Policy is Working

@@ -8,4 +8,3 @@ Estimated time for completion: **30 minutes.**
    :glob:
 
    lab*/lab*
-   review

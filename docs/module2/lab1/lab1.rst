@@ -119,7 +119,7 @@ You should now see the alerts since we have enabled this compliancy check and tu
 .. image:: images/image9.PNG
 
 HTTP Compliancy Check - Bad Host Header Value
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The **Bad Host Header Value** check is an HTTP Parser Attack and definitely something that should be implemented as part of **Good WAF Security**.
 
