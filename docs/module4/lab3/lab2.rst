@@ -16,7 +16,7 @@ Follow the below steps in order found in the Postman collection to complete this
 Task 1 - Interact with ASM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Within the F5SecDevOps Postman collection expand **Lab 3.1 - Interact with ASM** and select **1.0: Retrieve ASM resources **
+1. Within the F5SecDevOps Postman collection expand **Lab 3.1 - Interact with ASM** and select **1.0: Retrieve ASM resources**
 
 **Request**
 

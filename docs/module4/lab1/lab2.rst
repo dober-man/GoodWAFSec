@@ -95,7 +95,7 @@ Unsuccessful:
 
 |lab-2-12|
 
-.. |postman-icon| image:: /images/postman.png
+.. |postman-icon| image:: images/postman.png
 .. |lab-2-1| image:: images/lab-2-1.png
 .. |lab-2-2| image:: images/lab-2-2.png
 .. |lab-2-3| image:: images/lab-2-3.png

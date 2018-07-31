@@ -45,7 +45,7 @@ You should receive the new custom reponse page with your companies support numbe
 .. image:: images/image4_3_3.png
 
 
-.. BONUS:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
+.. Note:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
 
 Task 3 - Event logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
