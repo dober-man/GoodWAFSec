@@ -167,7 +167,7 @@ Test the Proactive Bot Defense Policy
 
    ``curl https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
-.. NOTE:: This can take a few seconds to kick in and then you will see a ASM start issuing a redirect challenge and try to set a TS cookie. **307 Temporary Redirect**
+.. NOTE:: This can take a few seconds to kick in and then you will see ASM start issuing a redirect challenge and try to set a TS cookie. **307 Temporary Redirect**
 
 .. image:: images/image38.PNG
 
