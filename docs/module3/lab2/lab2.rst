@@ -89,7 +89,7 @@ Your policy should now look like this.
 
 19.  Return to the ASM Event Logs and you should see both attacks as shown here
 
-.. NOTE:: You may need to refresh the screen by clicking on the refresh icon top left of the event screen. 
+.. NOTE:: You may need to refresh the screen by clicking on the refresh icon top left of the event screen.
 
 .. image:: images/image4.PNG
 
@@ -136,6 +136,8 @@ Explore the Learning suggestions and Traffic Summary page.
 Locate the Enforcement Readiness section.
 
 .. image:: images/image14_3_2.png
+
+.. |zap_proxy| image:: images/zap_proxy.png
 
 Click on the numbers.  This will take you to the learning and blocking settings page.  This shows you the settings that could be turned on to better protect your application.
 
