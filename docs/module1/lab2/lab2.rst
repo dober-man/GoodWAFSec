@@ -29,10 +29,10 @@ Create Policy
 
 #. Run the following curl command to verify the site is loading without issue from this command line http utility. If the curl command is not successful (you are getting a “request rejected” error page), please let an instructor know.
 
-   ``curl https://webgoat.f5demo.com/WebGoat/login -k | more``
+   ``curl https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
 Input
-   .. image:: images/image1_3_1.PNG
+   .. image:: images/image36.PNG
 
 Output
   .. image:: images/image30.PNG
@@ -77,10 +77,13 @@ Configure Policy
    Security >> Proactive Bot Defense** menu and select **Always**
    from the drop-down menu for **Operation Mode**.
 
-   .. image:: images/image1_3_6.PNG
+#. Set the Grace Period to 20 seconds. We will observe this in action shortly.
+
+   .. image:: images/image37.PNG
 
 #. Notice that for **Block requests from suspicious browsers** the
    **Block Suspicious Browsers** setting is enabled by default.
+
 
 #. At this point, you may want to take a moment and explore the other defaults that were turned on such as TPS based detection and BOT Signatures. Please don't modify the defaults.
 
@@ -162,9 +165,16 @@ Test the Proactive Bot Defense Policy
 
 #. From the command line execute the following command several times:
 
-   ``curl https://webgoat.f5demo.com/WebGoat/login -k``
+   ``curl https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
-.. NOTE:: This can take a few seconds to kick in and you will start getting empty responses. Since Proactive BOT Defense is in "always on" mode, this tool will always be blocked.
+.. NOTE:: This can take a few seconds to kick in and then you will see a ASM start issuing a redirect challenge and try to set a TS cookie. **307 Temporary Redirect**
+
+    .. image:: images/image38.PNG
+
+
+  #. Once the Grace Period of 20 seconds has expired you will see ASM start to return a javascript challenge
+
+    .. image::  images/image39.PNG
 
 
 Validate that the Proactive Bot Defense Policy is Working
@@ -203,7 +213,7 @@ BOT Signatures
 
    .. image:: images/image1_3_12.PNG
 
-#. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k``
+#. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
    **The site should respond normally now every time.**
 
@@ -233,7 +243,7 @@ Selectively Blocking BOT Categories
 
    .. image:: images/image1_3_14.PNG
 
-#. Run cURL again: ``curl  https://webgoat.f5demo.com/WebGoat/login -k``
+#. Run cURL again: ``curl  https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
    .. image:: images/image35.PNG
 
@@ -251,7 +261,7 @@ Selectively Blocking BOT Categories
 .. image:: images/image1_3_16.PNG
 
 
-#. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k`` and you should be back in business. By now you should know the expected output.
+#. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k -v | more`` and you should be back in business. By now you should know the expected output.
 
 #. Change HTTP Library to: **Report** and remove **CURL** from the whitelist.
 
@@ -271,7 +281,7 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 
 .. image:: images/image1_3_19.PNG
 
-2. Modify the cURL command to point at the overlay virtual server and run several times: ``curl https://10.1.10.146/WebGoat/login -k``
+2. Modify the cURL command to point at the overlay virtual server and run several times: ``curl https://10.1.10.146/WebGoat/login -k -v | more``
 
 3. Review the event logs at **Event Logs >> Bot Defense** You will
    now see geo-data for the BOT connection attempts.

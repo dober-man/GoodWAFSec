@@ -218,9 +218,13 @@ This iRule will insert an X-Forward-For header with the value of a malicious Uni
 
 4. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site. Login and Click on one or two items.
 
-5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries. Since you configured IP Intelligence violations to alarm you will not need to change the filter. Select the most recent entry and examine why the request is illegal. What IP address did the request come? from?
+5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries. Since you configured IP Intelligence violations to alarm you will not need to change the filter. Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
 .. image:: images/image22.PNG
+
+.. NOTE:: For more information click on the violation hyperlink to see the IPI category that this IP belongs to. You can also click "All Details" at the top right.
+
+.. image:: images/image24.PNG
 
 **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
 and look up the IP address in question for further information. There is also
