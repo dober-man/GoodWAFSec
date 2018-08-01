@@ -6,7 +6,7 @@ Objective
 
 In this exercise we will examine the response pages, event logs and briefly look at utilizing HTTP capture tools
 
-Task 2 - Response Pages
+Task 1 - Response Pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1.  Go to **Security > Application Security > Policy > Response pages**
@@ -45,7 +45,7 @@ You should have received a reponse page that you customized.  Make note of the S
 
 .. BONUS:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
 
-Task 3 - Event logs
+Task 2 - Event logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1.  On the BIG-IP return to the Security --> Event Log --> Application --> requests
