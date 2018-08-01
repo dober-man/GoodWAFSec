@@ -66,7 +66,7 @@ Observe the detected attack, the expected parameter, and what the applied blocki
 
 .. image:: images/image7_3_3.png
 
-4.  Examine the HTTP header information.  Do you see your attack?
+4.  Examine the http body information.  Do you see your attack?
 
 .. image:: images/image9_3_3.png
 
@@ -78,8 +78,27 @@ Observe the detected attack, the expected parameter, and what the applied blocki
 
 .. image:: images/image11_3_3.png
 
-7.  Locate an entry with a 500 or 405 response code
+7.  Locate an entry and observe the Attack Type and Violation Rating
 
 .. image:: images/image12_3_3.png
 
-8.  Pop it out in to a new tab.  Why was this illegal action not blocked?  What was the attack type?  What was the violation rating?
+8.  Observe in the top left of the log you will find the Blocking Setting that could be enabled to block this request.
+
+.. image:: images/image13_3_3.png
+
+9.  Where would you find this setting to enable?  What happens when you click on the link?
+
+10.  Observe that the link will give you more information on which piece of HTTP Protocol Compliance will prevent this attack.
+
+.. image:: images/image14_3_3.png
+
+11.  Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings** and expand **HTTP Protocol Compliance failed**
+
+.. image:: images/image16_3_3.png
+
+12.  Do you see the setting that would prevent this attack?  How would you enable blocking for HTTP protocol compliance?
+
+.. HINT::
+  .. image:: images/image15_3_3.png
+
+  

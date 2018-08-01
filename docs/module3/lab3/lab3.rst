@@ -72,7 +72,3 @@ Fill out the following -
 .. image:: images/image7_3_3.png
 
 6.  Click Save and Apply policy
-
-7.  Go to **Security > Event Logs > Application > Requests** delete all requests.
-
-8.
