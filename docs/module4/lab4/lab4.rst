@@ -1,4 +1,4 @@
-Exercise 4.7: HTTPS iApp with Policy
+Exercise 4.0: HTTPS iApp with Policy
 ----------------------------------------
 
 Overview
