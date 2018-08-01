@@ -11,13 +11,17 @@ In this exercise you will attack the vulnerable application.  Then apply the blo
 Task 1 - Exploring an attack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Within Chrome click on the three dots in the upper right and choose New Incognito window
+1.  Before we begin clear all previous logs by going to **Security > Event Logs > Application > Requests**.  Click the checkbox to select all.  From the drop down that appears to the right click the down arrow and select Delete all requests.
+
+.. image:: images/image18_3_2.png
+
+2.  Within Chrome click on the three dots in the upper right and choose New Incognito window
 
 .. image:: images/image4_3_2.png
 
-2.  Click on the Login Page bookmark to get to the WebGoat application
+3.  Click on the Webgoat bookmark from the bookmark bar to get to the WebGoat application
 
-3.  At the username prompt try entering a sequel query for the username and the letter a for the password
+4.  At the username prompt try entering a SQL query for the username and the letter a for the password
 
 ::
 
@@ -25,49 +29,56 @@ Task 1 - Exploring an attack
 
 .. NOTE:: Did you see anything?  Why do you think you were not blocked?
 
-4.  Return to the BIG-IP Go to **Security > Event Logs > Application > Requests**.
+
+5.  Return to the BIG-IP Go to **Security > Event Logs > Application > Requests**.
 
 
-5.  You will find an entry there for the login page login attempt.
 
-.. image:: images/image1.PNG
+6.  You will find an entry there for the login page login attempt.
 
-6.  Return to the WebGoat application and login with credentials f5student and f5DEMOs4u!
+.. image:: images/image19_3_2.PNG
 
-7.  From the left menu go to Injection Flaws --> SQL Injection and select exercise 7
+7.  Return to the WebGoat application and login with credentials f5student and f5DEMOs4u!
+
+8.  From the left menu go to Injection Flaws --> SQL Injection and select exercise 7
 
 .. image:: images/image5_3_2.png
 
-8.  In the account name field try an injection attack
+9.  In the account name field try an injection attack
 
 ::
 
     %' or 1='1
 
-9.  You will be able to see a wealth of information
+10.  You will be able to see a wealth of information
 
 .. image:: images/image6_3_2.png
 
-10. Return to the BIG-IP Go to **Security > Event Logs > Application > Requests** and review the alert.
+11. Return to the BIG-IP Go to **Security > Event Logs > Application > Requests**, clear the illegal filter and review the alert.
+
 
 .. image:: images/image2.PNG
 
-11.  Time to Block! Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
+12.  Time to Block! Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
 
-12.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures) and **uncheck the box for signature staging**.  Make sure to click Save and Apply Policy.
+13.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures) and **uncheck the box for signature staging** (this may have already been turned off in creation of the policy).  Make sure to click Save and Apply Policy.
 Your policy should now look like this.
 
 .. image:: images/image3.PNG
 
+14.  Make sure to save and apply policy.
+
 .. NOTE::  Now you have enabled blocking for just the signatures.  Note that all other functions are still in only alarm and learn mode.  What attacks do you think will be blocked at this point?
 
-13.  On the BIG-IP navigate to **Security > Event Logs > Application > Requests**
 
-14.  Open a New Incognito Window in Chrome
+15.  On the BIG-IP navigate to **Security > Event Logs > Application > Requests
 
-15.  Click the bookmark for Login page
 
-16.  At the username prompt try entering a sequel query for the username and the letter a for the password
+16.  Open a New Incognito Window in Chrome
+
+17.  Click the bookmark for Login page
+
+18.  At the username prompt try entering a sequel query for the username and the letter a for the password
 
 ::
 
@@ -77,21 +88,23 @@ Your policy should now look like this.
 
 .. image:: images/image8_3_2.png
 
-17.  Repeat steps 7-8
+19.  Repeat steps 7-9
 
-.. NOTE:: Did the query work?  Why not?
+.. NOTE:: Did the query work?  Why not?  Did you receive a blocking response? Why not?  (hint - we will look at this in the troubleshooting section)
 
-18.  Return to the ASM Event Logs and you should see both attacks as shown here
+19.  Return to the ASM Event Logs and you should see both attacks as shown here
+
+.. NOTE:: You may need to refresh the screen by clicking on the refresh icon top left of the event screen.
 
 .. image:: images/image4.PNG
 
-19.  Click on the log entry for ``/webgoat/login`` and examine the request.
+20.  Click on the log entry for ``/webgoat/login`` and examine the request.
 
-20.  Change from Basic to All Details and will see more details regarding the request
+21.  Change from Basic to All Details and will see more details regarding the request
 
 .. image:: images/image10_3_2.png
 
-21.  Click on Attack signature detected
+22.  Click on Attack signature detected
 
 .. image:: images/image11_3_2.png
 
@@ -131,6 +144,8 @@ Explore the Learning suggestions and Traffic Summary page.
 Locate the Enforcement Readiness section.
 
 .. image:: images/image14_3_2.png
+
+.. |zap_proxy| image:: images/zap_proxy.png
 
 Click on the numbers.  This will take you to the learning and blocking settings page.  This shows you the settings that could be turned on to better protect your application.
 

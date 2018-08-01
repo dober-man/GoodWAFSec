@@ -1,21 +1,19 @@
-Exercise 3.3: Server Technologies and Custom Signature Sets
+Exercise 3.3: Troubleshooting
 ----------------------------------------
 
 Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this exercise we will examine server technologies and custom signature sets.
+In this exercise we will examine the response pages, event logs and briefly look at utilizing HTTP capture tools
 
-Task 2 - Server Technologies
+Task 2 - Response Pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Go to **Security > Application Security > Policy Building > Learning and Blocking Settings **
-
-2.  
+1.  Go to **Security > Application Security > Policy > Response pages**
 
 .. image:: images/image1_3_3.png
 
-2.  Within this area you can add various response pages for different request.  These pages can be modified by editing the response body. On the Default change the Response Type to "Custom Response".  This will open up the Response Body to editing.
+2.  Within this area you can add various response pages for different request.  These pages can be modified by editing the response body. On the Default change the Response Type to "Custome Response".  This will open up the Response Body to editing.
 
 .. image:: images/image2_3_3.png
 
@@ -31,9 +29,6 @@ Task 2 - Server Technologies
 
 5.  Click Save and Apply Policy.  And click OK.
 
-.. NOTE:: Explore the other response pages.  Observe that AJAX reponse pages are disabled by default.
-
-
 6.  Open a New Incognito Window in Chrome and navigate to the Webgoat login page
 
 7.  Try entering a sql injection.
@@ -42,12 +37,13 @@ Task 2 - Server Technologies
 
     or 1='1
 
-You should receive the new custom reponse page with your companies support number.  Make note of the Support ID before moving on to the next task.
+You should have received a reponse page that you customized.  Make note of the Support ID before moving on to the next task.
 
 .. image:: images/image4_3_3.png
 
+.. NOTE:: Explore the other response pages.  Observe that AJAX reponse pages are disabled by default.
 
-.. Note:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
+.. BONUS:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
 
 Task 3 - Event logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
