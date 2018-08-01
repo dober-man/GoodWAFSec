@@ -169,13 +169,14 @@ Test the Proactive Bot Defense Policy
 
 .. NOTE:: This can take a few seconds to kick in and then you will see a ASM start issuing a redirect challenge and try to set a TS cookie. **307 Temporary Redirect**
 
-    .. image:: images/image38.PNG
+.. image:: images/image38.PNG
 
 
-  #. Once the Grace Period of 20 seconds has expired you will see ASM start to return a javascript challenge
+2. Once the Grace Period of 20 seconds has expired you will see ASM start to return a javascript challenge
 
-    .. image::  images/image39.PNG
+.. image::  images/image39.PNG
 
+This bot is getting shot down in flames!
 
 Validate that the Proactive Bot Defense Policy is Working
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
