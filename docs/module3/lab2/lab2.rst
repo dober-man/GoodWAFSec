@@ -1,5 +1,5 @@
 Exercise 3.2: Protection from common exploit vectors
-----------------------------------------
+------------------------------------------------------
 
 Overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,7 +29,9 @@ Task 1 - Exploring an attack
 
 .. NOTE:: Did you see anything?  Why do you think you were not blocked?
 
+
 5.  Return to the BIG-IP Go to **Security > Event Logs > Application > Requests**.
+
 
 
 6.  You will find an entry there for the login page login attempt.
@@ -54,6 +56,7 @@ Task 1 - Exploring an attack
 
 11. Return to the BIG-IP Go to **Security > Event Logs > Application > Requests**, clear the illegal filter and review the alert.
 
+
 .. image:: images/image2.PNG
 
 12.  Time to Block! Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
@@ -67,7 +70,9 @@ Your policy should now look like this.
 
 .. NOTE::  Now you have enabled blocking for just the signatures.  Note that all other functions are still in only alarm and learn mode.  What attacks do you think will be blocked at this point?
 
+
 15.  On the BIG-IP navigate to **Security > Event Logs > Application > Requests
+
 
 16.  Open a New Incognito Window in Chrome
 
@@ -106,9 +111,11 @@ Your policy should now look like this.
 Task 2 - Using ZAP Proxy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Open ZAP Proxy by locating the icon on the top bar |zap_proxy|
+1.  Open ZAP Proxy by locating the icon on the top bar - Hint: It's next to burp icon and looks like a Springboard! This will take several seconds to launch so please do not multi-click.
 
-2.  Select No, I do not want to persist this session at this moment in time
+.. NOTE:: If burp is still running ZAP will throw an error that it can't start on port 8080. This a non-issue since we are not operating ZAP in proxy mode for this lab.
+
+2.  Select No, I do not want to persist this session at this moment in time. Zap will next ask if you would like to rescan nodes when scope changes. Click **no**.
 
 3.  In the upper right corner of ZAP, change the mode to ATTACK and accept the popup.
 Enter the following URL in to the URL to Attack field and click **Attack**:
@@ -127,7 +134,8 @@ Enter the following URL in to the URL to Attack field and click **Attack**:
 What additional functions can you turn on to prevent some of the other attacks?  How would you turn these on?
 Would this tool have even worked if Proactive Bot Defense was enabled?
 
-.. Bonus::
+Bonus
+~~~~~~
 
 Go to **Security > Application Security > Policy Building > Traffic learning**
 
