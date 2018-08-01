@@ -56,8 +56,8 @@ Fill out the following -
   - Signature Type -  ``Request``
   - Attack Type -  ``All``
   - Systems -  ``Unix/Linux, Apache, Apache Tomcat, Java Servlets/JSP`` Move to the right
-  - Accuracy -  ``Equals High``
-  - Risk - ``Equals Low``
+  - Accuracy -  ``All``
+  - Risk - ``Greater Than Equal To High``
   - User-defined -  ``All``
   - Update Date -  ``All``
 
@@ -72,3 +72,7 @@ Fill out the following -
 .. image:: images/image7_3_3.png
 
 6.  Click Save and Apply policy
+
+7.  Using ZAP attack the application again and examine the event logs.
+
+.. image:: images/image8_3_3.png
