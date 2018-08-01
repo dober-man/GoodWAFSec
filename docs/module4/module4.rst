@@ -1,12 +1,7 @@
-Module 4: Introduction to SecDevOps
+Module 4: Server Technologies and Custom Signature Sets
 ===================================================
 
-.. _GitHub: https://github.com/f5devcentral/f5-automation-labs
-.. _Issue: https://github.com/f5devcentral/f5-automation-labs/issues
-.. _Postman: https://www.getpostman.com/
-
-This lab will demonstrate how to secure applications programmatically
-using a BIG-IP's iControl based REST API.
+This lab will examine the use of server technologies feature to automatically build signature sets based on the server-side application frameworks, web servers and operating systems.  
 
 Leveraging programmability to deploy security policies and/or adhere to best
 practices during an application’s lifecycle reduces the operational

@@ -1,17 +1,15 @@
-Exercise 3.3: Server Technologies and Custom Signature Sets
+Exercise 3.3: Troubleshooting
 ----------------------------------------
 
 Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this exercise we will examine server technologies and custom signature sets.
+In this exercise we will examine the response pages, event logs and briefly look at utilizing HTTP capture tools
 
-Task 2 - Server Technologies
+Task 2 - Response Pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Go to **Security > Application Security > Policy Building > Learning and Blocking Settings **
-
-2.  
+1.  Go to **Security > Application Security > Policy > Response pages**
 
 .. image:: images/image1_3_3.png
 

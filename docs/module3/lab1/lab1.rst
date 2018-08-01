@@ -32,7 +32,7 @@ Fill out the following -
   - Learning Mode -  ``Manual``
   - Enforcement Mode -  ``Blocking``
   - Application Language -  ``Unicode (utf-8)``
-  - Server Technologies - ``(leave blank)``
+  - Server Technologies - ``(leave blank)`` (we will cover this option in a later exercise)
   - Signature Staging -  ``Disable``  (in a production environment consider leaving this set at 7 days)
   - Policy is Case Sensitive -  ``Disabled``
   - Differentiate between HTTP/WS and HTTPS/WSS URLs -  ``Enabled``
