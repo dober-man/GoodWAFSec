@@ -293,7 +293,7 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 4. Navigate to **Security > Overview > Application > Traffic** and review the default
    report elements. You can change the widget time frames to see more historical data.
 
-5. Click **Overview > Application > Traffic**:
+5. Click **Overview > Application > Traffic** and override the timeframe to **past year**:
 
 .. image:: images/image1_3_21.PNG
 
@@ -315,11 +315,7 @@ Although there have not been any L7 DoS attacks some of the widgets along the ri
 
 .. image:: images/image1_3_23.PNG
 
-9. Click the **URL Latencies** tab at the top and review the graphs available to you.
-
-.. image:: images/image1_3_24.PNG
-
-10. Click the **Custom Page** tab at the top and review the graphs available to you.
+9. Click the **Custom Page** tab at the top and review the graphs available to you.
 
 Please feel free to add widgets and/or explore the ASM interface further.
 

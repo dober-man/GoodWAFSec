@@ -75,7 +75,7 @@ Request and Response should look like this
 
 6. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy per the "Good WAF Protection recommendations", to not allow this since it is not RFC compliant HTTP/1.1
 
-.. image:: images/image8.PNG
+.. image:: images/image20.PNG
 
 Learning and Blocking
 ~~~~~~~~~~~~~~~~~~~~~~
