@@ -4,86 +4,75 @@ Exercise 3.3: Server Technologies and Custom Signature Sets
 Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this exercise we will examine server technologies and custom signature sets.
+In this exercise we will examine server technologies and custom signature sets.  Server Technologies function allows you to automatically discover server-side frameworks, web servers and operating systems.  This feature helps when the backend technologies are not well known.  The feature can be enabled to auto detect.  You can also add the technologies that you know.  Creating custom signature sets allows you to define what signature groupings work best for your needs.  In this exercise we will explore both.
 
-Task 2 - Server Technologies
+Task 1 - Server Technologies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1.  Go to **Security > Application Security > Policy Building > Learning and Blocking Settings **
 
-2.  
+2.  Locate Server Technologies and expand the option.  Click Enable Server Technology Detection
 
 .. image:: images/image1_3_3.png
 
-2.  Within this area you can add various response pages for different request.  These pages can be modified by editing the response body. On the Default change the Response Type to "Custom Response".  This will open up the Response Body to editing.
+3.  Make sure to save and Apply Policy.
+
+.. NOTE:: Our policy is currently in manual and we would need to manaully accept all server technologies suggestions to build the server technology signature sets.  If the policy were in automatic learning server technologies would automatically be accepted once the threshold was met.
+
+4.  Click on the diagnal arrow to the left of the Enable Server Technology Dectection.  This will open the Server Technologies configuration which can also be found by going to **Security > Application Security > Policy > Server Technologies**
 
 .. image:: images/image2_3_3.png
 
-3.  Edit the Response as follows:
-
-::
-
-    <html><head><title>Request Rejected</title></head><body>You have requested a site that is unavailable. Please contact customer service at 888-555-1212 and supply the following information:<br><br>Support ID: <%TS.request.ID()%><br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
-
-4.  Click on the Show button
+5. Click on the drop down box and you will find a list of various server-side technologies to choose from.
 
 .. image:: images/image3_3_3.png
 
-5.  Click Save and Apply Policy.  And click OK.
-
-.. NOTE:: Explore the other response pages.  Observe that AJAX reponse pages are disabled by default.
-
-
-6.  Open a New Incognito Window in Chrome and navigate to the Webgoat login page
-
-7.  Try entering a sql injection.
-
-::
-
-    or 1='1
-
-You should receive the new custom reponse page with your companies support number.  Make note of the Support ID before moving on to the next task.
+6.  Choose Apache Tomcat from the list.  You will be prompted that Java Servlet/JSP will also be added.  Click okay
 
 .. image:: images/image4_3_3.png
 
+7.  Choose Unix/Linux from the list and click ok.  Make sure to click Save and Apply Policy.
 
-.. Note:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
+8.  Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings**
 
-Task 3 - Event logs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1.  On the BIG-IP return to the Security --> Event Log --> Application --> requests
-
-2.  Click on the magnifying glass and that will open the log filter.  From here you can enter the Support ID you received from the preceeding task and select Apply Filter.
-
-.. image:: images/image8_3_3.png
-
-2.  Select an entry in the event logs.  At the top box you will find button to open the request in a separate tab
+9.  Expand Attack Signatures and you should now see the additional server technology signature sets enabled and in blocking.
 
 .. image:: images/image5_3_3.png
 
-3.  Click on Attack signature detected
+10.  Clear the event logs and try attacking the application again with ZAP and see if you were able to block more attacks.
+
+Task 2 - Create Custom Signature Set
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  Go to **Security > Options > Application Security > Attack Signature > Attack Signature Sets**
+
+2.  Click on Create
+
+Fill out the following -
+  - Name - ``my_signature_set``
+  - Type - ``filter-based``
+  - Default Blocking Actions -  ``leave Learn/Alarm/Block checked``
+  - Assign To Policy by Default -  ``Uncheck this box``  (in production enabling this feature ensures this signature set is assigned to all newly created policies)
+  - Signature Type -  ``Request``
+  - Attack Type -  ``All``
+  - Systems -  ``Unix/Linux, Apache, Apache Tomcat, Java Servlets/JSP`` Move to the right
+  - Accuracy -  ``All``
+  - Risk - ``Greater Than Equal To High``
+  - User-defined -  ``All``
+  - Update Date -  ``All``
+
+3.  Click on Create.  Now you have a created your own custom signature set of high accuracy signature with server side technologies and low risk.
 
 .. image:: images/image6_3_3.png
 
-Observe the detected attack, the expected parameter, and what the applied blocking settings were.  Also note that the signature used to block this attack has been identified.  By clicking on the "i" next to the name you can get further information on the signature as well as a link to other documentation.
+4.  Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings**
+
+5.  Expand Attack Signatures.  Click on Change and uncheck all the signatures currently enabled.  Check the newly created signature set, click Change
 
 .. image:: images/image7_3_3.png
 
-4.  Examine the HTTP header information.  Do you see your attack?
+6.  Click Save and Apply policy
 
-.. image:: images/image9_3_3.png
+7.  Using ZAP attack the application again and examine the event logs.
 
-5.  Observe the Source IP, Accept Status and Support ID.
-
-.. image:: images/image10_3_3.png
-
-6.  Close this tab and return to the BIG-IP Event Logs.  Open the filter again and click on Not Blocked.  Apply Filter
-
-.. image:: images/image11_3_3.png
-
-7.  Locate an entry with a 500 or 405 response code
-
-.. image:: images/image12_3_3.png
-
-8.  Pop it out in to a new tab.  Why was this illegal action not blocked?  What was the attack type?  What was the violation rating?
+.. image:: images/image8_3_3.png
