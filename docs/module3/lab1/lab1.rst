@@ -35,13 +35,13 @@ Fill out the following -
 
 .. image:: images/image1-1.png
 
-3.  Click Create Policy
+3.  Click **Create Policy**
 
 4.  Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
 
 5.  Make sure ``Blocking_Policy`` is selected in the Current edited security policy.
 
-6.  At the far right across from General Settings ensure Advanced is selected
+6.  At the far right across from General Settings ensure Advanced is selected.
 
 .. image:: images/image16_3_1.png
 
@@ -49,13 +49,13 @@ Fill out the following -
 
 .. image:: images/image1_3_1.png
 
-8.  Click the **Block** Check box at the top of to select all then click it again to clear Block from all entries.  Then click Change
+8.  Click the **Block** Check box at the top of to select all then click it again to clear Block from all entries.  Then click **Change**.
 
 .. image:: images/image2_3_1.png
 
 9.  Under Policy Building Settings  expand the Attack Signatures options
 
-.. image:: images/image3_3_1.png
+.. image:: images/image2.PNG
 
 10.  Click on the Change button at the far right to bring up the Select Policy Attack Signature sets and choose to add both High Accuracy signature sets and SQL Injection Signatures then click Change
 
