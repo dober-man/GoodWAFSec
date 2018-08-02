@@ -19,6 +19,10 @@ Objective
 
 #. RDP to the the jumpbox, launch Chrome (please be patient and don't click the icon multiple times. Chrome can take a few seconds to launch), click the BIG-IP bookmark and login to TMUI. admin/f5DEMOs4u!
 
+.. NOTE:: The XRDP service automatically opens a persistent shell in the top left corner of your desktop. Type **exit** to make it go away.
+
+.. image:: images/image25.PNG
+
 Please ensure that four virtual servers are configured before you begin:
 
 - ``webgoat.f5demo.com_https_vs``
