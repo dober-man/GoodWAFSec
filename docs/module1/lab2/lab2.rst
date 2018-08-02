@@ -218,7 +218,7 @@ BOT Signatures
 
 #. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
-   **The site should respond normally now every time.**
+.. NOTE:: The site should respond normally now every time because we are not "under attack" ASM uses TPS based detection (client-side) and Behavioral Stress detection (server-side) to determine when the system is under attack. Without the Advanced WAF license Behavioral DoS Detection is limited to two virtual servers. 
 
 #. cURL is considered an **HTTP Library tool** and falls in **the Benign
    Category**.
