@@ -1,4 +1,4 @@
-Exercise 3.3: Troubleshooting
+Exercise 3.4: Troubleshooting
 ----------------------------------------
 
 Objective
@@ -100,5 +100,3 @@ Observe the detected attack, the expected parameter, and what the applied blocki
 
 .. HINT::
   .. image:: images/image15_3_3.png
-
-  

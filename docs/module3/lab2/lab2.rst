@@ -61,7 +61,7 @@ Task 1 - Exploring an attack
 
 12.  Time to Block! Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
 
-13.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures) and **uncheck the box for signature staging** (this may have already been turned off in creation of the policy).  Make sure to click Save and Apply Policy.
+13.  Click on the carrot next to Attack Signatures and click on the Block check box at the top (this will turn on blocking for all the signatures).  Make sure signature staging is still set to diabled then click Save and Apply Policy.
 Your policy should now look like this.
 
 .. image:: images/image3.PNG
@@ -113,11 +113,11 @@ Task 2 - Using ZAP Proxy
 
 1.  Open ZAP Proxy by locating the icon on the top bar - |zap_proxy| This will take several seconds to launch so please do not multi-click.
 
-.. NOTE:: If burp is still running ZAP will throw an error that it can't start on port 8080. This a non-issue since we are not operating ZAP in proxy mode for this lab.
+.. NOTE:: If burp is still running ZAP will throw a warning stating that it can't start on port 8080. This a non-issue since we are not operating ZAP in proxy mode for this lab.
 
-2.  Select No, I do not want to persist this session at this moment in time. Zap will next ask if you would like to rescan nodes when scope changes. Click **no**.
+2.  Select No, I do not want to persist this session at this moment in time.
 
-3.  In the upper right corner of ZAP, change the mode to ATTACK and accept the popup.
+3.  In the upper left corner of ZAP, change the mode to ATTACK and accept the popup.
 Enter the following URL in to the URL to Attack field and click **Attack**:
 ::
 
@@ -132,7 +132,7 @@ Enter the following URL in to the URL to Attack field and click **Attack**:
 .. image:: images/image5.PNG
 
 What additional functions can you turn on to prevent some of the other attacks?  How would you turn these on?
-Would this tool have even worked if Proactive Bot Defense was enabled?
+Would this tool have even worked if Proactive Bot Defense was enabled? Answer: Absolutely not and your ASM even logs wouldn't be littered by these automated attempts that can quickly grow into the millios per day.  
 
 Bonus
 ~~~~~~

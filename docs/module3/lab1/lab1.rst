@@ -57,7 +57,7 @@ Fill out the following -
 
 .. image:: images/image2.PNG
 
-10.  Click on the Change button at the far right to bring up the Select Policy Attack Signature sets and choose to add both High Accuracy signature sets and SQL Injection Signatures then click Change
+10.  Click on the **Change** button at the far right to bring up the **Select Policy Attack Signature sets** and choose to add both **High Accuracy signature sets and SQL Injection Signatures** then click **Change**.
 
 .. image:: images/image9_3_1.png
 .. image:: images/image10_3_1.png
