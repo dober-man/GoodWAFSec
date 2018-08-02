@@ -188,9 +188,9 @@ Validate that the Proactive Bot Defense Policy is Working
 #. Notice that the detected bot activity has been logged and is now
    being displayed for review.
 
-.. Important:: This is very important to understand that we are logging bots in an entirely different internal logging system than the ASM events. Implementing Bot Defense keeps the ASM logs clean and actionable when there are millions of malicious attempts per day from bots.  
+.. Important:: This is very important to understand that we are logging bots in an entirely different internal logging system than the ASM events. Implementing Bot Defense keeps the ASM logs clean and actionable when there are millions of malicious attempts per day from bots.
 
-    .. image:: images/image1_3_11.PNG
+.. image:: images/image1_3_11.PNG
 
 #. Note the stated reason for the request being blocked. You may have to
    scroll to the right to see this reason. What was the stated reason?
