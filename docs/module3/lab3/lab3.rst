@@ -114,9 +114,9 @@ Fill out the following -
 
 5.  Expand Attack Signatures.  Click on Change and check your newly created signature set. Cick **Change**.
 
-.. image:: images/image5.png
+.. image:: images/image7.png
 
-.. image:: images/image6.png
+.. image:: images/image8.png
 
 6.  Click Save and Apply policy
 
