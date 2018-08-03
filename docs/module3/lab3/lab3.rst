@@ -112,12 +112,12 @@ Fill out the following -
 
 4.  Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings**
 
-5.  Expand Attack Signatures.  Click on Change and uncheck all the signatures currently enabled.  Check the newly created signature set, click Change
+5.  Expand Attack Signatures.  Click on Change and check your newly created signature set. Cick **Change**.
 
-.. image:: images/image7_3_3.png
+.. image:: images/image5.png
+
+.. image:: images/image6.png
 
 6.  Click Save and Apply policy
 
-7.  Using ZAP attack the application again and examine the event logs.
-
-.. image:: images/image8_3_3.png
+7.  Using BURP again with either of the two previous attacks and ensure your new custom signature set is blocking them. Examine the event logs.
