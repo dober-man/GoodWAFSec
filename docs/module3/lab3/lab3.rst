@@ -75,7 +75,16 @@ Task 1 - Server Technologies
 
 .. image:: images/image1.png
 
-15. Navigate to the Application Security Event Logs and review the alerts.
+15. Navigate to the Application Security Event Logs and review the alerts. Notice they are of different severity but how do we know that these were actually framework related signatures?
+
+.. image:: images/image2.png
+
+16. Click on the **Attack Signature Detected** hyperlink and then click on the little blue "i" next to the signature for more information.
+
+.. image:: images/image3.png
+
+
+.. image:: images/image4.png
 
 Task 2 - Create Custom Signature Set
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
