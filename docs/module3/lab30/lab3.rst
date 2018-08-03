@@ -75,7 +75,7 @@ Observe the detected attack, the expected parameter, and what the applied blocki
 
 .. image:: images/image10_3_3.png
 
-6.  Close this tab and return to the BIG-IP Event Logs.  Open the filter again and click on Not Blocked.  Apply Filter
+6.  Close this tab and return to the BIG-IP Event Logs.  Open the filter again, remove the support ID, and click on Not Blocked.  Apply Filter
 
 .. image:: images/image11_3_3.png
 
