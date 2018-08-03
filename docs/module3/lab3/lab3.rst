@@ -106,7 +106,7 @@ Fill out the following -
   - User-defined -  ``All``
   - Update Date -  ``All``
 
-3.  Click on Create.  Now you have a created your own custom signature set of high accuracy signature with server side technologies and low risk.
+3.  Click on Create.  Now you have a created your own custom signature set of high accuracy signatures with server side technologies and low risk.
 
 .. image:: images/image6_3_3.png
 
@@ -120,4 +120,4 @@ Fill out the following -
 
 6.  Click Save and Apply policy
 
-7.  Using BURP again with either of the two previous attacks and ensure your new custom signature set is blocking them. Examine the event logs.
+7.  Use BURP again with either of the two previous attacks and ensure your new custom signature set is blocking them. Examine the event logs.

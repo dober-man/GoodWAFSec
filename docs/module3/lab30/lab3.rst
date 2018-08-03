@@ -29,6 +29,8 @@ Task 1 - Response Pages
 
 5.  Click Save and Apply Policy.  And click OK.
 
+.. NOTE:: Explore the other response pages.  Observe that AJAX reponse pages are disabled by default.
+
 6.  Open a New Incognito Window in Chrome and navigate to the Webgoat login page
 
 7.  Try entering a sql injection.
@@ -41,20 +43,19 @@ You should have received a reponse page that you customized.  Make note of the S
 
 .. image:: images/image4_3_3.png
 
-.. NOTE:: Explore the other response pages.  Observe that AJAX reponse pages are disabled by default.
 
-.. BONUS:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
+.. NOTE:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
 
 Task 2 - Event logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  On the BIG-IP return to the Security --> Event Log --> Application --> requests
+1.  On the BIG-IP return to the **Security > Event Log > Application > Requests**
 
 2.  Click on the magnifying glass and that will open the log filter.  From here you can enter the Support ID you received from the preceeding task and select Apply Filter.
 
 .. image:: images/image8_3_3.png
 
-2.  Select an entry in the event logs.  At the top box you will find button to open the request in a separate tab
+2.  Select the alert and at the top box you will find a button to open the request in a separate tab
 
 .. image:: images/image5_3_3.png
 
