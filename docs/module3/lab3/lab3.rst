@@ -1,5 +1,5 @@
 Exercise 3.3: Server Technologies and Custom Signature Sets
-----------------------------------------
+-------------------------------------------------------------
 
 Objective
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -9,7 +9,7 @@ In this exercise we will examine server technologies and custom signature sets. 
 Task 1 - Server Technologies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Go to **Security > Application Security > Policy Building > Learning and Blocking Settings **
+1.  Go to **Security > Application Security > Policy Building > Learning and Blocking Settings**
 
 2.  Locate Server Technologies and expand the option.  Click Enable Server Technology Detection
 

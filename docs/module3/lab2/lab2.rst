@@ -108,7 +108,7 @@ Your policy should now look like this.
 
 .. image:: images/image11_3_2.png
 
-Task 2 - Using ZAP Proxy
+Task 2 - ZAP THE APP!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1.  Open ZAP Proxy by locating the icon on the top bar - |zap_proxy| This will take several seconds to launch so please do not multi-click.
@@ -132,7 +132,7 @@ Enter the following URL in to the URL to Attack field and click **Attack**:
 .. image:: images/image5.PNG
 
 What additional functions can you turn on to prevent some of the other attacks?  How would you turn these on?
-Would this tool have even worked if Proactive Bot Defense was enabled? Answer: Absolutely not and your ASM even logs wouldn't be littered by these automated attempts that can quickly grow into the millios per day.  
+Would this tool have even worked if Proactive Bot Defense was enabled? Answer: Absolutely not and your ASM even logs wouldn't be littered by these automated attempts that can quickly grow into the millios per day.
 
 Bonus
 ~~~~~~
