@@ -308,6 +308,7 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 .. NOTE:: You may need to change your time in the Windows system tray for accurate results.
 
 Although there have not been any L7 DoS attacks some of the widgets along the right contain statistics from the BOT mitigations.
+Change the time window (top left) from 5 minutes to **"All Time"** so see more data. 
 
 .. image:: images/image4.PNG
 
