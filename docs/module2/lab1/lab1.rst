@@ -75,7 +75,7 @@ Request and Response should look like this
 
 6. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy per the "Good WAF Protection recommendations", to not allow this since it is not RFC compliant HTTP/1.1
 
-.. image:: images/image8.PNG
+.. image:: images/image20.PNG
 
 Learning and Blocking
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -103,8 +103,7 @@ The first place we always take a look when we want to implement a new control is
 
 .. image:: images/image13.PNG
 
-8. Click **Accept Suggestion** and then browse back to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed**
-Notice that by accepting the learning suggestion ASM has now enabled the protection but it is still in learning mode so **uncheck** that manually.
+8. Click **Accept Suggestion** and then browse back to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed** and notice that by accepting the learning suggestion ASM has now enabled the protection but it is still in learning mode so **uncheck** that manually.
 
 .. image:: images/image7.PNG
 
@@ -151,7 +150,7 @@ Attack 2: XSS in HOST Header
 
 .. image:: images/image15.PNG
 
-4. Browse to **Security > Event Logs > Application > Requests** and review the alert for this attempted attack
+4. Browse to **Security > Event Logs > Application > Requests** and review the alert for this attempted attack. Note the alert severity is much higher (4) for this attack type due to the risk it presents.
 
 .. image:: images/image16.PNG
 
@@ -186,7 +185,7 @@ Example - The website may be accessed by non-browser clients attempting to bypas
 
   username=f5student&password=f5DEMOs4u!
 
-3. Review Event Logs to ensure the attack is being mitigated.
+3. Review Event Logs to ensure the attack is being mitigated. Notice the alert level is lower for this attack type due to less risk than a potential XSS as seen in the previous exercise. 
 
 .. image:: images/image18.PNG
 

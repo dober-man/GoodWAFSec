@@ -34,19 +34,19 @@ Task 1 - Deploy iApp with Security
 
 .. image:: images/image5_4_4.png
 
-6.  In the Application Security Manager section select Yes, use ASM and create a new ASM policy.  Also select the WebGoat logging profiles
+6.  In the Application Security Manager section select Yes, use ASM and create a new ASM policy.  Also select the waf_allrequests logging profiles
 
-.. image:: images/image6_4_4.png
+.. image:: images/image1.png
 
 7.  In the Virtual Server and Pool section give the IP Address, an FQDN and select the webgoat_pool
 
-.. image:: images/image7_4_4.png
+.. image:: images/image2.png
 
 8.  Click finished and have patience while the application objects are built
 
 .. image:: images/image8_4_4.png
 
-9.  Open a new icognito window in Chrome and enter app1.f5demo.com/WebGoat in the address bar.  When you get the SSL warning click Advanced and Proceed
+9.  Open a new icognito window in Chrome and click the app1 bookmark in the browser bar.  When you get the SSL warning click Advanced and Proceed
 
 .. image:: images/image9_4_4.png
 
@@ -56,13 +56,13 @@ Task 1 - Deploy iApp with Security
 
 12.  Return to the BIG-IP.  Go to **Security > Application Security > Policy Building > Traffic Learning**
 
-Do you see learning suggestions?
+Do you see learning suggestions? (Hint - there are none yet)
 
 13.  Go to **Security > Application Security > Policy Building > Learning and Blocking Settings**
 
-14.  Click the carrot by Attack Signatures then Change at the far right to add more signature.
+14.  Click the carrot by Attack Signatures then Change at the far right to add more signatures.
 
-15.  Choose the High Accurary Signatures and SQL injection
+15.  Choose the High Accuracy Signature sets and SQL injection.
 
 .. image:: images/image11_4_4.png
 
@@ -87,11 +87,13 @@ Task 2 - Attack Application
 
 .. NOTE:: Did you see anything?  Why do you think you were not blocked?
 
-4.  Return to the BIG-IP Go to **Security > Event Logs > Application > requests**
+4.  Return to the BIG-IP Go to **Security > Event Logs > Application > Requests** and clear the **illegal requests** filter.
 
-5.  You will find an entry there for the login page.
+5.  You will find an level 3 alert there for the login page.
 
-6.  Return to the WebGoat application and login with credentials webgoat and f5DEMOs4u!
+.. image:: images/image3.png
+
+6.  Return to the WebGoat application and login with credentials f5student and f5DEMOs4u!
 
 7.  From the left menu go to Injection Flaws --> SQL Injection and select exercise 7
 
@@ -105,9 +107,11 @@ Task 2 - Attack Application
 
 .. NOTE::  Were you blocked?  Why or why not?
 
-9.  Return to the BIG-IP **Security > Event Logs > Application > requests**
+.. image:: images/image4.png
+
+9.  Return to the BIG-IP **Security > Event Logs > Application > Requests**
 
 10.  You will need to refresh.  Locate the attacks.  Is the policy in transparent or blocking?  How can you change the policy to mitigate against this attack?
 
-We hope you enjoyed this session! Please come again next year!! The End!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We hope you enjoyed this session! Please leave us a great review and come again next year!! The End!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

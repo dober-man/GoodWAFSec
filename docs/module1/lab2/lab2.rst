@@ -1,4 +1,4 @@
-Exercise 1.3: Proactive Bot Defense
+>Exercise 1.3: Proactive Bot Defense
 ----------------------------------------
 
 Objective
@@ -29,10 +29,10 @@ Create Policy
 
 #. Run the following curl command to verify the site is loading without issue from this command line http utility. If the curl command is not successful (you are getting a “request rejected” error page), please let an instructor know.
 
-   ``curl https://webgoat.f5demo.com/WebGoat/login -k | more``
+   ``curl https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
 Input
-   .. image:: images/image1_3_1.PNG
+   .. image:: images/image36.PNG
 
 Output
   .. image:: images/image30.PNG
@@ -62,7 +62,7 @@ Configure Policy
 
    .. image:: images/image1_3_4.PNG
 
-#. Under the **Application Security** tab >> General Settings
+#. Under the **Application Security** tab > General Settings
    click the **Edit** link on the right-hand side of General Settings
    box and then check the ``Enabled`` check box for **Application
    Security** to enable the DoS profile and allow additional settings
@@ -74,13 +74,16 @@ Configure Policy
    Security** options for this DoS profile.
 
 #. Click the **Edit** link on the right for the **Application
-   Security >> Proactive Bot Defense** menu and select **Always**
+   Security > Proactive Bot Defense** menu and select **Always**
    from the drop-down menu for **Operation Mode**.
 
-   .. image:: images/image1_3_6.PNG
+#. Set the Grace Period to 20 seconds. We will observe this in action shortly.
+
+   .. image:: images/image37.PNG
 
 #. Notice that for **Block requests from suspicious browsers** the
    **Block Suspicious Browsers** setting is enabled by default.
+
 
 #. At this point, you may want to take a moment and explore the other defaults that were turned on such as TPS based detection and BOT Signatures. Please don't modify the defaults.
 
@@ -162,10 +165,18 @@ Test the Proactive Bot Defense Policy
 
 #. From the command line execute the following command several times:
 
-   ``curl https://webgoat.f5demo.com/WebGoat/login -k``
+   ``curl https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
-.. NOTE:: This can take a few seconds to kick in and you will start getting empty responses. Since Proactive BOT Defense is in "always on" mode, this tool will always be blocked.
+.. NOTE:: This can take a few seconds to kick in and then you will see ASM start issuing a redirect challenge and try to set a TS cookie. **307 Temporary Redirect**
 
+.. image:: images/image38.PNG
+
+
+2. Once the Grace Period of 20 seconds has expired you will see ASM start escalating the defense and start to return a javascript challenge.
+
+.. image::  images/image39.PNG
+
+This bot is getting shot down in flames!
 
 Validate that the Proactive Bot Defense Policy is Working
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -177,7 +188,9 @@ Validate that the Proactive Bot Defense Policy is Working
 #. Notice that the detected bot activity has been logged and is now
    being displayed for review.
 
-    .. image:: images/image1_3_11.PNG
+.. Important:: This is very important to understand that we are logging bots in an entirely different internal logging system than the ASM events. Implementing Bot Defense keeps the ASM logs clean and actionable when there are millions of malicious attempts per day from bots.
+
+.. image:: images/image1_3_11.PNG
 
 #. Note the stated reason for the request being blocked. You may have to
    scroll to the right to see this reason. What was the stated reason?
@@ -196,22 +209,21 @@ BOT Signatures
 #. Select **Proactive Bot Defense** under the list of **Application
    Security** options.
 
-#. In the **Application Security >> Proactive Bot Defense**
+#. In the **Application Security > Proactive Bot Defense**
    section, click the **Edit** link for **Operation Mode** and
    then change the setting from **Always** to **During Attack** and
    click **Update** to complete the policy change.
 
    .. image:: images/image1_3_12.PNG
 
-#. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k``
+#. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
-   **The site should respond normally now every time.**
+.. NOTE:: The site should respond normally now every time because we are not "under attack" ASM uses TPS based detection (client-side) and Behavioral Stress detection (server-side) to determine when the system is under attack. Without the Advanced WAF license, Behavioral DoS Detection is limited to two virtual servers.
 
-#. cURL is considered an **HTTP Library tool** and falls in **the Benign
-   Category**.
+cURL is considered an **HTTP Library tool** and falls in **the Benign Category**.
 
 
-.. NOTE:: Just how benign are HTTP library tools? cURL can easily be
+.. IMPORTANT:: Just how benign are HTTP library tools? cURL can easily be
    scripted in a variety of ways and can be used as a downloader to siphon
    off data. Remember the famous media defined “hacking tool” that Snowden
    used? wget? There are many use-cases where you simply do not want a tool
@@ -221,7 +233,7 @@ Selectively Blocking BOT Categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#. Under your ``webgoat_DoS`` profile in **Application Security >> Bot
+#. Under your ``webgoat_DoS`` profile in **Application Security > Bot
    Signatures** click on the **Edit** link for the **Bot Signature
    Categories** section.
 
@@ -233,7 +245,7 @@ Selectively Blocking BOT Categories
 
    .. image:: images/image1_3_14.PNG
 
-#. Run cURL again: ``curl  https://webgoat.f5demo.com/WebGoat/login -k``
+#. Run cURL again: ``curl  https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
    .. image:: images/image35.PNG
 
@@ -251,7 +263,7 @@ Selectively Blocking BOT Categories
 .. image:: images/image1_3_16.PNG
 
 
-#. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k`` and you should be back in business. By now you should know the expected output.
+#. Run cURL again: ``curl https://webgoat.f5demo.com/WebGoat/login -k -v | more`` and you should be back in business. By now you should know the expected output.
 
 #. Change HTTP Library to: **Report** and remove **CURL** from the whitelist.
 
@@ -271,9 +283,9 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 
 .. image:: images/image1_3_19.PNG
 
-2. Modify the cURL command to point at the overlay virtual server and run several times: ``curl https://10.1.10.146/WebGoat/login -k``
+2. Modify the cURL command to point at the overlay virtual server and run several times: ``curl https://10.1.10.146/WebGoat/login -k -v | more``
 
-3. Review the event logs at **Event Logs >> Bot Defense** You will
+3. Review the event logs at **Event Logs > Bot Defense** You will
    now see geo-data for the BOT connection attempts.
 
 .. image:: images/image1_3_20.PNG
@@ -281,7 +293,7 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 4. Navigate to **Security > Overview > Application > Traffic** and review the default
    report elements. You can change the widget time frames to see more historical data.
 
-5. Click **Overview > Application > Traffic**:
+5. Click **Overview > Application > Traffic** and override the timeframe to **past year**:
 
 .. image:: images/image1_3_21.PNG
 
@@ -296,6 +308,7 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 .. NOTE:: You may need to change your time in the Windows system tray for accurate results.
 
 Although there have not been any L7 DoS attacks some of the widgets along the right contain statistics from the BOT mitigations.
+Change the time window (top left) from 5 minutes to **"All Time"** so see more data.
 
 .. image:: images/image4.PNG
 
@@ -303,11 +316,7 @@ Although there have not been any L7 DoS attacks some of the widgets along the ri
 
 .. image:: images/image1_3_23.PNG
 
-9. Click the **URL Latencies** tab at the top and review the graphs available to you.
-
-.. image:: images/image1_3_24.PNG
-
-10. Click the **Custom Page** tab at the top and review the graphs available to you.
+9. Click the **Custom Page** tab at the top and review the graphs available to you.
 
 Please feel free to add widgets and/or explore the ASM interface further.
 

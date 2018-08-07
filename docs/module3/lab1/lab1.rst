@@ -15,11 +15,7 @@ Task 1 - Creating Blocking policy
 
 1.  Go to **Security > Application Security > Security Policies** and click the Plus sign.
 
-2.  Click on Create Policy
-
-.. image:: images/image14_3_1.png
-
-3.  At the far right change the setting to Advanced
+2.  At the far right change the setting to Advanced
 
 .. image:: images/image15_3_1.png
 
@@ -39,40 +35,40 @@ Fill out the following -
 
 .. image:: images/image1-1.png
 
-4.  Click Create Policy
+3.  Click **Create Policy**
 
-5.  Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
+4.  Go to **Security > Application Security > Policy Building > Learning and Blocking settings**
 
-6.  Make sure ``Blocking_Policy`` is selected in the Current edited security policy.
+5.  Make sure ``Blocking_Policy`` is selected in the Current edited security policy.
 
-7.  At the far right across from General Settings ensure Advanced is selected
+6.  At the far right across from General Settings ensure Advanced is selected.
 
 .. image:: images/image16_3_1.png
 
-8.  Click on **Blocking Settings**
+7.  Click on **Blocking Settings**
 
 .. image:: images/image1_3_1.png
 
-9.  Click the **Block** Check box at the top of to select all then click it again to clear Block from all entries.  Then click Change
+8.  Click the **Block** Check box at the top of to select all then click it again to clear Block from all entries.  Then click **Change**.
 
 .. image:: images/image2_3_1.png
 
-10.  Under Policy Building Settings  expand the Attack Signatures options
+9.  Under Policy Building Settings  expand the Attack Signatures options
 
-.. image:: images/image3_3_1.png
+.. image:: images/image2.PNG
 
-11.  Click on the Change button at the far right to bring up the Select Policy Attack Signature sets and choose to add both High Accuracy signature sets and SQL Injection Signatures then click Change
+10.  Click on the **Change** button at the far right to bring up the **Select Policy Attack Signature sets** and choose to add both **High Accuracy signature sets and SQL Injection Signatures** then click **Change**.
 
 .. image:: images/image9_3_1.png
 .. image:: images/image10_3_1.png
 
 .. NOTE:: For this lab Signature Staging has been disbaled.  In a production environment you should consider using staging to allow yourself mitigation time before new signatures are implemented.
 
-12.  Ensure that the blocking checkbox has been unchecked for all signatures.
+11.  Ensure that the blocking checkbox has been unchecked for all signatures.
 
 .. image:: images/image17_3_1.png
 
-13.  You will click Save and Apply Policy at this point.
+12.  You will click Save and Apply Policy at this point.
 
 .. image:: images/images11_3_1.png
 
