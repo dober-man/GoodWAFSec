@@ -1,4 +1,4 @@
-Exercise 1.3: Proactive Bot Defense
+>Exercise 1.3: Proactive Bot Defense
 ----------------------------------------
 
 Objective
@@ -62,7 +62,7 @@ Configure Policy
 
    .. image:: images/image1_3_4.PNG
 
-#. Under the **Application Security** tab >> General Settings
+#. Under the **Application Security** tab > General Settings
    click the **Edit** link on the right-hand side of General Settings
    box and then check the ``Enabled`` check box for **Application
    Security** to enable the DoS profile and allow additional settings
@@ -74,7 +74,7 @@ Configure Policy
    Security** options for this DoS profile.
 
 #. Click the **Edit** link on the right for the **Application
-   Security >> Proactive Bot Defense** menu and select **Always**
+   Security > Proactive Bot Defense** menu and select **Always**
    from the drop-down menu for **Operation Mode**.
 
 #. Set the Grace Period to 20 seconds. We will observe this in action shortly.
@@ -209,7 +209,7 @@ BOT Signatures
 #. Select **Proactive Bot Defense** under the list of **Application
    Security** options.
 
-#. In the **Application Security >> Proactive Bot Defense**
+#. In the **Application Security > Proactive Bot Defense**
    section, click the **Edit** link for **Operation Mode** and
    then change the setting from **Always** to **During Attack** and
    click **Update** to complete the policy change.
@@ -233,7 +233,7 @@ Selectively Blocking BOT Categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#. Under your ``webgoat_DoS`` profile in **Application Security >> Bot
+#. Under your ``webgoat_DoS`` profile in **Application Security > Bot
    Signatures** click on the **Edit** link for the **Bot Signature
    Categories** section.
 
@@ -285,7 +285,7 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 
 2. Modify the cURL command to point at the overlay virtual server and run several times: ``curl https://10.1.10.146/WebGoat/login -k -v | more``
 
-3. Review the event logs at **Event Logs >> Bot Defense** You will
+3. Review the event logs at **Event Logs > Bot Defense** You will
    now see geo-data for the BOT connection attempts.
 
 .. image:: images/image1_3_20.PNG
@@ -308,7 +308,7 @@ Go to the **Resources** horizontal tab and verify that the iRule **webgoat_overl
 .. NOTE:: You may need to change your time in the Windows system tray for accurate results.
 
 Although there have not been any L7 DoS attacks some of the widgets along the right contain statistics from the BOT mitigations.
-Change the time window (top left) from 5 minutes to **"All Time"** so see more data. 
+Change the time window (top left) from 5 minutes to **"All Time"** so see more data.
 
 .. image:: images/image4.PNG
 
