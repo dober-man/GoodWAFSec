@@ -20,7 +20,7 @@ Task 1 - Deploy iApp with Security
 
 2.  Give the application a name
 
-3.  In the drop down box for template choose f5.http.v1.3.Orc3
+3.  In the drop down box for template choose f5.http.v1.3.Orc3 (also choose Advanced just above)
 
 .. image:: images/image2_4_4.png
 
@@ -54,7 +54,7 @@ Task 1 - Deploy iApp with Security
 
 11.  You can try surfing around the application.  Try an injection attack.
 
-12.  Return to the BIG-IP.  Go to **Security > Application Security > Policy Building > Traffic Learning**
+12.  Return to the BIG-IP.  Go to **Security > Application Security > Policy Building > Traffic Learning** Select the new policy built by the iApp **web_app_policy**
 
 Do you see learning suggestions? (Hint - there are none yet)
 

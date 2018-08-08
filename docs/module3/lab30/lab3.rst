@@ -46,6 +46,8 @@ You should have received a reponse page that you customized.  Make note of the S
 
 .. NOTE:: If you were to login to the web application again and try the SQL Injection do you think you will see a response page?  What can you do to show a response?
 
+.. HINT:: Try enabling the AJAX reponse pages.
+
 Task 2 - Event logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -75,7 +77,7 @@ Observe the detected attack, the expected parameter, and what the applied blocki
 
 .. image:: images/image10_3_3.png
 
-6.  Close this tab and return to the BIG-IP Event Logs.  Open the filter again, remove the support ID, and click on Not Blocked.  Apply Filter
+6.  Close this tab and return to the BIG-IP Event Logs.  Open the filter again, remove the support ID, and click on Illegal and Not Blocked.  Apply Filter
 
 .. image:: images/image11_3_3.png
 

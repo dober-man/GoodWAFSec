@@ -19,7 +19,7 @@ Task 1 - Server Technologies
 
 .. NOTE:: Our policy is currently in manual and we would need to manaully accept all server technologies suggestions to build the server technology signature sets.  If the policy were in automatic learning server technologies would automatically be accepted once the threshold was met.
 
-4.  Click on the diagnal arrow to the left of the Enable Server Technology Dectection.  This will open the Server Technologies configuration which can also be found by going to **Security > Application Security > Policy > Server Technologies**
+4.  Click on the diagonal arrow to the left of the Enable Server Technology Dectection.  This will open the Server Technologies configuration which can also be found by going to **Security > Application Security > Policy > Server Technologies**
 
 .. image:: images/image2_3_3.png
 
