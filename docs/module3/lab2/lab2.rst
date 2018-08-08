@@ -122,7 +122,8 @@ Your policy should now look like this.
 Task 2 - ZAP THE APP!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Open ZAP Proxy by locating the icon on the top bar - |zap_proxy| This will take several seconds to launch so please do not multi-click.
+1.  Open ZAP Proxy by locating the icon on the top bar - |zap_proxy|
+This will take several seconds to launch so please do not multi-click.
 
 .. NOTE:: If burp is still running ZAP will throw a warning stating that it can't start on port 8080. This a non-issue since we are not operating ZAP in proxy mode for this lab.
 
