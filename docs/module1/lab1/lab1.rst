@@ -22,6 +22,8 @@ Objective
 .. NOTE:: The XRDP service automatically opens a persistent shell in the top left corner of your desktop. Type **exit** to make it go away.
 
 .. image:: images/image25.PNG
+  :scale: 50%
+
 
 Please ensure that four virtual servers are configured before you begin:
 

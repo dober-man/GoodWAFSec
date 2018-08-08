@@ -1,4 +1,4 @@
->Exercise 1.3: Proactive Bot Defense
+Exercise 1.3: Proactive Bot Defense
 ----------------------------------------
 
 Objective
