@@ -148,7 +148,7 @@ Geolocation
       ASM (Layer 7) if no private IP’s will be accessing the site.
 
    .. image:: images/image10.PNG
-    :width: 600 px
+    :width: 400 px
 
    .. IMPORTANT:: Remember to click on the **Apply Policy** button (top right) to commit security policy changes.
 
