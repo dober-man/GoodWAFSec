@@ -267,6 +267,7 @@ Selectively Blocking BOT Categories
 #. Run cURL again: ``curl  https://webgoat.f5demo.com/WebGoat/login -k -v | more``
 
    .. image:: images/image35.PNG
+    :width: 600 px
 
    Whammo!!!... as soon as the BOT is revealed... the connection is dropped.
    The TLS doesn’t get established.

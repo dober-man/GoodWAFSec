@@ -14,6 +14,7 @@ Task 1 - Server Technologies
 2.  Locate **Server Technologies** and expand the option.  Click **Enable Server Technology Detection**
 
 .. image:: images/image1_3_3.png
+    :width: 600 px
 
 3.  Make sure to save and Apply Policy.
 
@@ -22,14 +23,17 @@ Task 1 - Server Technologies
 4.  Click on the diagonal arrow to the left of the Enable Server Technology Dectection.  This will open the Server Technologies configuration which can also be found by going to **Security > Application Security > Policy > Server Technologies**
 
 .. image:: images/image2_3_3.png
+    :width: 600 px
 
 5. Click on the drop down box and you will find a list of various server-side technologies to choose from.
 
 .. image:: images/image3_3_3.png
+    :width: 600 px
 
 6.  Choose **Apache Tomcat** from the list.  You will be prompted that Java Servlet/JSP will also be added.  Click okay
 
 .. image:: images/image4_3_3.png
+    :width: 600 px
 
 7.  Choose **Unix/Linux** from the list and click ok.  Make sure to click Save and Apply Policy.
 
@@ -38,7 +42,7 @@ Task 1 - Server Technologies
 9.  Expand Attack Signatures and you should now see the additional server technology signature sets enabled and in blocking.
 
 .. image:: images/image5_3_3.png
-
+    :width: 600 px
 10.  Time to launch some framework attacks.
 
 11. Back in BURP navigate to the repeater tab and adjust the payload to the following and hit go:
@@ -74,18 +78,21 @@ Task 1 - Server Technologies
 14. Again, you should receive a Request Rejected page as output as shown here:
 
 .. image:: images/image1.png
+    :width: 600 px
 
 15. Navigate to the Application Security Event Logs and review the alerts. Notice they are of different severity but how do we know that these were actually framework related signatures?
 
 .. image:: images/image2.png
+    :width: 600 px
 
 16. Click on the **Attack Signature Detected** hyperlink and then click on the little blue "i" next to the signature for more information.
 
 .. image:: images/image3.png
+    :width: 600 px
 
 
 .. image:: images/image4.png
-
+    :width: 600 px
 Task 2 - Create Custom Signature Set
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -109,14 +116,17 @@ Fill out the following -
 3.  Click on Create.  Now you have a created your own custom signature set of high accuracy signatures with server side technologies and low risk.
 
 .. image:: images/image6_3_3.png
+    :width: 600 px
 
 4.  Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings**
 
 5.  Expand Attack Signatures.  Click on Change and check your newly created signature set. Cick **Change**.
 
 .. image:: images/image7.png
+    :width: 600 px
 
 .. image:: images/image8.png
+    :width: 600 px
 
 6.  Click Save and Apply policy
 
