@@ -119,11 +119,11 @@ Test WAF Policy
 
 #. Clear the default **"Illegal Requests"** filter by clicking the x.
 
-.. image:: images/image8.PNG
+        .. image:: images/image8.PNG
 
 #. Verify that requests are being logged by the WAF. You should be able to see both the raw client requests and server responses.
 
-.. image:: images/image9.PNG
+        .. image:: images/image9.PNG
 
 Exercise 1.2: Geolocation and IP Intelligence
 -------------------------------------------------
@@ -189,9 +189,7 @@ You can now check the box to **Trust XFF Header** and click **Save** then **Appl
 
 .. image:: images/image13.PNG
 
-Notice the geolocation detected and the presence of the X-Forwarded-For (XFF) in the Request details. Your actual client IP is still 10.1.10.28 however, because we trusted the XFF header and the iRule
-is randomizing the IP address placed in that header so ASM believes the request is from an external location. Depending on your network you may be leveraging a technology that creates a source NAT ahead of ASM so by leveraging the
-XFF. You can work around this and get contextual information about the client.
+Notice the geolocation detected and the presence of the X-Forwarded-For (XFF) in the Request details. Your actual client IP is still 10.1.10.28 however, because we trusted the XFF header and the iRule is randomizing the IP address placed in that header so ASM believes the request is from an external location. Depending on your network you may be leveraging a technology that creates a source NAT ahead of ASM. So by leveraging the XFF header, you can work around this and get contextual information about the client.
 
 .. IMPORTANT:: Please remove the iRule ``webgoat_irule`` from the
    Virtual Server before proceeding.
@@ -218,17 +216,19 @@ This iRule will insert an X-Forward-For header with the value of a malicious Uni
 
 3. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration and Click **Finished**.
 
-.. image:: images/image16.PNG
+        .. image:: images/image16.PNG
 
 4. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site. Login and Click on one or two items.
 
 5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries. Since you configured IP Intelligence violations to alarm you will not need to change the filter. Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
-.. image:: images/image22.PNG
+        .. image:: images/image22.PNG
 
-.. NOTE:: For more information click on the violation hyperlink to see the IPI category that this IP belongs to. You can also click "All Details" at the top right.
 
-.. image:: images/image24.PNG
+        .. NOTE:: For more information click on the violation hyperlink to see the IPI category that this IP belongs to. You can also click "All Details" at the top right.
+
+
+        .. image:: images/image24.PNG
 
 **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
 and look up the IP address in question for further information. There is also
