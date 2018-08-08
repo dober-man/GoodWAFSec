@@ -27,6 +27,7 @@ Apply Security Policy
 Your virtual should look like this
 
 .. image:: images/image1.PNG
+    :width: 600 px
 
 Burp'ing the App
 ~~~~~~~~~~~~~~~~
@@ -68,14 +69,17 @@ Attack 1: No Host Header - **Run this 10 times.**
 5. A popup will appear asking for target details. Fill out the form as shown below.
 
 .. image:: images/image10.PNG
+    :width: 600 px
 
 Request and Response should look like this
 
 .. image:: images/image5.PNG
+    :width: 600 px
 
-6. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy per the "Good WAF Protection recommendations", to not allow this since it is not RFC compliant HTTP/1.1
+6. Navigate to **Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy per the "Good WAF Protection recommendations", to not allow this since it is not RFC compliant HTTP/1.1
 
 .. image:: images/image20.PNG
+    :width: 600 px
 
 Learning and Blocking
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -84,6 +88,7 @@ The first place we always take a look when we want to implement a new control is
 1. Navigate to **Security > Application Security > Policy Building > Learning and Blocking Settings** and look for **HTTP Protocol Compliance failed**
 
 .. image:: images/image6.PNG
+    :width: 600 px
 
 2. Notice the violation is set to learn only and is not enabled by default in a Rapid Deployment Policy. That is why the request was seen as legal and there was no alert in the event logs.
 
@@ -94,18 +99,22 @@ The first place we always take a look when we want to implement a new control is
 5. Navigate to **Security > Application Security > Policy Building > Traffic Learning** and click on the Magnifying Glass.
 
 .. image:: images/image11.PNG
+    :width: 600 px
 
 6. Under the Advanced Tab move the slider to the left so you can see alerts with a learning score of less than 5 and click **Apply Filter**
 
 .. image:: images/image12.PNG
+    :width: 600 px
 
 7. Note the action ASM is suggesting that you take - **"Enable HTTP Check"**
 
 .. image:: images/image13.PNG
+    :width: 600 px
 
 8. Click **Accept Suggestion** and then browse back to **Security > Application Security > Policy Building > Learning and Blocking Settings > HTTP Protocol Compliance failed** and notice that by accepting the learning suggestion ASM has now enabled the protection but it is still in learning mode so **uncheck** that manually.
 
 .. image:: images/image7.PNG
+    :width: 600 px
 
 9. **Be sure you have clicked "Save" and Applied the Policy prior to proceeding.**
 
@@ -116,6 +125,7 @@ The first place we always take a look when we want to implement a new control is
 You should now see the alerts since we have enabled this compliancy check and turned off learning.
 
 .. image:: images/image9.PNG
+    :width: 600 px
 
 HTTP Compliancy Check - Bad Host Header Value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -129,6 +139,7 @@ If we allow bad host header values they can be used to Fuzz web servers and gath
 Notice that by default this is also in learning mode but disabled by default in a Rapid Deployment Policy.
 
 .. image:: images/image14.PNG
+    :width: 600 px
 
 2. **Uncheck** the Learn box and **Check** the Enable box. Scroll up, click **Save** and **Apply Policy**.
 
@@ -149,10 +160,12 @@ Attack 2: XSS in HOST Header
   username=f5student&password=f5DEMOs4u!
 
 .. image:: images/image15.PNG
+    :width: 600 px
 
 4. Browse to **Security > Event Logs > Application > Requests** and review the alert for this attempted attack. Note the alert severity is much higher (4) for this attack type due to the risk it presents.
 
 .. image:: images/image16.PNG
+    :width: 600 px
 
 5. Click **Export Request** and review the detailed report. Notice the XSS alerts and how they are currently still in staging. We will cover this in the next module.
 
@@ -185,10 +198,12 @@ Example - The website may be accessed by non-browser clients attempting to bypas
 
   username=f5student&password=f5DEMOs4u!
 
-3. Review Event Logs to ensure the attack is being mitigated. Notice the alert level is lower for this attack type due to less risk than a potential XSS as seen in the previous exercise. 
+3. Review Event Logs to ensure the attack is being mitigated. Notice the alert level is lower for this attack type due to less risk than a potential XSS as seen in the previous exercise.
 
 .. image:: images/image18.PNG
+    :width: 600 px
 
 .. image:: images/image19.PNG
+    :width: 600 px
 
 **This concludes module 2**

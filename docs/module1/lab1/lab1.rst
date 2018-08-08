@@ -22,6 +22,8 @@ Objective
 .. NOTE:: The XRDP service automatically opens a persistent shell in the top left corner of your desktop. Type **exit** to make it go away.
 
 .. image:: images/image25.PNG
+  :width: 600 px
+
 
 Please ensure that four virtual servers are configured before you begin:
 
@@ -37,7 +39,7 @@ Create Your 1st WAF Policy
 #. Click on the **Polices List**
 
 .. image:: images/image1.PNG
-
+  :width: 600 px
 
 #. Click on the **Create New Policy** button. The policy creation wizard opens.
 
@@ -58,9 +60,9 @@ Create Your 1st WAF Policy
 **Your settings should reflect the figures below:**
 
 .. image:: images/image2.PNG
-
+  :width: 600 px
 .. image:: images/imagefix.PNG
-
+  :width: 600 px
 
 Verify WAF Profile is Applied to Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -73,6 +75,7 @@ Verify WAF Profile is Applied to Virtual Server
 #. Notice Log Profile is set to ``Disabled``.
 
 .. image:: images/image4.PNG
+    :width: 600 px
 
 Create Application Security Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -91,6 +94,7 @@ Create Application Security Logging Profile
 #. Click **Finished.**
 
   .. image:: images/image5.PNG
+      :width: 600 px
 
 **Question:** Would logging all requests and responses in a production environment be a best practice?
 
@@ -106,12 +110,14 @@ Apply WAF Logging Profile
 #. Click on the Update button to apply the policy.
 
 .. image:: images/image6.PNG
+    :width: 600 px
 
 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
 #. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/WebGoat/login`` You'll find a toolbar shortcut for the webgoat link.
 
 .. image:: images/image7.PNG
+    :width: 600 px
 
 2. Login using **f5student/f5DEMOs4u!** credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
@@ -120,10 +126,12 @@ Test WAF Policy
 #. Clear the default **"Illegal Requests"** filter by clicking the x.
 
         .. image:: images/image8.PNG
+          :width: 600 px
 
 #. Verify that requests are being logged by the WAF. You should be able to see both the raw client requests and server responses.
 
         .. image:: images/image9.PNG
+          :width: 600 px
 
 Exercise 1.2: Geolocation and IP Intelligence
 -------------------------------------------------
@@ -140,6 +148,7 @@ Geolocation
       ASM (Layer 7) if no private IP’s will be accessing the site.
 
    .. image:: images/image10.PNG
+    :width: 600 px
 
    .. IMPORTANT:: Remember to click on the **Apply Policy** button (top right) to commit security policy changes.
 
@@ -165,17 +174,20 @@ Geolocation
    horizontal tab and click on **Manage** in the **iRules** section.
 
    .. image:: images/image11.PNG
+    :width: 600 px
 
 #. Select the ``webgoat_irule``, move it to the **Enabled** assignment and
    click **Finished**.
 
    .. image:: images/image12.PNG
+       :width: 600 px
 
 6. We now need to tell ASM to trust the XFF header by turning on the **Trust XFF Header** feature in the policy.
 Navigate to **Application Security > Policy > Policy Properties** and hit the dropdown for **Advanced View**.
 You can now check the box to **Trust XFF Header** and click **Save** then **Apply Policy**
 
 .. image:: images/image15.PNG
+    :width: 600 px
 
 .. NOTE:: Regarding Trust XFF - you would do this if ASM is deployed behind an internal or other trusted proxy. Then, the system uses the IP address that initiated the connection to the proxy instead of the internal proxy’s IP address. This option is useful for logging, web scraping, anomaly detection, and the geolocation feature.
 
@@ -188,6 +200,7 @@ You can now check the box to **Trust XFF Header** and click **Save** then **Appl
 #. Navigate to **Security > Event Logs > Application > Requests**.
 
 .. image:: images/image13.PNG
+    :width: 600 px
 
 Notice the geolocation detected and the presence of the X-Forwarded-For (XFF) in the Request details. Your actual client IP is still 10.1.10.28 however, because we trusted the XFF header and the iRule is randomizing the IP address placed in that header so ASM believes the request is from an external location. Depending on your network you may be leveraging a technology that creates a source NAT ahead of ASM. So by leveraging the XFF header, you can work around this and get contextual information about the client.
 
@@ -203,6 +216,7 @@ For all categories **select Alarm**. Click on **Save** and then on **Apply Polic
 .. NOTE:: On the top right you should see that your IP Intelligence database has been updated at some point.
 
 .. image:: images/image14.PNG
+    :width: 600 px
 
 .. NOTE:: In order to create traffic with malicious sources for the purposes of this lab we have created another special configuration item for you.
 
@@ -217,18 +231,21 @@ This iRule will insert an X-Forward-For header with the value of a malicious Uni
 3. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration and Click **Finished**.
 
         .. image:: images/image16.PNG
+            :width: 600 px
 
 4. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site. Login and Click on one or two items.
 
 5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries. Since you configured IP Intelligence violations to alarm you will not need to change the filter. Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
         .. image:: images/image22.PNG
+            :width: 600 px
 
 
         .. NOTE:: For more information click on the violation hyperlink to see the IPI category that this IP belongs to. You can also click "All Details" at the top right.
 
 
         .. image:: images/image24.PNG
+            :width: 600 px
 
 **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
 and look up the IP address in question for further information. There is also
