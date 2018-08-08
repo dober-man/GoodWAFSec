@@ -75,6 +75,7 @@ Verify WAF Profile is Applied to Virtual Server
 #. Notice Log Profile is set to ``Disabled``.
 
 .. image:: images/image4.PNG
+    :width: 600 px
 
 Create Application Security Logging Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -93,6 +94,7 @@ Create Application Security Logging Profile
 #. Click **Finished.**
 
   .. image:: images/image5.PNG
+      :width: 600 px
 
 **Question:** Would logging all requests and responses in a production environment be a best practice?
 
@@ -108,12 +110,14 @@ Apply WAF Logging Profile
 #. Click on the Update button to apply the policy.
 
 .. image:: images/image6.PNG
+    :width: 600 px
 
 Test WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~
 #. Open the Google Chrome browser and navigate to ``https://webgoat.f5demo.com/WebGoat/login`` You'll find a toolbar shortcut for the webgoat link.
 
 .. image:: images/image7.PNG
+    :width: 600 px
 
 2. Login using **f5student/f5DEMOs4u!** credentials and interact with the webgoat application by browsing. Please refrain from experimenting with the site using any familiar "exploit" techniques.
 
@@ -176,6 +180,7 @@ Geolocation
    click **Finished**.
 
    .. image:: images/image12.PNG
+       :width: 600 px
 
 6. We now need to tell ASM to trust the XFF header by turning on the **Trust XFF Header** feature in the policy.
 Navigate to **Application Security > Policy > Policy Properties** and hit the dropdown for **Advanced View**.
