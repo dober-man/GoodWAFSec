@@ -22,7 +22,7 @@ Objective
 .. NOTE:: The XRDP service automatically opens a persistent shell in the top left corner of your desktop. Type **exit** to make it go away.
 
 .. image:: images/image25.PNG
-  :scale: 50%
+  :width: 600 px
 
 
 Please ensure that four virtual servers are configured before you begin:
@@ -39,7 +39,7 @@ Create Your 1st WAF Policy
 #. Click on the **Polices List**
 
 .. image:: images/image1.PNG
-  :scale: 50%
+  :width: 600 px
 
 #. Click on the **Create New Policy** button. The policy creation wizard opens.
 
@@ -60,9 +60,9 @@ Create Your 1st WAF Policy
 **Your settings should reflect the figures below:**
 
 .. image:: images/image2.PNG
-  :scale: 50%
+  :width: 600 px
 .. image:: images/imagefix.PNG
-  :scale: 50%
+  :width: 600 px
 
 Verify WAF Profile is Applied to Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -144,7 +144,7 @@ Geolocation
       ASM (Layer 7) if no private IP’s will be accessing the site.
 
    .. image:: images/image10.PNG
-    :scale: 50%
+    :width: 600 px
 
    .. IMPORTANT:: Remember to click on the **Apply Policy** button (top right) to commit security policy changes.
 
@@ -170,7 +170,7 @@ Geolocation
    horizontal tab and click on **Manage** in the **iRules** section.
 
    .. image:: images/image11.PNG
-    :scale: 50%
+    :width: 600 px
 
 #. Select the ``webgoat_irule``, move it to the **Enabled** assignment and
    click **Finished**.
@@ -182,7 +182,7 @@ Navigate to **Application Security > Policy > Policy Properties** and hit the dr
 You can now check the box to **Trust XFF Header** and click **Save** then **Apply Policy**
 
 .. image:: images/image15.PNG
-    :scale: 50%
+    :width: 600 px
 
 .. NOTE:: Regarding Trust XFF - you would do this if ASM is deployed behind an internal or other trusted proxy. Then, the system uses the IP address that initiated the connection to the proxy instead of the internal proxy’s IP address. This option is useful for logging, web scraping, anomaly detection, and the geolocation feature.
 
@@ -195,7 +195,7 @@ You can now check the box to **Trust XFF Header** and click **Save** then **Appl
 #. Navigate to **Security > Event Logs > Application > Requests**.
 
 .. image:: images/image13.PNG
-    :scale: 50%
+    :width: 600 px
 
 Notice the geolocation detected and the presence of the X-Forwarded-For (XFF) in the Request details. Your actual client IP is still 10.1.10.28 however, because we trusted the XFF header and the iRule is randomizing the IP address placed in that header so ASM believes the request is from an external location. Depending on your network you may be leveraging a technology that creates a source NAT ahead of ASM. So by leveraging the XFF header, you can work around this and get contextual information about the client.
 
@@ -211,7 +211,7 @@ For all categories **select Alarm**. Click on **Save** and then on **Apply Polic
 .. NOTE:: On the top right you should see that your IP Intelligence database has been updated at some point.
 
 .. image:: images/image14.PNG
-    :scale: 50%
+    :width: 600 px
 
 .. NOTE:: In order to create traffic with malicious sources for the purposes of this lab we have created another special configuration item for you.
 
@@ -226,21 +226,21 @@ This iRule will insert an X-Forward-For header with the value of a malicious Uni
 3. Move the **ip_rep_irule** irule to the **Enabled** pane of the **Resource Management** configuration and Click **Finished**.
 
         .. image:: images/image16.PNG
-            :scale: 50%
+            :width: 600 px
 
 4. Open a new private browsing window in Google Chrome and use the bookmark for **WebGoat** to browse the site. Login and Click on one or two items.
 
 5. Navigate to **Security > Event Logs > Application > Requests** and review the log entries. Since you configured IP Intelligence violations to alarm you will not need to change the filter. Select the most recent entry and examine why the request is illegal. What IP address did the request come from?
 
         .. image:: images/image22.PNG
-            :scale: 50%
+            :width: 600 px
 
 
         .. NOTE:: For more information click on the violation hyperlink to see the IPI category that this IP belongs to. You can also click "All Details" at the top right.
 
 
         .. image:: images/image24.PNG
-            :scale: 50%
+            :width: 600 px
 
 **Bonus:** You can browse to ``http://www.brightcloud.com/tools/url-ip-lookup.php``
 and look up the IP address in question for further information. There is also
