@@ -73,7 +73,7 @@ Request and Response should look like this
 
 .. image:: images/image5.PNG
 
-6. Navigate to **Security > Application Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy per the "Good WAF Protection recommendations", to not allow this since it is not RFC compliant HTTP/1.1
+6. Navigate to **Security > Event Logs > Application > Requests** and clear the illegal request filter. You should see these requests being logged as legal but you may want to implement policy per the "Good WAF Protection recommendations", to not allow this since it is not RFC compliant HTTP/1.1
 
 .. image:: images/image20.PNG
 
@@ -185,7 +185,7 @@ Example - The website may be accessed by non-browser clients attempting to bypas
 
   username=f5student&password=f5DEMOs4u!
 
-3. Review Event Logs to ensure the attack is being mitigated. Notice the alert level is lower for this attack type due to less risk than a potential XSS as seen in the previous exercise. 
+3. Review Event Logs to ensure the attack is being mitigated. Notice the alert level is lower for this attack type due to less risk than a potential XSS as seen in the previous exercise.
 
 .. image:: images/image18.PNG
 

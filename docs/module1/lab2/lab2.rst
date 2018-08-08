@@ -127,7 +127,7 @@ Create Bot Defense Logging Profile
 
 #. Click **Finished**.
 
-   .. NOTE:: You could have also modified the existing ``asm_allrequests``
+   .. NOTE:: You could have also modified the existing ``waf_allrequests``
       logging profile and added BOT logging definitions.
 
    .. image:: images/image33.PNG
