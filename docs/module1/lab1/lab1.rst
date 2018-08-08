@@ -126,12 +126,12 @@ Test WAF Policy
 #. Clear the default **"Illegal Requests"** filter by clicking the x.
 
         .. image:: images/image8.PNG
-          :scale: 75%
+          :width: 600 px
 
 #. Verify that requests are being logged by the WAF. You should be able to see both the raw client requests and server responses.
 
         .. image:: images/image9.PNG
-          :scale: 75%
+          :width: 600 px
 
 Exercise 1.2: Geolocation and IP Intelligence
 -------------------------------------------------
@@ -148,7 +148,7 @@ Geolocation
       ASM (Layer 7) if no private IP’s will be accessing the site.
 
    .. image:: images/image10.PNG
-    :width: 400 px
+    :width: 600 px
 
    .. IMPORTANT:: Remember to click on the **Apply Policy** button (top right) to commit security policy changes.
 
