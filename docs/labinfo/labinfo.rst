@@ -8,12 +8,12 @@ Environment
 
 **Linux client (client01):**
 
-* Web Attack Tools used in this lab:
+**Web Attack Tools used in this lab:**
 
  * `OWASP ZAP <https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project>`_ - DAST
  * `BURP Community Edition <https://portswigger.net/burp/>`_ - Packet Crafting
 
-* Api Tools:
+**Api Tools:**
 
  * `Ansible <https://www.ansible.com/>`_ - Automation platform
  * `curl <https://curl.haxx.se/>`_ - command line webclient, will be used to interact with the iControl Rest API
@@ -29,7 +29,7 @@ Why the name "WebGoat"? Developers should not feel bad about not knowing securit
 .. _lab-topology:
 
 Lab Topology
-------------
+---------------
 
 The network topology implemented for this lab is very simple. The following
 components have been included in your lab environment:
@@ -68,8 +68,7 @@ components:
      - 10.1.20.252
      - ssh - ``f5student:f5DEMOs4u!``
 
+
 A graphical representation of the lab:
-
 |labDiagram|
-
 .. |labDiagram| image:: images/Agility2018LabDiagram.png
