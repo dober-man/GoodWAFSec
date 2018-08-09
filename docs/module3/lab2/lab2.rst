@@ -85,7 +85,7 @@ Your policy should now look like this.
 
 17.  Click the bookmark for Login page
 
-18.  At the username prompt try entering a sequel query for the username and the letter a for the password
+18.  At the username prompt try entering a SQL query for the username and the letter a for the password
 
 ::
 
@@ -161,7 +161,7 @@ Locate the Enforcement Readiness section.
     :width: 600 px
 
 .. |zap_proxy| image:: images/zap_proxy.png
-    :width: 600 px
+    :width: 50 px
 
 Click on the numbers.  This will take you to the learning and blocking settings page.  This shows you the settings that could be turned on to better protect your application.
 
