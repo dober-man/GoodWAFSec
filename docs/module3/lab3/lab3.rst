@@ -43,6 +43,7 @@ Task 1 - Server Technologies
 
 .. image:: images/image5_3_3.png
     :width: 600 px
+
 10.  Time to launch some framework attacks.
 
 11. Back in BURP navigate to the repeater tab and adjust the payload to the following and hit go:
@@ -93,6 +94,7 @@ Task 1 - Server Technologies
 
 .. image:: images/image4.png
     :width: 600 px
+
 Task 2 - Create Custom Signature Set
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -107,13 +109,13 @@ Fill out the following -
   - Assign To Policy by Default -  ``Uncheck this box``  (in production enabling this feature ensures this signature set is assigned to all newly created policies)
   - Signature Type -  ``Request``
   - Attack Type -  ``All``
-  - Systems -  ``Unix/Linux, Apache, Apache Tomcat, Java Servlets/JSP`` Move to the right
+  - Systems -  ``Unix/Linux, Apache, Apache Tomcat, Java Servlets/JSP`` <- Move to the left.
   - Accuracy -  ``All``
   - Risk - ``Greater Than Equal To High``
   - User-defined -  ``All``
   - Update Date -  ``All``
 
-3.  Click on Create.  Now you have a created your own custom signature set of high accuracy signatures with server side technologies and low risk.
+3.  Click on Create.  Now you have a created your own custom signature set of high risk signatures with server side technologies.
 
 .. image:: images/image6_3_3.png
     :width: 600 px
